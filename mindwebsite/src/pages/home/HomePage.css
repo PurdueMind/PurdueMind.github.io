@@ -1,0 +1,55 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.break {
+  height: 7px;
+  width: 35vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-inline: auto;
+
+  background-color: #C9B38C;
+}
+
+#homeHeader {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px;
+
+  text-align: center;
+}
+
+#slideshowContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 20px;
+  height: 350px;
+  width: 100%;
+
+  background-color: #c9b38c80;
+  z-index: -1;
+}
+
+#instaFeed {
+  max-width: 800px;
+}
+
+#breakBeforeEvents {
+  margin-bottom: 33px;
+}
+
+#eventsTxt {
+  line-height: 0px;
+}
+
+#calendar {
+  margin-bottom: 50px;
+}

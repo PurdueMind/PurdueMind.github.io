@@ -1,0 +1,13 @@
+.contactPage {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+#contactDesc {
+  margin-bottom: 20px;
+  width: 80%;
+  text-align: center;
+}
