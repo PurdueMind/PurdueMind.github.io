@@ -7,69 +7,78 @@
   },
   "officers": [
     {
-      "name": "Jenna Munshi",
+      "name": "Allison Lisota",
       "id": "president",
-      "position": "President",
+      "position": "Co-President",
       "major": "Pharmaceutical Sciences '22",
-      "description": "MIND has introduced me to an entirely different perspective on healthcare. I've not only learned new skills related to prototyping and design, but also developed my networking, entrepreneurial, time management, and leadership skills. It's been incredible to see how MIND has grown since my freshman year - from completing only one project a year to now having at least two at a time. Additionally, the club has grown significantly in size and diversity of majors. As President, I hope to provide the same opportunities I was given (ideation practice, networking, prototyping, etc) and more, for the members.",
-      "outlook": "jmunshi@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/jenna-munshi-851b0b17b/"
+      "description": "",
+      "outlook": "alisota@purdue.edu",
+      "linkedIn": ""
     },
     {
-      "name": "Kevin Alessandro Bautista",
+      "name": "Brandon Mar",
+      "id": "president2",
+      "position": "Co-President",
+      "major": "Pharmaceutical Sciences '22",
+      "description": "",
+      "outlook": "bmar@purdue.edu",
+      "linkedIn": ""
+    },
+    {
+      "name": "Simon Hasik",
       "id": "vice",
       "position": "Vice President",
       "major": "Biomedical Engineering '23",
       "minor": "Minor in Electrical and Computer Engineering",
-      "description": "MIND was my introduction to BME as a freshman, and a big reason of why I chose to major in it and go for a minor as well. I've been able to learn so much about innovation and instrumentation, and have been lucky to be surrounded with other amazing and diverse members. Moving forward, I hope to give other students more learning opportunities and experiences making great ideas that lead to global innovations :)",
-      "outlook": "kbautis@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/kevin-alessandro-bautista/"
+      "description": "",
+      "outlook": "shasik@purdue.edu",
+      "linkedIn": ""
     },
     {
-      "name": "Kyle Chang",
+      "name": "Lily Esterline",
       "id": "secretary",
       "position": "Secretary",
       "major": "Biomedical Engineering '23",
-      "description": "I didn't know much about what the Biomedical Engineering field looks like when I was a freshman. Fortunately, I got to join the MIND and participated in the thorough designing process starting from problem identification, prototyping, to optimization. It not only helps me gaining deeper understanding about the major of BME before I joined in, but also helps me knowing some awesome friends sharing the same passion. In this upcoming school year, I aim to make sure that our members enjoy every meeting and every progression. We will be on track of our schedule to showcase our product in the end!",
-      "outlook": "chang690@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/chihkai-chang/"
+      "description": "",
+      "outlook": "lesterli@purdue.edu",
+      "linkedIn": ""
     },
     {
-      "name": "Akio Fujita",
+      "name": "Sam Ying",
       "srcID": "1l4v4lnSVoxptcN-m03lx_tx4eCO0gt3F",
       "position": "Treasurer",
       "major": "Computer Engineering '23",
       "description": "I have been a part of MIND since freshman year and I enjoy working on the various biomedical projects with other members. MIND has helped me grow both technically and professionally and I am grateful to have had the opportunity to be part of this club. As an officer, I hope to reach out to more Purdue students and give them a chance to work on cool projects with MIND.",
-      "outlook": "afujita@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/akio-fujita-1ca/"
+      "outlook": "ying39@purdue.edu",
+      "linkedIn": ""
     },
     {
-      "name": "Elyssia Wellington",
+      "name": "Dalton Aaker",
       "id": "eNi",
       "position": "Director of Entrepreneurship & Ideation",
       "major": "Biomedical Engineering '24",
       "description": "In my previous experience in mind I have become the secretary and learned how to load a group of intelligent individuals to a common goal. I have also learned how to handle meeting notes and keeping advisors updated. In my new position as director of entrepreneurship and ideation, I would like to be able to learn how to lead the group in competition submissions and outreach.",
-      "outlook": "ewellin@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/elyssiawellington/"
+      "outlook": "daaker@purdue.edu",
+      "linkedIn": ""
     },
     {
-      "name": "Matthew Starobrat",
+      "name": "Matt Ghera",
       "id": "rNd",
       "position": "Director of Research & Development",
       "major": "Robotics Engineering Technology '23",
       "description": "I’ve found MIND to be a very welcoming and helpful community of people wanting to get hands on experience with research and production. It’s casual enough to be very approachable and easy to fit into my schedule while also being something I look forward to each week. Especially being outside of the biomedical major, I mainly hope to bring my manufacturing knowledge and enable others to be more ambitious with their projects and improve everyone else’s club experience.",
-      "outlook": "mstarobr@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/matthew-starobrat-8953741a0/"
+      "outlook": "mghera@purdue.edu",
+      "linkedIn": ""
     },
     {
-      "name": "Claire Poukey",
+      "name": "Aditi",
       "srcID": "1UdUsnzq5XeZKrJtXpC-3Jb9-TOGNeZ_E",
       "position": "Director of Networking & Events",
-      "major": "Computer Engineering '23",
+      "major": "Computer Science '25",
       "minor": "Minor in Communications",
       "description": "I love MIND because I get to spend my time with peers who are passionate about what they do. MIND allows me try out a variety of roles and collaboratively perform applied engineering to make an impact. As Director of Networking and Events, I hope to expand our social media following-base, improve alumni relations, and establish a professional development series.",
-      "outlook": "cpoukey@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/clairepoukey/"
+      "outlook": "abarla@purdue.edu",
+      "linkedIn": ""
     }
   ],
   "seniorExecs": [

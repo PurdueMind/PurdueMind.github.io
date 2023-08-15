@@ -1,13 +1,14 @@
 import './AboutPage.css';
 import '../../App.css';
 
-import pres from '../../assets/headshots/jenna.png'
-import vice from '../../assets/headshots/kevin.png'
-import treasurer from '../../assets/headshots/akio.png'
-import secretary from '../../assets/headshots/kyle.png'
-import eNi from '../../assets/headshots/elyssia.png'
-import rNd from '../../assets/headshots/matthew.png'
-import nNe from '../../assets/headshots/claire.png'
+import pres from '../../assets/headshots/allison.JPG'
+import pres2 from '../../assets/headshots/brandon.jpg'
+import vice from '../../assets/headshots/'
+import treasurer from '../../assets/headshots/sam.jpeg'
+import secretary from '../../assets/headshots/lily.jpeg'
+import eNi from '../../assets/headshots/'
+import rNd from '../../assets/headshots/matt.jpeg'
+import nNe from '../../assets/headshots/'
 
 import damen from '../../assets/headshots/damen.png'
 
@@ -19,7 +20,8 @@ import AdvisorProfile from './components/Advisor';
 
 const execList = require('./boardList.json');
 const imgList = {
-  "president": pres,
+  "president": pres, 
+  "president2": pres2,
   "vice": vice,
   "treasurer": treasurer,
   "secretary": secretary,
