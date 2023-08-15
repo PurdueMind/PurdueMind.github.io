@@ -3,12 +3,12 @@ import '../../App.css';
 
 import pres from '../../assets/headshots/allison.JPG'
 import pres2 from '../../assets/headshots/brandon.jpg'
-import vice from '../../assets/headshots/matt.jpeg'
-import treasurer from '../../assets/headshots/sam.jpeg'
+import vice from '../../assets/headshots/simon.jpeg'
+import treasurer from '../../assets/headshots/sam.jpg'
 import secretary from '../../assets/headshots/lily.jpeg'
-import eNi from '../../assets/headshots/matt.jpeg'
+import eNi from '../../assets/headshots/dalton.png'
 import rNd from '../../assets/headshots/matt.jpeg'
-import nNe from '../../assets/headshots/matt.jpeg'
+import nNe from '../../assets/headshots/aditi.jpg'
 
 import damen from '../../assets/headshots/damen.png'
 

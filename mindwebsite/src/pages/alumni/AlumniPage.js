@@ -1,7 +1,7 @@
 import './AlumniPage.css';
 import '../../App.css';
 
-import sriram     from '../../assets/headshots/sriram.png'
+import sriram     from '../../assets/headshots/sam.jpg'
 import pablo      from '../../assets/headshots/pablo.png'
 import samuel     from '../../assets/headshots/samuel.png'
 import dane       from '../../assets/headshots/default.png'
@@ -9,7 +9,6 @@ import scott      from '../../assets/headshots/scott.png'
 import pragna     from '../../assets/headshots/pragna.png'
 import david      from '../../assets/headshots/default.png'
 import michaeld   from '../../assets/headshots/default.png'
-import srinivas   from '../../assets/headshots/srinivas.png'
 import jason      from '../../assets/headshots/default.png'
 import barrett    from '../../assets/headshots/barrett.png'
 import michaelw   from '../../assets/headshots/default.png'
@@ -29,7 +28,6 @@ const imgList = {
   "pragna"    : pragna,
   "david"     : david,
   "michaeld"  : michaeld,
-  "srinivas"  : srinivas,
   "jason"     : jason,
   "barrett"   : barrett,
   "michaelw"  : michaelw,

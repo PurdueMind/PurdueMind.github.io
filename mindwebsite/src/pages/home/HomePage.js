@@ -56,16 +56,6 @@ export default function HomePage() {
 
       <div className='break'/>
       
-      <h2 id='eventsTxt'>Instagram Feed</h2>
-      <Feed
-        id='instaFeed'
-        userName='purdue.mind'
-        limit={20}
-        width='100%'
-        maxContainerHeight={475}
-      />
-
-      <div className='break'/>
 
       <h2 id='eventsTxt'>Upcoming Events</h2>
       <iframe 
