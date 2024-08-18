@@ -1,7 +1,7 @@
 import './AboutPage.css';
 import '../../App.css';
 
-import pres from '../../assets/headshots/allison.JPG'
+import pres from '../../assets/headshots/dalton.png'
 import pres2 from '../../assets/headshots/brandon.jpg'
 import vice from '../../assets/headshots/simon.jpeg'
 import treasurer from '../../assets/headshots/sam.jpg'
