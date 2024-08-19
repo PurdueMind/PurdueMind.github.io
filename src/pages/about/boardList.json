@@ -1,0 +1,91 @@
+{
+  "introTxt": {
+    "about": "Purdue MIND’s purpose is to promote and grow the biomedical engineering community at Purdue by providing undergraduate students the opportunity to engage in hands-on activities, discuss current research, and network with a wide range of faculty both within and outside of Purdue including professors, physicians, and engineers. We are a unique, multidisciplinary student organization that seeks to innovate and develop medical technology. Our overall goals are listed below:",
+    "goal1": "To give Purdue undergraduates extensive experience with medical technology market research, design, prototyping, validation, regulatory approval, intellectual property management, and transition to market.",
+    "goal2": "To allow highly motivated students to network with each other and with professors and medical professionals and to collaborate on a significant, long-term, medically-focused project.",
+    "goal3": "To recognize the work done on the project through submission to national design competitions."
+  },
+  "officers": [
+    {
+      "name": "Dalton Aaker",
+      "id": "president",
+      "position": "President",
+      "major": "Biomedical Engineering '25",
+      "description": "",
+      "outlook": "daaker@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/daaker/"
+    },
+    {
+      "name": "Simon Hasik",
+      "id": "vice",
+      "position": "Vice President",
+      "major": "Biomedical Engineering '25",
+      "description": "",
+      "outlook": "shasik@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/simon-hasik/"
+    },
+    {
+      "name": "Matt Schaller",
+      "id": "secretary",
+      "position": "Secretary",
+      "major": "Biomedical Engineering '26",
+      "description": "",
+      "outlook": "schallem@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/matthew-schaller-4413b124b/"
+    },
+    {
+      "name": "Myra Khare",
+      "id": "treasurer",
+      "position": "Treasurer",
+      "major": "Biomedical Engineering '27",
+      "description": "",
+      "outlook": "khare19@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/myrakhare/"
+    },
+    {
+      "name": "Grant Congdon",
+      "id": "rNd",
+      "position": "Director of Research & Development",
+      "major": "Electrical Engineering '27",
+      "description": "",
+      "outlook": "gcongdon@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/grant-congdon/"
+    },
+    {
+      "name": "Sam Ying",
+      "id": "nNe",
+      "position": "Director of Networking & Events",
+      "major": "Biomedical Engineering '26",
+      "description": "",
+      "outlook": "ying39@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/aditi-barla-147232281/"
+    }
+  ],
+  "advisors": [
+    {
+      "name": "Dr. Aaron Lottes",
+      "id": "lee",
+      "position": "Purdue Faculty Advisor"
+    },
+    {
+      "name": "Hammad Khan",
+      "id": "hammad",
+      "position": "Graduate Advisor"
+    },
+    {
+      "name": "Rahaf Salim",
+      "id": "rahaf",
+      "position": "Graduate Advisor"
+    },
+    {
+      "name": "Zach Davis",
+      "id": "zach",
+      "position": "Graduate Advisor"
+    },
+    {
+      "name": "Barrett Davis",
+      "id": "barrett",
+      "position": "Graduate Advisor"
+    }
+  ]
+}
