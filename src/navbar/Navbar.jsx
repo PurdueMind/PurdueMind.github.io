@@ -99,24 +99,29 @@ export default function Navbar(props) {
                   <Link to='/'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => setActive('Home')}
-                      onClick={() => setOpen(!isOpen)}
+                      onClick={() => {
+                        setActive('Home')
+                        setOpen(!isOpen)}}
                     >Home</button>
                   </Link>
 
                   <Link to='/AboutUs'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => setActive('About Us')}
-                      onClick={() => setOpen(!isOpen)}
+                      onClick={() => {
+                        setActive('About Us')
+                        setOpen(!isOpen)
+                      }}
                     >About Us</button>
                   </Link>
 
                   <Link to='/Projects'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => setActive('Projects')}
-                      onClick={() => setOpen(!isOpen)}
+                      onClick={() => {
+                        setActive('Projects')
+                        setOpen(!isOpen)
+                      }}
                     >Projects</button>
                   </Link>
 
