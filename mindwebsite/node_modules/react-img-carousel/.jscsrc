@@ -1,4 +1,0 @@
-{
-  "preset": "./node_modules/godaddy-style/dist/.jscsrc",
-  "validateLineBreaks": false
-}
