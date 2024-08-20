@@ -3,17 +3,17 @@ import '../../App.css';
 
 import pres from '../../assets/headshots/dalton.png'
 import vice from '../../assets/headshots/simon.jpeg'
-import treasurer from '../../assets/headshots/default.png'
-import secretary from '../../assets/headshots/default.png'
+import treasurer from '../../assets/headshots/myra.jpeg'
+import secretary from '../../assets/headshots/matt.png'
 import rNd from '../../assets/headshots/grant.jpg'
 import nNe from '../../assets/headshots/sam.jpg'
 
-import lee from '../../assets/headshots/default.png'
+import lee from '../../assets/headshots/aaron.jpeg'
 
-import hammad from '../../assets/headshots/default.png'
-import rahaf from '../../assets/headshots/default.png'
-import zach from '../../assets/headshots/default.png'
-import barrett from '../../assets/headshots/default.png'
+import hammad from '../../assets/headshots/hammad.jpeg'
+import rahaf from '../../assets/headshots/rahaf.jpeg'
+import zach from '../../assets/headshots/zach.jpeg'
+import juan from '../../assets/headshots/juan.jpeg'
 
 import OfficerProfile from './components/Officer';
 import AdvisorProfile from './components/Advisor';
@@ -30,7 +30,7 @@ const imgList = {
   "hammad": hammad,
   "rahaf": rahaf,
   "zach": zach,
-  "barrett": barrett
+  "juan": juan
 };
 
 export default function AboutPage() {
