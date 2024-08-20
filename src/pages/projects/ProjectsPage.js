@@ -11,7 +11,7 @@ export default function ProjectsPage() {
       <h1 className='header'>Projects</h1>
       
       <div className='projectsContainer'>
-        <h2 className="sectionHeader" id="currentProjects">Current Mind Projects</h2>
+        <h2 className="sectionHeader">Current Mind Projects</h2>
         {getProjects(projectList.currentProjects)}
       </div>
 
