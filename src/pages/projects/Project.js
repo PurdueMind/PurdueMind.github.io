@@ -4,7 +4,7 @@ import '../../App.css';
 export default function Projects(
   {
     id,
-    imgSrc = 'https://drive.google.com/uc?export=view&id=1pnitzFNzovrKFX_8tFv22vjohCrWPdvp',
+    imgSrc,
     alt = '404: No Image',
     title,
     description
@@ -14,6 +14,7 @@ export default function Projects(
     <div className='project' id={id}>
       <div id='projectInfo'>
         <h4 className='title'>{title}</h4>
+        <img className='projectImg' src={imgSrc} alt={alt} />
         <h5 className='description'>
           {description}
         </h5>
