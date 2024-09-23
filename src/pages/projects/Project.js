@@ -22,6 +22,7 @@ export default function Projects(
     </div>
   );
 };
+
 // function that takes a list of strings and return a unorder list of html elements
 function expandDescription(description) {
   const listItems = [];

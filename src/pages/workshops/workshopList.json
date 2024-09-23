@@ -1,0 +1,14 @@
+{
+    "workshops": [
+        {
+            "id": "ml-workshop",
+            "title": "Machine Learning Workshop",
+            "description": [
+                "Introduces PyTorch, a Python-based machine-learning framework",
+                "Teaches foundations of how machine learning functions",
+                "Helps members create a classification machine learning model",
+                "Leaves members with trained neural networks and resources for training more complex models"
+            ]
+        }
+    ]
+}
