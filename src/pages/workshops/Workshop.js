@@ -1,6 +1,22 @@
 import '../../App.css';
 import './Workshop.css';
 
+export const DownloadButton = ({downloadFile, filename}) => {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = downloadFile;
+        link.download = filename || "downloaded-file";
+        document.body.appendChild(link);
+
+        link.click();
+
+        document.body.removeChild(link);
+    }
+    return (
+        <button className="downloadButton" onClick={handleDownload}>Download Workshop Files</button>
+    )
+}
+
 export default function Workshops({id, title, description, downloadFile}) {
     return (
         <div className='workshop' id={id}>
@@ -9,7 +25,7 @@ export default function Workshops({id, title, description, downloadFile}) {
                 <h5 className='description'>
                     {expandDescription(description)}
                 </h5>
-                <a href={downloadFile} download='workshop.zip'>Click to download workshop files</a>
+                <DownloadButton downloadFile={downloadFile} filename="workshop.zip"/>
             </div>
         </div>
     )
