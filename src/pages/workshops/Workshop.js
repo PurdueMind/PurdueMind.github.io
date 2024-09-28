@@ -25,7 +25,7 @@ export default function Workshops({id, title, description, downloadFile}) {
                 <h5 className='description'>
                     {expandDescription(description)}
                 </h5>
-                <DownloadButton downloadFile={downloadFile} filename="workshop.zip"/>
+                <DownloadButton downloadFile={downloadFile} filename="ml-workshop.zip"/>
             </div>
         </div>
     )
