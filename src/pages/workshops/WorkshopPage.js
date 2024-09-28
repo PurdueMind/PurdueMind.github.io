@@ -2,7 +2,7 @@ import './WorkshopPage.css';
 import '../../App.css';
 import Workshop from './Workshop';
 
-import mlFiles from '../../assets/workshops/workshop.zip';
+import mlFiles from '../../assets/workshops/ml-workshop.zip';
 
 const workshopList = require('./workshopList.json');
 
