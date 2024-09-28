@@ -83,6 +83,13 @@ export default function Navbar(props) {
                   onClick={() => setActive('Projects')}
                 >Projects</button>
               </Link>
+
+              <Link to='/Workshops'>
+                <button
+                  className={`btn navBtn ${active === 'Workshops' ? 'activeBtn' : ''}`}
+                  onClick={() => setActive('Workshops')}
+                >Workshops</button>
+              </Link>
             </div>
           </div>
         }
@@ -123,6 +130,16 @@ export default function Navbar(props) {
                         setOpen(!isOpen)
                       }}
                     >Projects</button>
+                  </Link>
+
+                  <Link to='/Workshops'>
+                    <button
+                      className='btn burgerBtn'
+                      onClick={() => {
+                        setActive('Workshops')
+                        setOpen(!isOpen)
+                      }}
+                    >Workshops</button>
                   </Link>
 
                   <Marginer />

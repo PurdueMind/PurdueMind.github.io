@@ -1,0 +1,75 @@
+.workshopContainer {
+    display: inherit;
+    flex-direction: inherit;
+    max-width: 850px;
+    width: 85%;
+    margin-top: 10px;
+  
+    border: 2px solid #C9B38C;
+  }
+  
+  .workshop {
+    display: contents;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-self: flex-start;
+  
+    height: fit-content;
+    width: auto;
+  
+    margin-top: 5px;
+    margin-bottom: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  
+    align-items: center;
+    justify-content: left;
+  }
+  
+  .description {
+    margin: 0px;
+    margin-top: 5px;
+  }
+
+  .downloadButton {
+    margin-top: 0.5em;
+    margin-bottom: 1.5em;
+    padding: 0.5em 1em;
+    background-color: #C9B38C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  h4.title {
+    font-size: 18px;
+    color: #C9B38C;
+    font-weight: bold;
+    line-height: 19px;
+    padding-bottom: 0px;
+    margin: 0px;
+    text-align: left;
+  }
+  
+  h5.description {
+    line-height: normal;
+    color: #737680;
+    text-align: left;
+  }
+
+  .a {
+    color: #006aff;
+    text-decoration: none;
+    margin-top: 1.5em;
+  }
+  
+  #workshopInfo {
+    display: inline-flexbox;
+    flex-direction: column;
+    height: fit-content;
+  
+    padding: 0px;
+    margin-left: 20px;
+    text-align: center;
+  }
