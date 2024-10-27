@@ -3,11 +3,13 @@ import '../../App.css';
 import Workshop from './Workshop';
 
 import mlFiles from '../../assets/workshops/ml-workshop.zip';
+import cadFiles from '../../assets/workshops/cad-workshop.pdf'
 
 const workshopList = require('./workshopList.json');
 
 const fileList = {
-    'ml-workshop': mlFiles
+    'ml-workshop': mlFiles,
+    'cad-workshop': cadFiles
 }
 
 export default function WorkshopPage() {
@@ -34,6 +36,7 @@ function getWorkshops(workshops) {
             title={workshop.title}
             description={workshop.description}
             downloadFile={fileList[workshop.id]}
+            downloadFilename={workshop.filename}
         />);
     }
     return formattedWorkshops;

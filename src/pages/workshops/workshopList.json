@@ -3,11 +3,23 @@
         {
             "id": "ml-workshop",
             "title": "Machine Learning Workshop",
+            "filename": "ml-workshop.zip",
             "description": [
                 "Introduces PyTorch, a Python-based machine-learning framework",
                 "Teaches foundations of how machine learning functions",
                 "Helps members create a classification machine learning model",
                 "Leaves members with trained neural networks and resources for training more complex models"
+            ]
+        },
+        {
+            "id": "cad-workshop",
+            "title": "CAD Workshop",
+            "filename": "cad-workshop.pdf",
+            "description": [
+                "Introduces Fusion for Computer-aided Design (CAD)",
+                "Guides members through the 3D design process",
+                "Teaches beginner and intermediate tools and assemblies as well as CAD best practices",
+                "Leaves members with printable CAD models and resources for designing more complex models"
             ]
         }
     ]
