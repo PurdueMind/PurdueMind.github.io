@@ -17,7 +17,7 @@ export const DownloadButton = ({downloadFile, filename}) => {
     )
 }
 
-export default function Workshops({id, title, description, downloadFile}) {
+export default function Workshops({id, title, description, downloadFile, downloadFilename}) {
     return (
         <div className='workshop' id={id}>
             <div id='workshopInfo'>
@@ -25,7 +25,7 @@ export default function Workshops({id, title, description, downloadFile}) {
                 <h5 className='description'>
                     {expandDescription(description)}
                 </h5>
-                <DownloadButton downloadFile={downloadFile} filename="ml-workshop.zip"/>
+                <DownloadButton downloadFile={downloadFile} filename={downloadFilename}/>
             </div>
         </div>
     )
