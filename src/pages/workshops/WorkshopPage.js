@@ -3,7 +3,7 @@ import '../../App.css';
 import Workshop from './Workshop';
 
 import mlFiles from '../../assets/workshops/ml-workshop.zip';
-import cadFiles from '../../assets/workshops/cad-workshop.pdf'
+import cadFiles from '../../assets/workshops/cad-workshop.zip'
 
 const workshopList = require('./workshopList.json');
 
