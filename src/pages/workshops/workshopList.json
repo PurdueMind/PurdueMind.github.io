@@ -21,6 +21,18 @@
                 "Teaches beginner and intermediate tools and assemblies as well as CAD best practices",
                 "Leaves members with printable CAD models and resources for designing more complex models"
             ]
+        },
+        {
+            "id": "electronics-workshop",
+            "title": "Electronics Workshop",
+            "filename": "electronics-workshop.zip",
+            "description": [
+                "Introduces circuit design and the Arduino microcontroller",
+                "Guides members through circuit simulation using LTSpice",
+                "Demonstrates how to design and construct a PCB using KiCad",
+                "Shows members how to wire breadboard circuit and program an Arduino to interact with that circuit",
+                "Leaves members with breadboard circuits and resources for building more complex circuits"
+            ]
         }
     ]
 }
