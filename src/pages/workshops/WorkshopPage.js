@@ -3,13 +3,15 @@ import '../../App.css';
 import Workshop from './Workshop';
 
 import mlFiles from '../../assets/workshops/ml-workshop.zip';
-import cadFiles from '../../assets/workshops/cad-workshop.zip'
+import cadFiles from '../../assets/workshops/cad-workshop.zip';
+import electronicsFiles from '../../assets/workshops/electronics-workshop.zip';
 
 const workshopList = require('./workshopList.json');
 
 const fileList = {
     'ml-workshop': mlFiles,
-    'cad-workshop': cadFiles
+    'cad-workshop': cadFiles,
+    'electronics-workshop': electronicsFiles
 }
 
 export default function WorkshopPage() {
