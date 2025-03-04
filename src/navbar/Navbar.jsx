@@ -84,11 +84,11 @@ export default function Navbar(props) {
                 >Projects</button>
               </Link>
 
-              <Link to='/Workshops'>
+              <Link to='/Onboarding'>
                 <button
-                  className={`btn navBtn ${active === 'Workshops' ? 'activeBtn' : ''}`}
-                  onClick={() => setActive('Workshops')}
-                >Workshops</button>
+                  className={`btn navBtn ${active === 'Onboarding' ? 'activeBtn' : ''}`}
+                  onClick={() => setActive('Onboarding')}
+                >Onboarding</button>
               </Link>
             </div>
           </div>

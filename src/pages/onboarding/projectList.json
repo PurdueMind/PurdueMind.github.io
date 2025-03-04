@@ -1,9 +1,9 @@
 {
-    "workshops": [
+    "projects": [
         {
-            "id": "ml-workshop",
-            "title": "Machine Learning Workshop",
-            "filename": "ml-workshop.zip",
+            "id": "ml-project",
+            "title": "Machine Learning Onboarding Project",
+            "filename": "ml-project.zip",
             "description": [
                 "Introduces PyTorch, a Python-based machine-learning framework",
                 "Teaches foundations of how machine learning functions",
@@ -12,9 +12,9 @@
             ]
         },
         {
-            "id": "cad-workshop",
-            "title": "CAD Workshop",
-            "filename": "cad-workshop.zip",
+            "id": "cad-project",
+            "title": "CAD Onboarding Project",
+            "filename": "cad-project.zip",
             "description": [
                 "Introduces Fusion for Computer-aided Design (CAD)",
                 "Guides members through the 3D design process",
@@ -23,9 +23,9 @@
             ]
         },
         {
-            "id": "electronics-workshop",
-            "title": "Electronics Workshop",
-            "filename": "electronics-workshop.zip",
+            "id": "electronics-project",
+            "title": "Electronics Onboarding Project",
+            "filename": "electronics-project.zip",
             "description": [
                 "Introduces circuit design and the Arduino microcontroller",
                 "Guides members through circuit simulation using LTSpice",

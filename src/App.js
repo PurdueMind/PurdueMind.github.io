@@ -4,7 +4,7 @@ import Footer from './footer/Footer';
 import HomePage from './pages/home/HomePage'
 import AboutPage from './pages/about/AboutPage'
 import ProjectsPage from './pages/projects/ProjectsPage'
-import WorkshopsPage from './pages/workshops/WorkshopPage'
+import OnboardingPage from './pages/onboarding/OnboardingPage'
 
 import {
   BrowserRouter as Router,
@@ -39,8 +39,8 @@ export default function App() {
             <ProjectsPage/>
             <Footer/>
           </Route>
-          <Route path='/Workshops'>
-            <WorkshopsPage/>
+          <Route path='/Onboarding'>
+            <OnboardingPage/>
             <Footer/>
           </Route>
       </Switch>
