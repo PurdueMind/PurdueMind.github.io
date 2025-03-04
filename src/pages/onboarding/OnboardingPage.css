@@ -1,4 +1,4 @@
-.workshopPage {
+.OnboardingPage {
     display: flex;
     flex-direction: column;
   
@@ -6,7 +6,7 @@
     align-items: center;
 }
   
-.workshopContainer {
+.projectContainer {
   text-align: center;
   display: inherit;
   flex-direction: column;

@@ -1,4 +1,4 @@
-.workshopContainer {
+.projectContainer {
     display: inherit;
     flex-direction: inherit;
     max-width: 850px;
@@ -8,7 +8,7 @@
     border: 2px solid #C9B38C;
   }
   
-  .workshop {
+  .project {
     display: contents;
     flex-wrap: wrap;
     flex-direction: row;
@@ -64,7 +64,7 @@
     margin-top: 1.5em;
   }
   
-  #workshopInfo {
+  #projectInfo {
     display: inline-flexbox;
     flex-direction: column;
     height: fit-content;

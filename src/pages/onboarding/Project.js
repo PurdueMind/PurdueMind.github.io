@@ -1,5 +1,5 @@
 import '../../App.css';
-import './Workshop.css';
+import './Onboarding.css';
 
 export const DownloadButton = ({downloadFile, filename}) => {
     const handleDownload = () => {
@@ -13,14 +13,14 @@ export const DownloadButton = ({downloadFile, filename}) => {
         document.body.removeChild(link);
     }
     return (
-        <button className="downloadButton" onClick={handleDownload}>Download Workshop Files</button>
+        <button className="downloadButton" onClick={handleDownload}>Download Onboarding Files</button>
     )
 }
 
-export default function Workshops({id, title, description, downloadFile, downloadFilename}) {
+export default function Project({id, title, description, downloadFile, downloadFilename}) {
     return (
-        <div className='workshop' id={id}>
-            <div id='workshopInfo'>
+        <div className='project' id={id}>
+            <div id='projectInfo'>
                 <h4 className='title'>{title}</h4>
                 <h5 className='description'>
                     {expandDescription(description)}
