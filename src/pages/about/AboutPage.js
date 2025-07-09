@@ -84,7 +84,7 @@ function getMembers(memberList, type) {
         major={member.major}
         minor={member.minor}
         description={member.description}
-        outlook={member.outlook}
+        email={member.email}
         linkedIn={member.linkedIn} />)
     } else {
       formattedProfiles.push(<AdvisorProfile

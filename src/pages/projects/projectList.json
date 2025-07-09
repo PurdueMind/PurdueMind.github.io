@@ -1,6 +1,31 @@
 {
   "currentProjects": [
     {
+      "id": "biomechanics",
+      "alt": "",
+      "title": "Biomechanics (2024-2026)",
+      "description": ["Last year a sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
+                      "By integrating EMG and flex sensors with a mechanical pulley-motor system, the glove detects user intent and provides personalized grip assistance",
+                      "The final product will aim to prioritize affordability, user-friendliness, and portability to increase accessibility beyond research settings"]
+    },
+    {
+      "id": "dvt",
+      "alt": "DVT CAD rendering",
+      "title": "Deep Vein Thrombosis (DVT) Detection Device (2025-2026)",
+      "description": ["Post surgery patients are at elevated risk for deep vein thrombosis (DVT) which occurs when a thrombus (blood clot) develops in the veins",
+                      "This project aims to develop a wearable sleeve that detects blood clots by tracking symptoms and alerts healthcare practitioners upon detection."]
+    },
+    {
+      "id": "CTS",
+      "alt": "CTS CAD rendering",
+      "title": "Carpal Tunnel Syndrome (CTS) Detection Device (2024-2025)",
+      "description": ["Wearable designed to assist individuals with carpal tunnel syndrome by tracking wrist and finger movement and delivering heat/cold therapy for symptom relief.",
+      "Using 3D printing and CAD design to prototype a custom ergonomic and comfortable wearable band, ensuring both functionality, optimal sensor placement and user comfort.",
+      "Real-time feedback, therapy guidance, and clinician-integrated progress tracking"]
+    }
+  ],
+  "pastProjects": [
+    {
       "id": "muscle-computer",
       "alt": "",
       "title": "EMG-Integrated Controller for Musclar Dystrophy Rehabilitation (2024-2025)",
@@ -18,14 +43,6 @@
       "title": "AI Healthcare Optimization (2024-2025)",
       "description": ["Using AI & Machine Learning to optimize healthcare", "Partnered w/ ML @ Purdue"]
     },
-    {
-      "id": "biomechanics",
-      "alt": "",
-      "title": "Biomechanics (2024-2025)",
-      "description": ["Device to help with daily life for people with physical disabilities", "Partnered w/ 3D Prosthetics Club"]
-    }
-  ],
-  "pastProjects": [
     {
       "id": "ptsd-dog-collar",
       "alt": "Nightmare Detection Dog Collar",

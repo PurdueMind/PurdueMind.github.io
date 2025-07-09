@@ -132,14 +132,14 @@ export default function Navbar(props) {
                     >Projects</button>
                   </Link>
 
-                  <Link to='/Workshops'>
+                  <Link to='/Onboarding'>
                     <button
                       className='btn burgerBtn'
                       onClick={() => {
-                        setActive('Workshops')
+                        setActive('Onboarding')
                         setOpen(!isOpen)
                       }}
-                    >Workshops</button>
+                    >Onboarding</button>
                   </Link>
 
                   <Marginer />

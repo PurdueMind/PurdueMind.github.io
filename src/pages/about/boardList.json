@@ -7,31 +7,31 @@
   },
   "officers": [
     {
-      "name": "Dalton Aaker",
+      "name": "Grant Congdon",
       "id": "president",
       "position": "President",
-      "major": "Biomedical Engineering '25",
+      "major": "Electrical Engineering '27",
       "description": "",
-      "outlook": "daaker@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/daaker/"
+      "email": "gcongdon@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/grant-congdon/"
     },
     {
-      "name": "Simon Hasik",
+      "name": "Uday Mittal",
       "id": "vice",
       "position": "Vice President",
-      "major": "Biomedical Engineering '25",
+      "major": "Mechanical Engineering '27",
       "description": "",
-      "outlook": "shasik@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/simon-hasik/"
+      "email": "mitta106@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/mittal-uday/"
     },
     {
-      "name": "Matt Schaller",
+      "name": "Shreya Krishnan",
       "id": "secretary",
       "position": "Secretary",
-      "major": "Biomedical Engineering '26",
+      "major": "Biomedical Engineering '28",
       "description": "",
-      "outlook": "schallem@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/matthew-schaller-4413b124b/"
+      "email": "krish177@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/"
     },
     {
       "name": "Myra Khare",
@@ -39,26 +39,35 @@
       "position": "Treasurer",
       "major": "Biomedical Engineering '27",
       "description": "",
-      "outlook": "khare19@purdue.edu",
+      "email": "khare19@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/myrakhare/"
     },
     {
-      "name": "Grant Congdon",
+      "name": "Supreet Mishra",
       "id": "rNd",
       "position": "Director of Research & Development",
-      "major": "Electrical Engineering '27",
+      "major": "Mechanical Engineering '28",
       "description": "",
-      "outlook": "gcongdon@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/grant-congdon/"
+      "email": "mishr193@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/supreet-mishra-b87558243/"
     },
     {
-      "name": "Sam Ying",
+      "name": "Scout Hudson",
       "id": "nNe",
       "position": "Director of Networking & Events",
-      "major": "Biomedical Engineering '26",
+      "major": "Biomedical Engineering '28",
       "description": "",
-      "outlook": "ying39@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/aditi-barla-147232281/"
+      "email": "hudso195@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/"
+    },
+    {
+      "name": "Mrya Khare",
+      "id": "eNi",
+      "position": "Director of Entrepreneurship & Ideation",
+      "major": "Biomedical Engineering '27",
+      "description": "",
+      "email": "khare19@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/myrakhare/"
     }
   ],
   "advisors": [
@@ -66,26 +75,6 @@
       "name": "Dr. Aaron Lottes",
       "id": "lee",
       "position": "Purdue Faculty Advisor"
-    },
-    {
-      "name": "Hammad Khan",
-      "id": "hammad",
-      "position": "Graduate Advisor"
-    },
-    {
-      "name": "Rahaf Salim",
-      "id": "rahaf",
-      "position": "Graduate Advisor"
-    },
-    {
-      "name": "Zach Davis",
-      "id": "zach",
-      "position": "Graduate Advisor"
-    },
-    {
-      "name": "Juan C. Mesa",
-      "id": "juan",
-      "position": "Graduate Advisor"
     }
   ]
 }
