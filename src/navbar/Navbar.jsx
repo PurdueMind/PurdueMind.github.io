@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 
@@ -43,8 +43,27 @@ const Marginer = styled.div`
 
 export default function Navbar(props) {
   const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
-  const [active, setActive] = useState('Home');
+  const location = useLocation();
   const [isOpen, setOpen] = useState(false);
+
+  // Function to determine which nav item should be active based on current route
+  const getActiveItem = () => {
+    switch(location.pathname) {
+      case '/':
+      case '/PurdueMIND/':
+        return 'Home';
+      case '/AboutUs':
+        return 'About Us';
+      case '/Projects':
+        return 'Projects';
+      case '/Onboarding':
+        return 'Onboarding';
+      default:
+        return 'Home';
+    }
+  };
+
+  const active = getActiveItem();
 
   return (
     <div className='navbarContainer'>
@@ -53,7 +72,6 @@ export default function Navbar(props) {
           <button className='btn' id='mindLogoBtn'>
             <img
               id='mindLogo' src={mindLogo} alt='MIND Logo'
-              onClick={() => setActive('Home')}
             />
           </button>
         </Link>
@@ -66,28 +84,24 @@ export default function Navbar(props) {
               <Link to='/'>
                 <button
                   className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
-                  onClick={() => setActive('Home')}
                 >Home</button>
               </Link>
 
               <Link to='/AboutUs'>
                 <button
                   className={`btn navBtn ${active === 'About Us' ? 'activeBtn' : ''}`}
-                  onClick={() => setActive('About Us')}
                 >About Us</button>
               </Link>
 
               <Link to='/Projects'>
                 <button
                   className={`btn navBtn ${active === 'Projects' ? 'activeBtn' : ''}`}
-                  onClick={() => setActive('Projects')}
                 >Projects</button>
               </Link>
 
               <Link to='/Onboarding'>
                 <button
                   className={`btn navBtn ${active === 'Onboarding' ? 'activeBtn' : ''}`}
-                  onClick={() => setActive('Onboarding')}
                 >Onboarding</button>
               </Link>
             </div>
@@ -106,39 +120,28 @@ export default function Navbar(props) {
                   <Link to='/'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => {
-                        setActive('Home')
-                        setOpen(!isOpen)}}
+                      onClick={() => setOpen(!isOpen)}
                     >Home</button>
                   </Link>
 
                   <Link to='/AboutUs'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => {
-                        setActive('About Us')
-                        setOpen(!isOpen)
-                      }}
+                      onClick={() => setOpen(!isOpen)}
                     >About Us</button>
                   </Link>
 
                   <Link to='/Projects'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => {
-                        setActive('Projects')
-                        setOpen(!isOpen)
-                      }}
+                      onClick={() => setOpen(!isOpen)}
                     >Projects</button>
                   </Link>
 
                   <Link to='/Onboarding'>
                     <button
                       className='btn burgerBtn'
-                      onClick={() => {
-                        setActive('Onboarding')
-                        setOpen(!isOpen)
-                      }}
+                      onClick={() => setOpen(!isOpen)}
                     >Onboarding</button>
                   </Link>
 

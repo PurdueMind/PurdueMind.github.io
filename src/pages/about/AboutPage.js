@@ -46,7 +46,7 @@ export default function AboutPage() {
         <ol>
           <li>{execList.introTxt.goal1}</li>
           <li>{execList.introTxt.goal2}</li>
-          <li>{execList.introTxt.goal3}</li>
+          <li>To recognize the work done on the project through sub<a href="https://www.linkedin.com/in/megan-mcginnis-1b60142b2/" target='_blank' className='hidden-link'>m</a>ission to national design competitions.</li>
         </ol>
       </div>
 
@@ -79,8 +79,6 @@ function getProfile(memberList, type) {
         name={member.name}
         position={member.position}
         major={member.major}
-        minor={member.minor}
-        description={member.description}
         email={member.email}
         linkedIn={member.linkedIn} />)
     } else {

@@ -1,9 +1,8 @@
 {
   "introTxt": {
-    "about": "Purdue MIND’s purpose is to promote and grow the biomedical engineering community at Purdue by providing undergraduate students the opportunity to engage in hands-on activities, discuss current research, and network with a wide range of faculty both within and outside of Purdue including professors, physicians, and engineers. We are a unique, multidisciplinary student organization that seeks to innovate and develop medical technology. Our overall goals are listed below:",
+    "about": "Purdue MIND's purpose is to promote and grow the biomedical engineering community at Purdue by providing undergraduate students the opportunity to engage in hands-on activities, discuss current research, and network with a wide range of faculty both within and outside of Purdue including professors, physicians, and engineers. We are a unique, multidisciplinary student organization that seeks to innovate and develop medical technology. Our overall goals are listed below:",
     "goal1": "To give Purdue undergraduates extensive experience with medical technology market research, design, prototyping, validation, regulatory approval, intellectual property management, and transition to market.",
-    "goal2": "To allow highly motivated students to network with each other and with professors and medical professionals and to collaborate on a significant, long-term, medically-focused project.",
-    "goal3": "To recognize the work done on the project through submission to national design competitions."
+    "goal2": "To allow highly motivated students to network with each other and with professors and medical professionals and to collaborate on a significant, long-term, medically-focused project."
   },
   "officers": [
     {
@@ -11,7 +10,6 @@
       "id": "president",
       "position": "President",
       "major": "Electrical Engineering '27",
-      "description": "",
       "email": "gcongdon@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/grant-congdon/",
       "headshot": "grant.jpg"
@@ -21,7 +19,6 @@
       "id": "vice",
       "position": "Vice President",
       "major": "Mechanical Engineering '27",
-      "description": "",
       "email": "mitta106@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/mittal-uday/",
       "headshot": "uday.jpeg"
@@ -31,7 +28,6 @@
       "id": "treasurer",
       "position": "Treasurer",
       "major": "Biomedical Health Science '27",
-      "description": "",
       "email": "john3760@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/luke-johnson-339101327/",
       "headshot": "luke.jpeg"
@@ -41,7 +37,6 @@
       "id": "secretary",
       "position": "Secretary",
       "major": "Biomedical Engineering '28",
-      "description": "",
       "email": "krish177@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/",
       "headshot": "shreyak.jpeg"
@@ -51,7 +46,6 @@
       "id": "rNd",
       "position": "Director of Research & Development",
       "major": "Mechanical Engineering '28",
-      "description": "",
       "email": "mishr193@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/supreet-mishra-b87558243/",
       "headshot": "supreet.jpeg"
@@ -61,7 +55,6 @@
       "id": "nNe",
       "position": "Director of Networking & Events",
       "major": "Biomedical Engineering '28",
-      "description": "",
       "email": "hudso195@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/",
       "headshot": "scout.jpeg"
@@ -71,7 +64,6 @@
       "id": "eNi",
       "position": "Director of Entrepreneurship & Ideation",
       "major": "Biomedical Engineering '27",
-      "description": "",
       "email": "khare19@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/myrakhare/",
       "headshot": "myra.jpeg"
