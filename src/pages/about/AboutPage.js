@@ -9,7 +9,7 @@ const execList = require('./boardList.json');
 // Function to dynamically import all images from the headshots folder
 function importAll(r) {
   let images = {};
-  r.keys().map((item, _) => {
+  r.keys().forEach((item, _) => {
     images[item.replace('./', '')] = r(item).default;
   });
   return images;
@@ -46,7 +46,7 @@ export default function AboutPage() {
         <ol>
           <li>{execList.introTxt.goal1}</li>
           <li>{execList.introTxt.goal2}</li>
-          <li>To recognize the work done on the project through sub<a href="https://www.linkedin.com/in/megan-mcginnis-1b60142b2/" target='_blank' className='hidden-link'>m</a>ission to national design competitions.</li>
+          <li>To recognize the work done on the project through sub<a href="https://www.linkedin.com/in/megan-mcginnis-1b60142b2/" target='_blank' rel="noreferrer" className='hidden-link'>m</a>ission to national design competitions.</li>
         </ol>
       </div>
 

@@ -8,7 +8,7 @@ const projectList = require('./projectList.json');
 // Function to dynamically import all images from the projects folder
 function importAll(r) {
   let images = {};
-  r.keys().map((item, _) => {
+  r.keys().forEach((item, _) => {
     images[item.replace('./', '')] = r(item).default;
   });
   return images;
