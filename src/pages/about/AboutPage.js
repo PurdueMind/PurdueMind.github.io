@@ -1,37 +1,34 @@
 import './AboutPage.css';
 import '../../App.css';
 
-import pres from '../../assets/headshots/dalton.png'
-import vice from '../../assets/headshots/simon.jpeg'
-import treasurer from '../../assets/headshots/myra.jpeg'
-import secretary from '../../assets/headshots/matt.png'
-import rNd from '../../assets/headshots/grant.jpg'
-import nNe from '../../assets/headshots/sam.jpg'
-
-import lee from '../../assets/headshots/aaron.jpeg'
-
-import hammad from '../../assets/headshots/hammad.jpeg'
-import rahaf from '../../assets/headshots/rahaf.jpeg'
-import zach from '../../assets/headshots/zach.jpeg'
-import juan from '../../assets/headshots/juan.jpeg'
-
 import OfficerProfile from './components/Officer';
 import AdvisorProfile from './components/Advisor';
 
 const execList = require('./boardList.json');
-const imgList = {
-  "president": pres, 
-  "vice": vice,
-  "treasurer": treasurer,
-  "secretary": secretary,
-  "rNd": rNd,
-  "nNe": nNe,
-  "lee": lee,
-  "hammad": hammad,
-  "rahaf": rahaf,
-  "zach": zach,
-  "juan": juan
-};
+
+// Function to dynamically import all images from the headshots folder
+function importAll(r) {
+  let images = {};
+  r.keys().map((item, _) => {
+    images[item.replace('./', '')] = r(item).default;
+  });
+  return images;
+}
+
+// Import all images from the headshots directory
+const images = importAll(
+  require.context('../../assets/headshots', false, /\.(png|jpe?g)$/i)
+);
+
+// Function to get image source with fallback
+function getImageSrc(imageName) {
+  return images[imageName] || images['default.png'];
+}
+
+function getImageForMember(memberId) {
+  const member = execList.officers.find(m => m.id === memberId) || execList.advisors.find(m => m.id === memberId);
+  return member ? getImageSrc(member.headshot) : getImageSrc('default.png');
+}
 
 export default function AboutPage() {
   return (
@@ -57,28 +54,28 @@ export default function AboutPage() {
 
       <h2 className='subHeader'>MIND Officers</h2>
       <div className='memberProfiles' id='officers'>
-        {getMembers(execList.officers, 'Officers')}
+        {getProfile(execList.officers, 'Officers')}
       </div>
 
       <div className='break'/>
 
       <h2 className='subHeader'>MIND Advisors</h2>
       <div className='memberProfiles' id='advisors'>
-        {getMembers(execList.advisors, 'Advisors')}
+        {getProfile(execList.advisors, 'Advisors')}
       </div>
 
     </div>
   );
 };
 
-function getMembers(memberList, type) {
+function getProfile(memberList, type) {
   const formattedProfiles = [];
   for (const index in memberList) {
     const member = memberList[index];
     if (type === 'Officers') {
       formattedProfiles.push(<OfficerProfile
         id={member.id}
-        imgSrc={imgList[member.id]}
+        imgSrc={getImageForMember(member.id)}
         name={member.name}
         position={member.position}
         major={member.major}
@@ -89,7 +86,7 @@ function getMembers(memberList, type) {
     } else {
       formattedProfiles.push(<AdvisorProfile
         id={member.id}
-        imgSrc={imgList[member.id]}
+        imgSrc={getImageForMember(member.id)}
         name={member.name}
         position={member.position} />)
     }

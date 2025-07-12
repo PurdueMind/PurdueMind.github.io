@@ -13,7 +13,8 @@
       "major": "Electrical Engineering '27",
       "description": "",
       "email": "gcongdon@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/grant-congdon/"
+      "linkedIn": "https://www.linkedin.com/in/grant-congdon/",
+      "headshot": "grant.jpg"
     },
     {
       "name": "Uday Mittal",
@@ -22,7 +23,18 @@
       "major": "Mechanical Engineering '27",
       "description": "",
       "email": "mitta106@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/mittal-uday/"
+      "linkedIn": "https://www.linkedin.com/in/mittal-uday/",
+      "headshot": "uday.jpeg"
+    },
+    {
+      "name": "Luke Johnson",
+      "id": "treasurer",
+      "position": "Treasurer",
+      "major": "Biomedical Health Science '27",
+      "description": "",
+      "email": "john3760@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/luke-johnson-339101327/",
+      "headshot": "luke.jpeg"
     },
     {
       "name": "Shreya Krishnan",
@@ -31,16 +43,8 @@
       "major": "Biomedical Engineering '28",
       "description": "",
       "email": "krish177@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/"
-    },
-    {
-      "name": "Myra Khare",
-      "id": "treasurer",
-      "position": "Treasurer",
-      "major": "Biomedical Engineering '27",
-      "description": "",
-      "email": "khare19@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/myrakhare/"
+      "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/",
+      "headshot": "shreyak.jpeg"
     },
     {
       "name": "Supreet Mishra",
@@ -49,7 +53,8 @@
       "major": "Mechanical Engineering '28",
       "description": "",
       "email": "mishr193@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/supreet-mishra-b87558243/"
+      "linkedIn": "https://www.linkedin.com/in/supreet-mishra-b87558243/",
+      "headshot": "supreet.jpeg"
     },
     {
       "name": "Scout Hudson",
@@ -58,23 +63,26 @@
       "major": "Biomedical Engineering '28",
       "description": "",
       "email": "hudso195@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/"
+      "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/",
+      "headshot": "scout.jpeg"
     },
     {
-      "name": "Mrya Khare",
+      "name": "Myra Khare",
       "id": "eNi",
       "position": "Director of Entrepreneurship & Ideation",
       "major": "Biomedical Engineering '27",
       "description": "",
       "email": "khare19@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/myrakhare/"
+      "linkedIn": "https://www.linkedin.com/in/myrakhare/",
+      "headshot": "myra.jpeg"
     }
   ],
   "advisors": [
     {
       "name": "Dr. Aaron Lottes",
       "id": "lee",
-      "position": "Purdue Faculty Advisor"
+      "position": "Purdue Faculty Advisor",
+      "headshot": "aaron.jpeg"
     }
   ]
 }
