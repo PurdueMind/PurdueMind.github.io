@@ -9,9 +9,7 @@ export default function OfficerProfile(
     name,
     position,
     major,
-    minor = '',
-    description,
-    outlook,
+    email,
     linkedIn
   }) {
   return (
@@ -23,10 +21,7 @@ export default function OfficerProfile(
         <h3 className='name'>{name}</h3>
         <h4 className='position'>{position}</h4>
         <h5 className='major'>{major}</h5>
-        <h5 className='major'>{minor}</h5>
-        <h5 className='description'>{description}</h5>
-        <br/>
-        <a className='outlook' href={`mailto:${outlook}`}>{outlook}</a>
+        <a className='email' href={`mailto:${email}`}>{email}</a>
         <div id='spacer'/>
       </div>
     </div>

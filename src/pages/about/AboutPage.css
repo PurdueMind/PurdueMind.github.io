@@ -37,3 +37,15 @@
   margin-top: 50px;
   text-align: center;
 }
+
+.hidden-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: text;
+}
+
+.hidden-link:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: text;
+}
