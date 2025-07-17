@@ -6,18 +6,30 @@ import AboutPage from './pages/about/AboutPage'
 import ProjectsPage from './pages/projects/ProjectsPage'
 import OnboardingPage from './pages/onboarding/OnboardingPage'
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+
+function RedirectHandler() {
+  useEffect(() => {
+    const search = window.location.search;
+    if (search.startsWith('?/')) {
+      // Extract the path from ?/path
+      const cleanPath = search.slice(2);
+      // Replace the current URL with the clean path
+      window.history.replaceState(null, null, cleanPath || '/');
+    }
+  }, []);
+  
+  return null;
+}
 
 export default function App() {
   return (
     <Router>
+    <RedirectHandler />
     <div className='App'>
       <link rel='preconnect' href='https://fonts.googleapis.com'/>
-      <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin/>
+      <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="true"/>
       <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel="stylesheet" />
         
       <Navbar />
