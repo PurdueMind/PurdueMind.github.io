@@ -6,19 +6,21 @@ import AboutPage from './pages/about/AboutPage'
 import ProjectsPage from './pages/projects/ProjectsPage'
 import OnboardingPage from './pages/onboarding/OnboardingPage'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function RedirectHandler() {
+  const history = useHistory();
+  
   useEffect(() => {
     const search = window.location.search;
     if (search.startsWith('?/')) {
       // Extract the path from ?/path
       const cleanPath = search.slice(2);
-      // Replace the current URL with the clean path
-      window.history.replaceState(null, null, cleanPath || '/');
+      // Navigate to the clean path
+      history.replace(cleanPath || '/');
     }
-  }, []);
+  }, [history]);
   
   return null;
 }
