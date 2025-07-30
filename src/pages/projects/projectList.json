@@ -31,86 +31,103 @@
     {
       "id": "muscle-computer",
       "alt": "",
-      "title": "EMG-Integrated Controller for Musclar Dystrophy Rehabilitation (2024-2025)",
+      "title": "EMG-Integrated Controller for Muscular Dystrophy Rehabilitation (2024-2025)",
       "imgSrc": "defaultImg.jpg",
-      "description": ["EMG-based device to gamify rehab for children w/ muscular dystrophy"]
+      "description": ["Supports the treatment of children affected with muscular dystrophic diseases like cerebral palsy and Duchenne's by increasing their adherence to their rehabilitation protocol via gamifying the treatment",
+                      "A Raspberry Pi Pico W was used to leverage its WiFi capabilities and small size to send EMG data to an offsite at Amazon Web Services (AWS) database",
+                      "A WebSocket API integration request was set up on a React server to allow users to use movement as input for an Angry Birds-like game"]
     },
     {
       "id": "neurotech",
       "alt": "",
       "title": "fNIR TBI Detection (2024-2025)",
       "imgSrc": "defaultImg.jpg",
-      "description": ["Portable brain imaging unit to diagnose TBI", "Partnered w/ IEEE Neurotech"]
-    },
-    {
-      "id": "computational",
-      "alt": "",
-      "title": "AI Healthcare Optimization (2024-2025)",
-      "imgSrc": "defaultImg.jpg",
-      "description": ["Using AI & Machine Learning to optimize healthcare", "Partnered w/ ML @ Purdue"]
+      "description": ["Developed software capable of detecting various types of TBIs across different fNIR platforms",
+                      "Using a Random Forest ML algorithm, analyzed key physiological constraints such as mean oxygenated blood levels by performing an analysis on specific data features and contrasting hemoglobin levels in healthy and unhealthy individuals",
+                      "By integrating machine learning (ML), the software automates injury assessment, enabling early detection by providing accurate and real-time prognosis on the sidelines"]
     },
     {
       "id": "ptsd-dog-collar",
       "alt": "Nightmare Detection Dog Collar",
       "title": "PTSD-Activated Nightmare Detecting Apparatus for Service Dogs [PANDAS] (2020-2021)",
       "imgSrc": "ptsdCollar.jpg",
-      "description": ["PANDAS strives to aid veterans who suffer from PTSD nightmares by helping train service dogs to recognize night terrors. A biometric monitor detects disrupted sleep in Veterans and send signals to provide haptic feedback to a service dog's collar or vest. Once the service dog receives the haptic feedback, they can wake up and comfort the veteran."]
+      "description": ["PANDAS strives to aid veterans who suffer from PTSD nightmares by helping train service dogs to recognize night terrors",
+                      "A biometric monitor detects disrupted sleep in veterans and send signals to provide haptic feedback to a service dog's collar or vest",
+                      "Once the service dog receives the haptic feedback, they can wake up and comfort the veteran"]
     },
     {
       "id": "hydra-check",
       "alt": "Hydra-Check CAD rendering",
       "title": "Hydra-Check (2020-2021)",
       "imgSrc": "hydraCheck.png",
-      "description": ["Hydra-Check is designed to provide a means for the testing and the diagnosis of dehydration. A stamp-like device applies downwards pressure to a patient's fingernail and lift up whilst a constant light source in combination with a light sensor measures the amount of time it takes for the light intensity to return to normal. As the stamp pulses up and down, the data is plotted on a monitor for the physician to analyze."]
+      "description": ["Hydra-Check is designed to provide a means for the testing and the diagnosis of dehydration",
+                      "A stamp-like device applies downwards pressure to a patient's fingernail and lift up whilst a constant light source in combination with a light sensor measures the amount of time it takes for the light intensity to return to normal",
+                      "As the stamp pulses up and down, the data is plotted on a monitor for the physician to analyze."]
     },
     {
       "id": "tri-wheels",
       "alt": "Photo of the Walker Project Tri-Wheels",
       "title": "Walker Project Tri-Wheels (2020-2021)",
       "imgSrc": "walkerProject.png",
-      "description": ["The walker project tri-wheels work to provide a greater range of mobility for individuals who use the BuddyRoamer walker. The multipurpose tri-wheel design allows users to go through sharp elevation changes, such as 6\" curbs, which helps eliminate the need for finding ramps or elevators. The tri-wheel also features a set of omni-wheels, which allow for omni-directional movement without the need to turn and reposition alignment prior to lateral progression."]
+      "description": ["The walker project tri-wheels work to provide a greater range of mobility for individuals who use the BuddyRoamer walker",
+                      "The multipurpose tri-wheel design allows users to go through sharp elevation changes, such as 6\" curbs, which helps eliminate the need for finding ramps or elevators",
+                      "The tri-wheel also features a set of omni-wheels, which allow for omni-directional movement without the need to turn and reposition alignment prior to lateral progression"]
     },
     {
       "id": "smart-sleeve",
       "alt": "Generic Stock Photo",
       "title": "Smart Sleeve (2019-2020)",
       "imgSrc": "defaultImg.jpg",
-      "description": ["The smart sleeve is designed to aid in the physical therapy and rehabilitation of patients. It has a range of uses. The electrical stimulation feature is designed to aid in muscle regrowth, promote muscle regeneration, and to stimulate pain relief for the user. Next, Peltier units are for hot and cold therapy to relax the arm, and finally, the sleeve includes vibration from motors for bone density therapy."]
+      "description": ["The smart sleeve is designed to aid in the physical therapy and rehabilitation of patients",
+                      "The electrical stimulation feature is designed to aid in muscle regrowth, promote muscle regeneration, and to stimulate pain relief for the user",
+                      "Next, Peltier units are for hot and cold therapy to relax the arm, and finally, the sleeve includes vibration from motors for bone density therapy"]
     },
     {
       "id": "tmap",
       "alt": "TMAP CAD rendering",
       "title": "TMAP (2019-2020)",
       "imgSrc": "tmap.png",
-      "description": ["The transmetatarsal foot amputation is common in patients with diabetic neuropathy, ulcers, and peripheral artery disease. Our prosthetic is designed to take into account gait and balance, and provide a safer, more comfortable way of walking. It also allows the patient to regain their normal gait and balance, as well as increase limb health post-amputation. Springs act like tendons to distribute weight and sensors record biometric data that is then stored in a mobile app for physician and physical therapist use."]
+      "description": ["The transmetatarsal foot amputation is common in patients with diabetic neuropathy, ulcers, and peripheral artery disease",
+                      "This prosthetic is designed to take into account gait and balance, and provide a safer, more comfortable way of walking",
+                      "It also allows the patient to regain their normal gait and balance, as well as increase limb health post-amputation",
+                      "Springs act like tendons to distribute weight and sensors record biometric data that is then stored in a mobile app for physician and physical therapist use"]
     },
     {
       "id": "verti-fix",
       "alt": "Photo of the Verti-Fix Headset",
       "title": "Verti-Fix (2018-2019)",
       "imgSrc": "vertiFix.jpeg",
-      "description": ["Verti-Fix is a device designed to aid GPs and ER doctors diagnose and correct Benign Paroxysmal Positional Vertigo (BPPV). Even though BPPV is a common condition (more than 200,000 cases per year), GPs and ER doctors will not diagnose it because they need to perform the Dix-Hallpike maneuver on the patient, and if performed incorrectly, could make things worse for the patient. Our device will help these doctors perform the Dix-Hallpike by guiding them through the proper steps and angles required with the use of a headband, neck brace for the patient, and a small screen for the doctor. Our device will also check the eyes for nystagmus to diagnose BPPV. Once diagnosed, the doctor will use our device to perform the Epley maneuver to correct the vertigo."]
+      "description": ["Verti-Fix is a device designed to aid GPs and ER doctors diagnose and correct Benign Paroxysmal Positional Vertigo (BPPV)",
+                      "Even though BPPV is a common condition (more than 200,000 cases per year), GPs and ER doctors will not diagnose it because they need to perform the Dix-Hallpike maneuver on the patient, and if performed incorrectly, could make things worse for the patient",
+                      "This device helps doctors perform the Dix-Hallpike by guiding them through the proper steps and angles required with the use of a headband, neck brace for the patient, and a small screen for the doctor",
+                      "It also checks the eyes for nystagmus to diagnose BPPV. Once diagnosed, the doctor will use our device to perform the Epley maneuver to correct the vertigo"]
     },
     {
       "id": "ambient-sound-bracelet",
       "alt": "Generic Stock Photo",
       "title": "Ambient Sound Bracelet (2017-2018)",
       "imgSrc": "defaultImg.jpg",
-      "description": ["The ambient sound bracelet is usable by the hard-of-hearing population. The device may be used to obtain a visual and/or vibratory representation of the local sound environment on the user’s wrist. The device will notify the wearer to significant changes in the local auditory environment."]
+      "description": ["The ambient sound bracelet is usable by the hard-of-hearing population",
+                      "The device may be used to obtain a visual and/or vibratory representation of the local sound environment on the user's wrist",
+                      "The device will notify the wearer to significant changes in the local auditory environment"]
     },
     {
       "id": "exomind-glove",
       "alt": "Photo of the ExoMIND Glove",
       "title": "ExoMIND Glove (2016-2017)",
       "imgSrc": "exomindGlove.jpeg",
-      "description": ["The ExoMIND Glove is a stroke rehabilitation device used to generate biofeedback for physical therapists and patients. The ExoMind Glove is a wearable device equipped with 7 accelerometers that are used to quantify forearm, wrist, and finger angles. Additionally, an EMG with conductive fabric electrodes is secured into the sleeve of the device to monitor muscle activity. The glove houses an Arduino 101 which runs an interactive program to prompt the user through motions in order to gauge the range of motion and detect muscle activity which can be used by the physical therapist."]
+      "description": ["The ExoMIND Glove is a stroke rehabilitation device used to generate biofeedback for physical therapists and patients",
+                      "The ExoMind Glove is a wearable device equipped with 7 accelerometers that are used to quantify forearm, wrist, and finger angles",
+                      "Additionally, an EMG with conductive fabric electrodes is secured into the sleeve of the device to monitor muscle activity",
+                      "The glove houses an Arduino 101 which runs an interactive program to prompt the user through motions in order to gauge the range of motion and detect muscle activity which can be used by the physical therapist"]
     },
     {
       "id": "smart-stock",
       "alt": "Photo of Compression Leggings",
       "title": "The Smart Sock (2015-2016)",
       "imgSrc": "smartSock.jpeg",
-      "description": ["The smart sock is a smart compression stocking for monitoring chronic venous insufficiency. The Smart Sock consists of a novel and non-invasive method of monitoring and treating CVI in the legs that provides convenient, objective and continuous measurements of relative fluid distribution levels and blood flow using bioimpedance spectroscopy (BIS) and reflective red and infrared pulse oximetry."]
+      "description": ["The smart sock is a smart compression stocking for monitoring chronic venous insufficiency",
+                      "The Smart Sock consists of a novel and non-invasive method of monitoring and treating CVI in the legs that provides convenient, objective and continuous measurements of relative fluid distribution levels and blood flow using bioimpedance spectroscopy (BIS) and reflective red and infrared pulse oximetry."]
     }
   ]
 }
