@@ -4,7 +4,7 @@ import Project from './Project';
 
 import mlFiles from '../../assets/onboarding/ml-project.zip';
 import cadFiles from '../../assets/onboarding/cad-project.zip';
-import electronicsFiles from '../../assets/onboarding/electronics-project.zip';
+import electronicsFiles from '../../assets/onboarding/Electronics-Onboarding.pdf';
 
 const projectList = require('./projectList.json');
 
