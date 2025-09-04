@@ -16,6 +16,8 @@ export default function HomePage() {
         />
       </div>
 
+      <h2><a href="https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-3cy3ljpxd-RqL5fJwChYdRKniiasXepw" target="_blank" rel="noopener noreferrer">Join our Slack!</a></h2>
+
       <h2 id='eventsTxt'>Calendar</h2>
 
       <iframe 
