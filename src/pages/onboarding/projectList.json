@@ -1,20 +1,21 @@
 {
     "projects": [
         {
-            "id": "ml-project",
-            "title": "Machine Learning Onboarding Project",
-            "filename": "ml-project.zip",
+            "id": "electronics-project",
+            "title": "Electronics Onboarding Project",
+            "filename": "Electronics-Onboarding.pdf",
+            "buttonName": "Download Electronics Onboarding Files",
             "description": [
-                "Introduces PyTorch, a Python-based machine-learning framework",
-                "Teaches foundations of how machine learning functions",
-                "Helps members create a classification machine learning model",
-                "Leaves members with trained neural networks and resources for training more complex models"
+                "Guides members through bandpass filter circuit simulation using LTSpice",
+                "Demonstrates how to design and construct a PCB using KiCad",
+                "Leaves members with a basic understanding of electronics design and simulation"
             ]
         },
         {
             "id": "cad-project",
-            "title": "CAD Onboarding Project",
+            "title": "SolidWorks Onboarding Project",
             "filename": "cad-project.zip",
+            "buttonName": "Download CAD Onboarding Files",
             "description": [
                 "Introduces SolidWorks for Computer-aided Design (CAD)",
                 "Guides members through the 3D design process",
@@ -23,13 +24,15 @@
             ]
         },
         {
-            "id": "electronics-project",
-            "title": "Electronics Onboarding Project",
-            "filename": "Electronics-Onboarding.pdf",
+            "id": "ml-project",
+            "title": "Arduino Onboarding Project",
+            "filename": "ml-project.zip",
+            "buttonName": "Download Arduino Onboarding Files",
             "description": [
-                "Guides members through bandpass filter circuit simulation using LTSpice",
-                "Demonstrates how to design and construct a PCB using KiCad",
-                "Leaves members with a basic understanding of electronics design and simulation"
+                "Learn about Arduino circuit design and programming",
+                "Utilize different types of sensor input",
+                "Measure and visualize temperature and heart rate data",
+                "Leaves members with embedded systems knowledge and resources for further learning"
             ]
         }
     ]

@@ -17,7 +17,7 @@
   display: flex;
   position: relative;
 
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
 
   top: 0px;
@@ -82,7 +82,8 @@
 #middle {
   flex: 2;
   height: 100%;
-  justify-content: center;
+  display: flex;
+  justify-content: flex-end;
 }
 
 #hamburger {

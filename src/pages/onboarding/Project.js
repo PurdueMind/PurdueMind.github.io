@@ -1,7 +1,7 @@
 import '../../App.css';
 import './Onboarding.css';
 
-export const DownloadButton = ({downloadFile, filename}) => {
+export const DownloadButton = ({downloadFile, filename, buttonName}) => {
     const handleDownload = () => {
         const link = document.createElement("a");
         link.href = downloadFile;
@@ -13,11 +13,11 @@ export const DownloadButton = ({downloadFile, filename}) => {
         document.body.removeChild(link);
     }
     return (
-        <button className="downloadButton" onClick={handleDownload}>Download Onboarding Files</button>
+        <button className="downloadButton" onClick={handleDownload}>{buttonName}</button>
     )
 }
 
-export default function Project({id, title, description, downloadFile, downloadFilename}) {
+export default function Project({id, title, buttonName, description, downloadFile, downloadFilename}) {
     return (
         <div className='project' id={id}>
             <div id='projectInfo'>
@@ -25,7 +25,7 @@ export default function Project({id, title, description, downloadFile, downloadF
                 <h5 className='description'>
                     {expandDescription(description)}
                 </h5>
-                <DownloadButton downloadFile={downloadFile} filename={downloadFilename}/>
+                <DownloadButton downloadFile={downloadFile} filename={downloadFilename} buttonName={buttonName} />
             </div>
         </div>
     )

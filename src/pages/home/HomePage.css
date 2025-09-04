@@ -1,3 +1,8 @@
+h1 {
+  color: #8e6f3e;
+  margin-bottom: 5px;
+}
+
 .homePage {
   display: flex;
   flex-direction: column;
@@ -18,7 +23,15 @@
 
 #homeHeader {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  padding: 5px;
+
+  text-align: center;
+}
+
+#imageContainer {
+  margin-top: 5px;
+  margin-bottom: 10px;
   padding: 5px;
 
   text-align: center;
