@@ -14,7 +14,7 @@
         {
             "id": "cad-project",
             "title": "SolidWorks Onboarding Project",
-            "filename": "cad-project.zip",
+            "filename": "",
             "buttonName": "Download CAD Onboarding Files",
             "description": [
                 "Introduces SolidWorks for Computer-aided Design (CAD)",
@@ -26,7 +26,7 @@
         {
             "id": "ml-project",
             "title": "Arduino Onboarding Project",
-            "filename": "ml-project.zip",
+            "filename": "",
             "buttonName": "Download Arduino Onboarding Files",
             "description": [
                 "Learn about Arduino circuit design and programming",
