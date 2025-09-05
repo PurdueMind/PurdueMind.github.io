@@ -53,6 +53,7 @@ function getProjects(projects) {
       imgSrc={getImageSrc(project.imgSrc)}
       alt={project.alt}
       title={project.title}
+      lead={project.lead}
       description={project.description} />)
   }
   return formattedProjects;

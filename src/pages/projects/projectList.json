@@ -5,6 +5,7 @@
       "alt": "",
       "title": "Biomechanics (2024-2026)",
       "imgSrc": "gripAssist.jpg",
+      "lead": "Shreya Prakash & Isha Varshney",
       "description": ["Last year a sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
                       "By integrating EMG and flex sensors with a mechanical pulley-motor system, the glove detects user intent and provides personalized grip assistance",
                       "The final product will aim to prioritize affordability, user-friendliness, and portability to increase accessibility beyond research settings"]
@@ -12,16 +13,18 @@
     {
       "id": "dvt",
       "alt": "DVT CAD rendering",
-      "title": "Deep Vein Thrombosis (DVT) Detection Device (2025-2026)",
+      "title": "DVT Detection Sleeve (2025-2026)",
       "imgSrc": "defaultImg.jpg",
+      "lead": "Ian Lam",
       "description": ["Post surgery patients are at elevated risk for deep vein thrombosis (DVT) which occurs when a thrombus (blood clot) develops in the veins",
                       "This project aims to develop a wearable sleeve that detects blood clots by tracking symptoms and alerts healthcare practitioners upon detection."]
     },
     {
       "id": "CTS",
       "alt": "CTS CAD rendering",
-      "title": "Carpal Tunnel Syndrome (CTS) Detection Device (2024-2025)",
+      "title": "CTS Smart Brace (2024-2025)",
       "imgSrc": "defaultImg.jpg",
+      "lead": "Khushi Choksi",
       "description": ["Wearable designed to assist individuals with carpal tunnel syndrome by tracking wrist and finger movement and delivering heat/cold therapy for symptom relief.",
       "Using 3D printing and CAD design to prototype a custom ergonomic and comfortable wearable band, ensuring both functionality, optimal sensor placement and user comfort.",
       "Real-time feedback, therapy guidance, and clinician-integrated progress tracking"]

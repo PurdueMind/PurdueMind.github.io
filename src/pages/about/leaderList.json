@@ -1,0 +1,118 @@
+{
+  "introTxt": {
+    "about": "Purdue MIND's purpose is to promote and grow the biomedical engineering community at Purdue by providing undergraduate students the opportunity to engage in hands-on activities, discuss current research, and network with a wide range of faculty both within and outside of Purdue including professors, physicians, and engineers. We are a unique, multidisciplinary student organization that seeks to innovate and develop medical technology. Our overall goals are listed below:",
+    "goal1": "To give Purdue undergraduates extensive experience with medical technology market research, design, prototyping, validation, regulatory approval, intellectual property management, and transition to market.",
+    "goal2": "To allow highly motivated students to network with each other and with professors and medical professionals and to collaborate on a significant, long-term, medically-focused project."
+  },
+  "officers": [
+    {
+      "name": "Grant Congdon",
+      "id": "president",
+      "position": "President",
+      "major": "Electrical Engineering '27",
+      "email": "gcongdon@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/grant-congdon/",
+      "headshot": "grant.jpeg"
+    },
+    {
+      "name": "Uday Mittal",
+      "id": "vice",
+      "position": "Vice President",
+      "major": "Mechanical Engineering '27",
+      "email": "mitta106@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/mittal-uday/",
+      "headshot": "uday.jpeg"
+    },
+    {
+      "name": "Luke Johnson",
+      "id": "treasurer",
+      "position": "Treasurer",
+      "major": "Biomedical Health Science '28",
+      "email": "john3760@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/luke-johnson-339101327/",
+      "headshot": "luke.jpeg"
+    },
+    {
+      "name": "Shreya Krishnan",
+      "id": "secretary",
+      "position": "Secretary",
+      "major": "Biomedical Engineering '27",
+      "email": "krish177@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/",
+      "headshot": "shreyak.jpeg"
+    },
+    {
+      "name": "Supreet Mishra",
+      "id": "rNd",
+      "position": "Director of Research & Development",
+      "major": "Mechanical Engineering '27",
+      "email": "mishr193@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/supreet-mishra-b87558243/",
+      "headshot": "supreet.jpeg"
+    },
+    {
+      "name": "Scout Hudson",
+      "id": "nNe",
+      "position": "Director of Networking & Events",
+      "major": "Biomedical Engineering '28",
+      "email": "hudso195@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/",
+      "headshot": "scout.jpeg"
+    },
+    {
+      "name": "Myra Khare",
+      "id": "eNi",
+      "position": "Director of Entrepreneurship & Ideation",
+      "major": "Biomedical Engineering '27",
+      "email": "khare19@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/myrakhare/",
+      "headshot": "myra.jpeg"
+    }
+  ],
+  "leads": [
+    {
+      "name": "Khushi Choksi",
+      "id": "CTS",
+      "team": "CTS Smart Brace",
+      "major": "Biomedical Engineering '27",
+      "email": "choksik@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/khushichoksipurdue/",
+      "headshot": "khushi.jpeg"
+    },
+    {
+      "name": "Shreya Prakash",
+      "id": "glove2",
+      "team": "Biomechanics",
+      "major": "Mechanical Engineering '27",
+      "email": "prakas39@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/shreyaprakash0/",
+      "headshot": "shreyap.jpeg"
+    },
+    {
+      "name": "Isha Varshney",
+      "id": "glove1",
+      "team": "Biomechanics",
+      "major": "Biomedical Engineering '27",
+      "email": "ivarshn@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/isha-varshney/",
+      "headshot": "isha.jpeg"
+    },
+    {
+      "name": "Ian Lam",
+      "id": "DVT",
+      "team": "DVT Detection Sleeve",
+      "major": "Computer Science '27",
+      "email": "lam180@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/ilam180/",
+      "headshot": "ian.jpeg"
+    }
+  ],
+  "advisors": [
+    {
+      "name": "Dr. Aaron Lottes",
+      "id": "lee",
+      "position": "Purdue Faculty Advisor",
+      "headshot": "aaron.jpeg"
+    }
+  ]
+}

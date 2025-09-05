@@ -7,13 +7,18 @@ export default function Projects(
     imgSrc,
     alt = '404: No Image',
     title,
-    description
+    description,
+    lead = '' // name of the team lead (optional)
   }) {
   description = expandDescription(description);
   return (
     <div className='project' id={id}>
       <div id='projectInfo'>
-        <h4 className='title'>{title}</h4>
+        {/* Title and lead on one line, lead right-aligned */}
+        <div className='projectHeader'>
+          <h4 className='title'>{title}</h4>
+          <span className='lead'>{lead}</span>
+        </div>
         <img className='projectImg' src={imgSrc} alt={alt} />
         <h5 className='description'>
           {description}

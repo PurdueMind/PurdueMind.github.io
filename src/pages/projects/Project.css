@@ -67,3 +67,25 @@ h5.description {
   margin-left: 20px;
   text-align: center;
 }
+
+.projectHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* title left, lead right */
+  gap: 1rem;
+  width: 100%;
+}
+
+.projectHeader .title {
+  margin: 0;
+  /* keep existing title styles if any */
+}
+
+.lead {
+  font-size: 0.9rem;
+  color: #000000;
+  white-space: nowrap;
+  margin-left: 1rem;
+  margin-right: 10px;
+  /* optional: reduce prominence compared to title */
+}

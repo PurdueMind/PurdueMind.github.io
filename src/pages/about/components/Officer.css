@@ -13,6 +13,10 @@
 
   border: 2px solid #c9b38c;
   border-radius: 2px;
+
+  align-content: center;
+
+  text-align: center;
 }
 
 .profilePic {
@@ -43,4 +47,6 @@
   margin-bottom: 0px;
 
   cursor: pointer;
+
+  text-align: center;
 }

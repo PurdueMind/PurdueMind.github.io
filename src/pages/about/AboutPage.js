@@ -3,8 +3,9 @@ import '../../App.css';
 
 import OfficerProfile from './components/Officer';
 import AdvisorProfile from './components/Advisor';
+import LeadProfile from './components/Lead';
 
-const execList = require('./boardList.json');
+const leaderList = require('./leaderList.json');
 
 // Function to dynamically import all images from the headshots folder
 function importAll(r) {
@@ -26,7 +27,7 @@ function getImageSrc(imageName) {
 }
 
 function getImageForMember(memberId) {
-  const member = execList.officers.find(m => m.id === memberId) || execList.advisors.find(m => m.id === memberId);
+  const member = leaderList.officers.find(m => m.id === memberId) || leaderList.advisors.find(m => m.id === memberId) || leaderList.leads.find(m => m.id === memberId);
   return member ? getImageSrc(member.headshot) : getImageSrc('default.png');
 }
 
@@ -40,12 +41,12 @@ export default function AboutPage() {
         </div>
 
         <div>
-          <p>{execList.introTxt.about}</p>
+          <p>{leaderList.introTxt.about}</p>
         </div>
 
         <ol>
-          <li>{execList.introTxt.goal1}</li>
-          <li>{execList.introTxt.goal2}</li>
+          <li>{leaderList.introTxt.goal1}</li>
+          <li>{leaderList.introTxt.goal2}</li>
           <li>To recognize the work done on the project through sub<a href="https://www.linkedin.com/in/megan-mcginnis-1b60142b2/" target='_blank' rel="noreferrer" className='hidden-link'>m</a>ission to national design competitions.</li>
         </ol>
       </div>
@@ -54,14 +55,21 @@ export default function AboutPage() {
 
       <h2 className='subHeader'>MIND Officers</h2>
       <div className='memberProfiles' id='officers'>
-        {getProfile(execList.officers, 'Officers')}
+        {getProfile(leaderList.officers, 'Officers')}
       </div>
 
       <div className='break'/>
 
-      <h2 className='subHeader'>MIND Advisors</h2>
+      <h2 className='subHeader'>MIND Team Leads</h2>
+      <div className='memberProfiles' id='teamLeads'>
+        {getProfile(leaderList.leads, 'Team Leads')}
+      </div>
+
+      <div className='break'/>
+
+      <h2 className='subHeader'>MIND Faculty Advisor</h2>
       <div className='memberProfiles' id='advisors'>
-        {getProfile(execList.advisors, 'Advisors')}
+        {getProfile(leaderList.advisors, 'Advisors')}
       </div>
 
     </div>
@@ -78,6 +86,16 @@ function getProfile(memberList, type) {
         imgSrc={getImageForMember(member.id)}
         name={member.name}
         position={member.position}
+        major={member.major}
+        email={member.email}
+        linkedIn={member.linkedIn} />)
+    }
+    else if (type === 'Team Leads') {
+      formattedProfiles.push(<LeadProfile
+        id={member.id}
+        imgSrc={getImageForMember(member.id)}
+        name={member.name}
+        team={member.team}
         major={member.major}
         email={member.email}
         linkedIn={member.linkedIn} />)
