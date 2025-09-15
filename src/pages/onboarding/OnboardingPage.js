@@ -2,7 +2,7 @@ import './OnboardingPage.css';
 import '../../App.css';
 import Project from './Project';
 
-import mlFiles from '../../assets/onboarding/ml-project.zip';
+import mlFiles from '../../assets/onboarding/Arduino-Onboarding.pdf';
 import cadFiles from '../../assets/onboarding/cad-workshop-2025.zip';
 import electronicsFiles from '../../assets/onboarding/Electronics-Onboarding.pdf';
 
