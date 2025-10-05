@@ -3,6 +3,15 @@ h1 {
   margin-bottom: 5px;
 }
 
+p {
+  max-width: 800px;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 .homePage {
   display: flex;
   flex-direction: column;
