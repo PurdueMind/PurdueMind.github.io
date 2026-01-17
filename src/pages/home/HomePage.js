@@ -9,14 +9,6 @@ export default function HomePage() {
       <h1>Purdue MIND</h1>
 
       <p>Purdue MIND is a multidisciplinary student organization that promotes and grows the biomedical engineering community by providing undergraduates with hands-on experience in medical technology innovation—from research and design to commercialization—while fostering collaboration, professional networking, and participation in national design competitions.</p>
-      
-      <div id='imageContainer' style={{ display: 'flex', justifyContent: 'center'}}>
-        <img
-          src={ToDisplay}
-          alt='Purdue MIND'
-          style={{ width: '80%', maxWidth: 900, height: 'auto', border: 'solid 1px #777' }}
-        />
-      </div>
 
       <h2><a href="https://forms.gle/AW5sP5hvR4kH7YYG9" target="_blank" rel="noopener noreferrer">Click Here for Submission Form!</a></h2>
 
@@ -36,4 +28,11 @@ export default function HomePage() {
   );
 };
 /*
+<div id='imageContainer' style={{ display: 'flex', justifyContent: 'center'}}>
+        <img
+          src={ToDisplay}
+          alt='Purdue MIND'
+          style={{ width: '80%', maxWidth: 900, height: 'auto', border: 'solid 1px #777' }}
+        />
+      </div>
 */
