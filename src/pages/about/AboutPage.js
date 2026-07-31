@@ -5,21 +5,38 @@ import OfficerProfile from './components/Officer';
 import AdvisorProfile from './components/Advisor';
 import LeadProfile from './components/Lead';
 
+import aaron from '../../assets/headshots/aaron.jpeg';
+import defaultHeadshot from '../../assets/headshots/default.png';
+import grant from '../../assets/headshots/grant.jpeg';
+import ian from '../../assets/headshots/ian.jpeg';
+import isha from '../../assets/headshots/isha.jpeg';
+import khushi from '../../assets/headshots/khushi.jpeg';
+import luke from '../../assets/headshots/luke.jpeg';
+import myra from '../../assets/headshots/myra.jpeg';
+import scout from '../../assets/headshots/scout.jpeg';
+import shreyak from '../../assets/headshots/shreyak.jpeg';
+import shreyap from '../../assets/headshots/shreyap.jpeg';
+import supreet from '../../assets/headshots/supreet.jpeg';
+import uday from '../../assets/headshots/uday.jpeg';
+
 const leaderList = require('./leaderList.json');
 
-// Function to dynamically import all images from the headshots folder
-function importAll(r) {
-  let images = {};
-  r.keys().forEach((item, _) => {
-    images[item.replace('./', '')] = r(item).default;
-  });
-  return images;
-}
-
-// Import all images from the headshots directory
-const images = importAll(
-  require.context('../../assets/headshots', false, /\.(png|jpe?g)$/i)
-);
+// Static map of headshot filename (as referenced in leaderList.json) to its imported asset
+const images = {
+  'aaron.jpeg': aaron,
+  'default.png': defaultHeadshot,
+  'grant.jpeg': grant,
+  'ian.jpeg': ian,
+  'isha.jpeg': isha,
+  'khushi.jpeg': khushi,
+  'luke.jpeg': luke,
+  'myra.jpeg': myra,
+  'scout.jpeg': scout,
+  'shreyak.jpeg': shreyak,
+  'shreyap.jpeg': shreyap,
+  'supreet.jpeg': supreet,
+  'uday.jpeg': uday,
+};
 
 // Function to get image source with fallback
 function getImageSrc(imageName) {

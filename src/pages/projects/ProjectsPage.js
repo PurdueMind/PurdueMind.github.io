@@ -3,21 +3,30 @@ import '../../App.css';
 
 import Project from './Project';
 
+import defaultImg from '../../assets/projects/defaultImg.jpg';
+import exomindGlove from '../../assets/projects/exomindGlove.jpeg';
+import gripAssist from '../../assets/projects/gripAssist.jpg';
+import hydraCheck from '../../assets/projects/hydraCheck.png';
+import ptsdCollar from '../../assets/projects/ptsdCollar.jpg';
+import smartSock from '../../assets/projects/smartSock.jpeg';
+import tmap from '../../assets/projects/tmap.png';
+import vertiFix from '../../assets/projects/vertiFix.jpeg';
+import walkerProject from '../../assets/projects/walkerProject.png';
+
 const projectList = require('./projectList.json');
 
-// Function to dynamically import all images from the projects folder
-function importAll(r) {
-  let images = {};
-  r.keys().forEach((item, _) => {
-    images[item.replace('./', '')] = r(item).default;
-  });
-  return images;
-}
-
-// Import all images from the projects directory
-const images = importAll(
-  require.context('../../assets/projects', false, /\.(png|jpe?g)$/i)
-);
+// Static map of image filename (as referenced in projectList.json) to its imported asset
+const images = {
+  'defaultImg.jpg': defaultImg,
+  'exomindGlove.jpeg': exomindGlove,
+  'gripAssist.jpg': gripAssist,
+  'hydraCheck.png': hydraCheck,
+  'ptsdCollar.jpg': ptsdCollar,
+  'smartSock.jpeg': smartSock,
+  'tmap.png': tmap,
+  'vertiFix.jpeg': vertiFix,
+  'walkerProject.png': walkerProject,
+};
 
 // Function to get image source with fallback
 function getImageSrc(imageName) {

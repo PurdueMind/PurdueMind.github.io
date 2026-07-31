@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
@@ -18,6 +18,7 @@ const NavLinksContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  margin-left: auto;
 `;
 
 const LinksWrapper = styled.ul`
@@ -32,7 +33,7 @@ const LinksWrapper = styled.ul`
   width: 100%;
   
   position: fixed;
-  top: 65px;
+  top: 95px;
   left: 0;
 `;
 
@@ -45,6 +46,28 @@ export default function Navbar(props) {
   const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
   const location = useLocation();
   const [isOpen, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  // Hide the navbar when scrolling down, reveal it when scrolling up or at the top
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 0) {
+        setHidden(false);
+      } else if (currentScrollY > lastScrollY.current) {
+        setHidden(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        setHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Function to determine which nav item should be active based on current route
   const getActiveItem = () => {
@@ -66,7 +89,7 @@ export default function Navbar(props) {
   const active = getActiveItem();
 
   return (
-    <div className='navbarContainer'>
+    <div className={`navbarContainer ${hidden ? 'navbarHidden' : ''}`}>
       <div className='section'>
         <Link to='/'>
           <button className='btn' id='mindLogoBtn'>
@@ -77,39 +100,42 @@ export default function Navbar(props) {
         </Link>
       </div>
 
-      <div className='section' id='middle'>
+      <div className='section' id='navSection'>
         {!isMobile &&
           <div className='navbar'>
-            <div id='navPaths'>
-              <Link to='/'>
-                <button
-                  className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
-                >Home</button>
-              </Link>
+            <Link to='/'>
+              <button
+                className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
+              ><b>Home</b></button>
+            </Link>
 
-              <Link to='/AboutUs'>
-                <button
-                  className={`btn navBtn ${active === 'About Us' ? 'activeBtn' : ''}`}
-                >About Us</button>
-              </Link>
+            <Link to='/AboutUs'>
+              <button
+                className={`btn navBtn ${active === 'About Us' ? 'activeBtn' : ''}`}
+              ><b>About Us</b></button>
+            </Link>
 
-              <Link to='/Projects'>
-                <button
-                  className={`btn navBtn ${active === 'Projects' ? 'activeBtn' : ''}`}
-                >Projects</button>
-              </Link>
+            <Link to='/Projects'>
+              <button
+                className={`btn navBtn ${active === 'Projects' ? 'activeBtn' : ''}`}
+              ><b>Projects</b></button>
+            </Link>
 
-              <Link to='/Onboarding'>
-                <button
-                  className={`btn navBtn ${active === 'Onboarding' ? 'activeBtn' : ''}`}
-                >Onboarding</button>
-              </Link>
-            </div>
+            <Link to='/Onboarding'>
+              <button
+                className={`btn navBtn ${active === 'Onboarding' ? 'activeBtn' : ''}`}
+              ><b>Onboarding</b></button>
+            </Link>
+
+            <Link to='/Donate'>
+              <button
+                className={`btn navBtn ${active === 'Donate' ? 'activeBtn': ''}`}
+                id={`donateBtn`}
+                ><b>Sponsor</b></button>
+            </Link>
           </div>
         }
-      </div>
 
-      <div className='section'>
         {isMobile &&
           <NavLinksContainer>
             <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />

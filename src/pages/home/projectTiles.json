@@ -1,0 +1,28 @@
+{
+  "projectTiles": [
+    {
+      "id": "biomechanics",
+      "team": "Biomechanics",
+      "imgSrc": "defaultImg.jpg",
+      "info": ""
+    },
+    {
+      "id": "dvt",
+      "team": "DVT Detection",
+      "imgSrc": "defaultImg.jpg",
+      "info": ""
+    },
+    {
+      "id": "cts",
+      "team": "CTS",
+      "imgSrc": "defaultImg.jpg",
+      "info": ""
+    },
+    {
+      "id": "exomind",
+      "team": "ExoMIND",
+      "imgSrc": "defaultImg.jpg",
+      "info": ""
+    }
+  ]
+}
