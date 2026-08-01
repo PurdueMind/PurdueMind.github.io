@@ -111,8 +111,9 @@
     {
       "name": "Dr. Aaron Lottes",
       "id": "lee",
-      "position": "Purdue Faculty Advisor",
-      "headshot": "aaron.jpeg"
+      "position": "Professor of Engineering Practice",
+      "headshot": "aaron.jpeg",
+      "email": "lottes@purdue.edu"
     }
   ]
 }

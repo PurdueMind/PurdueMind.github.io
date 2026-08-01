@@ -31,3 +31,14 @@ h5 {
   font-weight: lighter;
   color: #c9b38c;
 }
+
+.break {
+  display: flex;
+  height: 7px;
+  width: 95%;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-inline: auto;
+  background-color: #8e6f3e;
+  border-radius: 3px;
+}

@@ -1,6 +1,9 @@
 import './Officer.css';
 import '../../../App.css';
 
+import EmailLink from './EmailLink';
+import LinkedInLink from './LinkedInLink';
+
 export default function OfficerProfile(
   {
     id,
@@ -15,14 +18,15 @@ export default function OfficerProfile(
   return (
     <div className='profile'>
       <img className='profilePic' id={id} src={imgSrc} alt={alt} />
-      <a href={linkedIn}><button id="linkedIn"><b>LinkedIn</b></button></a>
 
       <div id='eboardInfo'>
         <h3 className='name'>{name}</h3>
-        <h4 className='position'>{position}</h4>
-        <h5 className='major'>{major}</h5>
-        <a className='email' href={`mailto:${email}`}>{email}</a>
-        <div id='spacer'/>
+        <h4 className='position'><i>{position}</i></h4>
+        <span className='major'>{major}</span>
+        <div className='iconRow'>
+          <LinkedInLink linkedIn={linkedIn} name={name} />
+          <EmailLink email={email} />
+        </div>
       </div>
     </div>
   );

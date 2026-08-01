@@ -1,0 +1,124 @@
+.peoplePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #c4bfc0;
+}
+
+.aboutInfo {
+  width: 80vw;
+}
+
+.subHeader {
+  text-align: center;
+}
+
+.memberProfiles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  width: 100%;
+  max-width: 80vw;
+  height: 100%;
+  margin-top: 50px;
+}
+
+/* Fixed tile width + a flex gap keeps spacing identical between
+   every tile. Flexbox centers each wrapped line independently, so
+   4 tiles land on row one and the remaining 3 auto-center below. */
+#officers {
+  margin-inline: auto;
+  gap: 24px;
+}
+
+#officers .profile {
+  flex: 0 0 275px;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  #officers .profile {
+    flex: 1 1 200px;
+    width: auto;
+  }
+}
+
+.header {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.hidden-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: text;
+}
+
+.hidden-link:hover {
+  color: inherit;
+  text-decoration: none;
+  cursor: text;
+}
+
+.peopleTitleDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.peopleTitleLeftDiv {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  background-color: #9d9795;
+  border-radius: 0px 20px 20px 0px;
+}
+
+.peopleTitleRightDiv {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#peopleTitle {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 64px;
+  font-family: "Oranienbaum", serif;
+  font-size: 56px;
+  color: #8e6f3e;
+}
+
+#peopleDescription {
+  font-size: 36px;
+  font-family: "Oranienbaum", serif;
+  line-height: 1.5;
+  font-style: bold;
+  color: #000000;
+}
+
+#peopleDescriptionRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  padding-left: 5%;
+}
+
+#peopleDescriptionCenter {
+  text-align: center;
+}
+
+#peopleMiddleDiv {
+  margin-top: 20px;
+}
+
+#peopleBottomDiv {
+  margin-top: 30px;
+}

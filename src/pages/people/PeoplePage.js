@@ -1,4 +1,4 @@
-import './AboutPage.css';
+import './PeoplePage.css';
 import '../../App.css';
 
 import OfficerProfile from './components/Officer';
@@ -48,43 +48,43 @@ function getImageForMember(memberId) {
   return member ? getImageSrc(member.headshot) : getImageSrc('default.png');
 }
 
-export default function AboutPage() {
+export default function PeoplePage() {
   return (
-    <div className='aboutPage'>
+    <div className='peoplePage'>
 
-      <div className='aboutInfo'>
-        <div className='header'>
-          <h1>About Us</h1>
+      <div className='peopleTitleDiv'>
+        <div className='peopleTitleLeftDiv'>
+          <h1 id='peopleTitle'>Executive Board</h1>
         </div>
-
-        <div>
-          <p>{leaderList.introTxt.about}</p>
-        </div>
-
-        <ol>
-          <li>{leaderList.introTxt.goal1}</li>
-          <li>{leaderList.introTxt.goal2}</li>
-          <li>To recognize the work done on the project through sub<a href="https://www.linkedin.com/in/megan-mcginnis-1b60142b2/" target='_blank' rel="noreferrer" className='hidden-link'>m</a>ission to national design competitions.</li>
-        </ol>
+        <div className='peopleTitleRightDiv'/>
       </div>
 
-      <div className='break'/>
-
-      <h2 className='subHeader'>MIND Officers</h2>
       <div className='memberProfiles' id='officers'>
         {getProfile(leaderList.officers, 'Officers')}
       </div>
 
       <div className='break'/>
 
-      <h2 className='subHeader'>MIND Team Leads</h2>
+      <div className='peopleTitleDiv' id='peopleMiddleDiv'>
+        <div className='peopleTitleLeftDiv'>
+          <h1 id='peopleTitle'>Team Leads</h1>
+        </div>
+        <div className='peopleTitleRightDiv'/>
+      </div>
+
       <div className='memberProfiles' id='teamLeads'>
         {getProfile(leaderList.leads, 'Team Leads')}
       </div>
 
       <div className='break'/>
 
-      <h2 className='subHeader'>MIND Faculty Advisor</h2>
+      <div className='peopleTitleDiv' id='peopleBottomDiv'>
+        <div className='peopleTitleLeftDiv'>
+          <h1 id='peopleTitle'>Faculty Advisor</h1>
+        </div>
+        <div className='peopleTitleRightDiv'/>
+      </div>
+
       <div className='memberProfiles' id='advisors'>
         {getProfile(leaderList.advisors, 'Advisors')}
       </div>
@@ -121,7 +121,8 @@ function getProfile(memberList, type) {
         id={member.id}
         imgSrc={getImageForMember(member.id)}
         name={member.name}
-        position={member.position} />)
+        position={member.position}
+        email={member.email}/>)
     }
   }
   return formattedProfiles;

@@ -1,13 +1,16 @@
 import './Officer.css';
 import '../../../App.css';
 
+import EmailLink from './EmailLink';
+
 export default function AdvisorProfile(
   {
     id,
     imgSrc = 'https://drive.google.com/uc?export=view&id=',
     alt = '404: No Image',
     name,
-    position
+    position,
+    email
   }) {
   return (
     <div className='profile'>
@@ -15,7 +18,10 @@ export default function AdvisorProfile(
 
       <div id='eboardInfo'>
         <h3 className='name'>{name}</h3>
-        <h5 className='position'>{position}</h5>
+        <h4 className='position'><i>{position}</i></h4>
+        <div className='iconRow'>
+          <EmailLink email={email} />
+        </div>
       </div>
     </div>
   );

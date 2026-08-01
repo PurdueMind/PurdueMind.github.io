@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 import HomePage from './pages/home/HomePage'
-import AboutPage from './pages/about/AboutPage'
+import PeoplePage from './pages/people/PeoplePage'
 import ProjectsPage from './pages/projects/ProjectsPage'
 import OnboardingPage from './pages/onboarding/OnboardingPage'
 
@@ -45,8 +45,8 @@ export default function App() {
             <HomePage/>
             <Footer/>
           </Route>
-          <Route path='/AboutUs'>
-            <AboutPage/>
+          <Route path='/People'>
+            <PeoplePage/>
             <Footer/>
           </Route>
           <Route path='/Projects'>

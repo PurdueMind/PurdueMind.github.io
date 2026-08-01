@@ -48,7 +48,6 @@ p {
 .pitchTitle {
   font-size: 96px;
   line-height: 1.1;
-  word-spacing: 2rem;
 }
 
 #pitchWord1 {
@@ -141,17 +140,6 @@ p {
   font-size: 16px;
   text-align: center;
   margin-top: 10px;
-}
-
-.homeBreak {
-  display: flex;
-  height: 7px;
-  width: 95%;
-  margin-top: 50px;
-  margin-bottom: 25px;
-  margin-inline: auto;
-  background-color: #8e6f3e;
-  border-radius: 3px;
 }
 
 .minorTitle {

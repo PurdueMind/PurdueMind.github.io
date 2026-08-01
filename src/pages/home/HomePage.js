@@ -63,7 +63,7 @@ export default function HomePage() {
   return (
     <div className='homePage'>
       <div className='pitchDiv'>
-        <h1 className='pitchTitle' id='pitchWord1'>Solutions that Heal</h1>
+        <h1 className='pitchTitle' id='pitchWord1'>Solutions That Heal</h1>
       </div>
       <div className='statDiv'>
         <div className='descDiv'>
@@ -83,7 +83,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className='homeBreak'/>
+      <div className='break'/>
       <div className='sectionDiv'>
         <h2 className='minorTitle' id='projectDemoTitle'><b>Active Projects</b></h2>
 
@@ -102,7 +102,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className='homeBreak'/>
+      <div className='break'/>
       <div className='sectionDiv'>
         <div className='leftHalfDiv'>
           <div className='imageSlideshow'>
@@ -115,14 +115,14 @@ export default function HomePage() {
         </div>
         <div className='rightHalfDiv'>
           <div className='upperHalfDiv'>
-            <p className='desc-text' id='slogan'>Connecting students, faculty,<br/>and industry leaders to <b>build</b><br/>Purdue's MedTech community</p>
+            <p className='desc-text' id='slogan'>Connecting students, faculty,<br/>and industry leaders to build<br/>Purdue's MedTech community</p>
           </div>
           <div className='lowerHalfDiv'>
             <button className='sectionButton'><b>Join our Slack</b></button>
           </div>
         </div>
       </div>
-      <div className='homeBreak'/>
+      <div className='break'/>
       <div className='sectionDiv'>
         <h2 className='minorTitle'><b>Meetings & Events</b></h2>
         <iframe 

@@ -75,8 +75,8 @@ export default function Navbar(props) {
       case '/':
       case '/PurdueMIND/':
         return 'Home';
-      case '/AboutUs':
-        return 'About Us';
+      case '/People':
+        return 'People';
       case '/Projects':
         return 'Projects';
       case '/Onboarding':
@@ -109,10 +109,10 @@ export default function Navbar(props) {
               ><b>Home</b></button>
             </Link>
 
-            <Link to='/AboutUs'>
+            <Link to='/People'>
               <button
-                className={`btn navBtn ${active === 'About Us' ? 'activeBtn' : ''}`}
-              ><b>About Us</b></button>
+                className={`btn navBtn ${active === 'People' ? 'activeBtn' : ''}`}
+              ><b>People</b></button>
             </Link>
 
             <Link to='/Projects'>
@@ -150,11 +150,11 @@ export default function Navbar(props) {
                     >Home</button>
                   </Link>
 
-                  <Link to='/AboutUs'>
+                  <Link to='/People'>
                     <button
                       className='btn burgerBtn'
                       onClick={() => setOpen(!isOpen)}
-                    >About Us</button>
+                    >People</button>
                   </Link>
 
                   <Link to='/Projects'>

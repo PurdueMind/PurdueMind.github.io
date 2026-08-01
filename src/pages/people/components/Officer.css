@@ -1,0 +1,157 @@
+.profile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: auto;
+  max-width: 230px;
+  width: 30vw;
+  min-width: 200px;
+
+  padding: 16px 14px 14px;
+  margin: 14px;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  text-align: center;
+  background-color: #9d9795;
+
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+}
+
+.profile:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 22px 34px rgba(0, 0, 0, 0.28);
+  z-index: 5;
+}
+
+.profilePic {
+  display: block;
+
+  width: calc(100% - 16px);
+  max-width: 259px;
+  min-width: 184px;
+
+  margin: 8px auto 14px;
+
+  border-radius: 14px;
+}
+
+.name {
+  margin-top: 0px;
+  text-align: left;
+  margin-left: 0%;
+  margin-bottom: 0px;
+}
+
+.position {
+  text-align: left;
+  align-items: left;
+  margin-left: 0%;
+  margin-top: 5px;
+}
+
+#eboardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+}
+
+/* Degree / grad-date line, always visible between position and the icon row. */
+.major {
+  text-align: left;
+  margin-top: 5px;
+  color: #8e6f3e;
+  font-weight: 600;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  margin-top: 12px;
+}
+
+.iconButton {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 34px;
+  height: 34px;
+
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
+}
+
+.iconButton:hover {
+  transform: scale(1.15);
+}
+
+.iconImg {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.iconButton::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+
+  background-color: #000;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 4px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.iconButton:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.copyToast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 10px;
+  font-size: 16px;
+
+  z-index: 1000;
+  pointer-events: none;
+
+  animation: copyToastFade 1.8s ease forwards;
+}
+
+@keyframes copyToastFade {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+  15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+}
