@@ -5,78 +5,77 @@
   align-self: flex-start;
 
   height: fit-content;
-  width: auto;
+  width: 100%;
 
   margin-top: 5px;
   margin-bottom: 30px;
-  padding-left: 25px;
+  /* padding-left: 25px; */
   padding-right: 25px;
 
   align-items: center;
   justify-content: left;
 }
 
-.projectImg {
-  max-width: 300px;
+.projectInfoDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.projectImageDiv {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.projectImage {
   max-height: fit-content;
 
-  width: 80%;
+  width: 100%;
   height: auto;
 
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.description {
-  margin: 0px;
-  margin-top: 5px;
-  text-align: left;
-}
-
-h4.title {
-  font-size: 18px;
-  color: #C9B38C;
-  font-weight: bold;
-  line-height: 19px;
-  padding-bottom: 0px;
-  margin: 0px;
-  text-align: left;
-}
-
-h5.description {
-  line-height: normal;
-  color: #737680;
-  text-align: left;
-}
-
-#projectInfo {
-  display: inline-flexbox;
-  flex-direction: column;
-  height: fit-content;
-
-  padding: 0px;
-  margin-left: 20px;
-  text-align: left;
-}
-
-.projectHeader {
+.projectDescriptionDiv {
   display: flex;
-  align-items: center;
-  justify-content: space-between; /* title left, lead right */
-  gap: 1rem;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-start;
+  justify-content: center;
+
+  margin-left: 20px;
+}
+
+.projectLeadDiv {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.projectHeader .title {
-  margin: 0;
-  /* keep existing title styles if any */
+#projectTitle {
+  margin-left: 2.5%;
 }
 
-.lead {
-  font-size: 0.9rem;
-  color: #000000;
-  white-space: nowrap;
-  margin-left: 1rem;
-  margin-right: 10px;
-  /* optional: reduce prominence compared to title */
+#projectLeadTitleDiv {
+  margin-top: 30px;
+}
+
+#projectBreak {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+#projectLeadNote {
+  background-color: #9d9795;
+  border-radius: 10px;
+  padding: 10px;
 }

@@ -18,7 +18,6 @@ export default function LeadProfile(
     return (
         <div className='profile'>
             <img className='profilePic' id={id} src={imgSrc} alt={alt} />
-
             <div id='eboardInfo'>
                 <h3 className='name'>{name}</h3>
                 <h4 className='position'><i>{team}</i></h4>

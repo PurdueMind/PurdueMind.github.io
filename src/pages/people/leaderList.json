@@ -6,67 +6,67 @@
   },
   "officers": [
     {
-      "name": "Grant Congdon",
+      "name": "Uday Mittal",
       "id": "president",
       "position": "President",
-      "major": "Electrical Engineering '27",
-      "email": "gcongdon@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/grant-congdon/",
-      "headshot": "grant.jpeg"
-    },
-    {
-      "name": "Uday Mittal",
-      "id": "vice",
-      "position": "Vice President",
       "major": "Mechanical Engineering '27",
       "email": "mitta106@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/mittal-uday/",
-      "headshot": "uday.jpeg"
-    },
-    {
-      "name": "Luke Johnson",
-      "id": "treasurer",
-      "position": "Treasurer",
-      "major": "Biomedical Health Science '28",
-      "email": "john3760@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/luke-johnson-339101327/",
-      "headshot": "luke.jpeg"
-    },
-    {
-      "name": "Shreya Krishnan",
-      "id": "secretary",
-      "position": "Secretary",
-      "major": "Biomedical Engineering '27",
-      "email": "krish177@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/",
-      "headshot": "shreyak.jpeg"
-    },
-    {
-      "name": "Supreet Mishra",
-      "id": "rNd",
-      "position": "Director of Research & Development",
-      "major": "Mechanical Engineering '27",
-      "email": "mishr193@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/supreet-mishra-b87558243/",
-      "headshot": "supreet.jpeg"
+      "headshot": "uday.jpg"
     },
     {
       "name": "Scout Hudson",
-      "id": "nNe",
-      "position": "Director of Networking & Events",
+      "id": "vice",
+      "position": "Vice President",
       "major": "Biomedical Engineering '28",
       "email": "hudso195@purdue.edu",
       "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/",
       "headshot": "scout.jpeg"
     },
     {
-      "name": "Myra Khare",
+      "name": "Shivum Nijhawan",
+      "id": "treasurer",
+      "position": "Treasurer",
+      "major": "Mechanical Engineering '27",
+      "email": "snijhaw@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/shivumnijhawan/",
+      "headshot": "shivum.jpg"
+    },
+    {
+      "name": "Sounish Ghosh",
+      "id": "secretary",
+      "position": "Secretary",
+      "major": "Biomedical Engineering '27",
+      "email": "ghosh155@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/sounishghosh/",
+      "headshot": "ghosh.jpeg"
+    },
+    {
+      "name": "Anaya Parikh",
+      "id": "rNd",
+      "position": "Director of Research & Development",
+      "major": "Biomedical Engineering '28",
+      "email": "parik113@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/anayaparikh/",
+      "headshot": "anaya.png"
+    },
+    {
+      "name": "Tashi Vasudeva",
+      "id": "nNe",
+      "position": "Director of Networking & Events",
+      "major": "Biomedical Sciences '28",
+      "email": "vasudevt@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/tashi-vasudeva-4a2668347/",
+      "headshot": "tashi.png"
+    },
+    {
+      "name": "Varun Senthil",
       "id": "eNi",
       "position": "Director of Entrepreneurship & Ideation",
-      "major": "Biomedical Engineering '27",
-      "email": "khare19@purdue.edu",
-      "linkedIn": "https://www.linkedin.com/in/myrakhare/",
-      "headshot": "myra.jpeg"
+      "major": "Biomedical Engineering '28",
+      "email": "senthi42@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/varun-senthil-b90097320/",
+      "headshot": "varun.png"
     }
   ],
   "leads": [

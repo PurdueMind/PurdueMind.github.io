@@ -10,17 +10,19 @@ import LeadProfile from './components/Lead';
 
 import aaron from '../../assets/headshots/aaron.jpeg';
 import defaultHeadshot from '../../assets/headshots/default.png';
-import grant from '../../assets/headshots/grant.jpeg';
+
+import uday from '../../assets/headshots/uday.jpg';
+import scout from '../../assets/headshots/scout.jpeg';
+import shivum from '../../assets/headshots/shivum.jpg';
+import ghosh from '../../assets/headshots/ghosh.jpeg';
+import anaya from '../../assets/headshots/anaya.png';
+import tashi from '../../assets/headshots/tashi.png';
+import varun from '../../assets/headshots/varun.png';
+
 import ian from '../../assets/headshots/ian.jpeg';
 import isha from '../../assets/headshots/isha.jpeg';
 import khushi from '../../assets/headshots/khushi.jpeg';
-import luke from '../../assets/headshots/luke.jpeg';
-import myra from '../../assets/headshots/myra.jpeg';
-import scout from '../../assets/headshots/scout.jpeg';
-import shreyak from '../../assets/headshots/shreyak.jpeg';
 import shreyap from '../../assets/headshots/shreyap.jpeg';
-import supreet from '../../assets/headshots/supreet.jpeg';
-import uday from '../../assets/headshots/uday.jpeg';
 
 const leaderList = require('./leaderList.json');
 
@@ -28,17 +30,17 @@ const leaderList = require('./leaderList.json');
 const images = {
   'aaron.jpeg': aaron,
   'default.png': defaultHeadshot,
-  'grant.jpeg': grant,
+  'uday.jpg': uday,
+  'scout.jpeg': scout,
+  'shivum.jpg': shivum,
+  'ghosh.jpeg': ghosh,
+  'anaya.png': anaya,
+  'tashi.png': tashi,
+  'varun.png': varun,
   'ian.jpeg': ian,
   'isha.jpeg': isha,
   'khushi.jpeg': khushi,
-  'luke.jpeg': luke,
-  'myra.jpeg': myra,
-  'scout.jpeg': scout,
-  'shreyak.jpeg': shreyak,
   'shreyap.jpeg': shreyap,
-  'supreet.jpeg': supreet,
-  'uday.jpeg': uday,
 };
 
 // Function to get image source with fallback

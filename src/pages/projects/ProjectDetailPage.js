@@ -28,17 +28,13 @@ export default function ProjectDetailPage() {
 
   return (
     <div className='projectsPage'>
-      <h1 className='header'>{project.title}</h1>
-
-      <div className='projectsContainer'>
-        <Project
-          id={project.id}
-          imgSrc={getImageSrc(project.imgSrc)}
-          alt={project.alt}
-          title={project.title}
-          lead={project.lead}
-          description={project.description} />
-      </div>
+      <Project
+        id={project.id}
+        imgSrc={getImageSrc(project.imgSrc)}
+        alt={project.alt}
+        title={project.title}
+        lead={project.lead}
+        description={project.description} />
     </div>
   );
 };

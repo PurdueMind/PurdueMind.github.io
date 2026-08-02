@@ -133,12 +133,12 @@ export default function Navbar(props) {
               ><b>Onboarding</b></button>
             </Link>
 
-            <Link to='/Donate'>
+            <a href='https://www.coolfaces.net/TooCOOLPUWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=BHSiXXqQ0BU%3d' target='_blank' rel='noopener noreferrer'>
               <button
                 className={`btn navBtn ${active === 'Donate' ? 'activeBtn': ''}`}
                 id={`donateBtn`}
-                ><b>Sponsor</b></button>
-            </Link>
+                ><b>Storefront</b></button>
+            </a>
           </div>
         }
 
