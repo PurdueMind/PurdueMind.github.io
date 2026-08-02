@@ -2,29 +2,22 @@ import './Project.css';
 import '../../App.css';
 import LeadProfile from '../people/components/Lead';
 
-import defaultHeadshot from '../../assets/headshots/default.png';
-import ian from '../../assets/headshots/ian.jpeg';
-import isha from '../../assets/headshots/isha.jpeg';
-import khushi from '../../assets/headshots/khushi.jpeg';
-import shreyap from '../../assets/headshots/shreyap.jpeg';
+import defaultHeadshot from '../../assets/people/default.png';
 
 const leaderList = require('../people/leaderList.json');
 
-const images = {
-  'default.png': defaultHeadshot,
-  'ian.jpeg': ian,
-  'isha.jpeg': isha,
-  'khushi.jpeg': khushi,
-  'shreyap.jpeg': shreyap,
-};
+// Team leads are the only role Project.js shows, so only that folder is needed here.
+const leadContext = require.context('../../assets/people/leads', false, /\.(png|jpe?g)$/);
 
-function getImageSrc(imageName) {
-  return images[imageName] || images['default.png'];
-}
+const leadImages = {};
+leadContext.keys().forEach((key) => {
+  const mod = leadContext(key);
+  leadImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
+});
 
 function getImageForMember(memberId) {
-  const member = leaderList.officers.find(m => m.id === memberId) || leaderList.advisors.find(m => m.id === memberId) || leaderList.leads.find(m => m.id === memberId);
-  return member ? getImageSrc(member.headshot) : getImageSrc('default.png');
+  const member = leaderList.leads.find(m => m.id === memberId);
+  return (member && leadImages[member.filename]) || defaultHeadshot;
 }
 
 export default function Projects(
@@ -53,9 +46,9 @@ export default function Projects(
 
       <div className='break'/>
 
-      <div className='sectionTitleDiv' id='projectBreak'>
+      <div className='sectionTitleDiv'>
         <div className='sectionTitleLeftDiv'>
-          <h1 id='peopleTitle'>Project Leadership Team</h1>
+          <h1 className='sectionTitle'>Project Leadership Team</h1>
         </div>
         <div className='sectionTitleRightDiv'/>
       </div>

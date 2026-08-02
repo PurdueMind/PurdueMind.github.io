@@ -21,7 +21,7 @@ export default function ProjectsPage() {
 
       <div className='sectionTitleDiv' id='previousProjectsTitleDiv'>
         <div className='sectionTitleLeftDiv'>
-          <h1 id='peopleTitle'>Previous Projects</h1>
+          <h1 className='sectionTitle'>Previous Projects</h1>
         </div>
         <div className='sectionTitleRightDiv'/>
       </div>

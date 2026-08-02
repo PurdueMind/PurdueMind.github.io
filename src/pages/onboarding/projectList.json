@@ -1,8 +1,8 @@
 {
-    "projects": [
+    "onboarding": [
         {
             "id": "electronics-project",
-            "title": "Electronics Onboarding Project",
+            "title": "Learn to design a PCB from scratch!",
             "filename": "Electronics-Onboarding.pdf",
             "buttonName": "Download Electronics Onboarding Files",
             "description": [
@@ -36,5 +36,7 @@
                 "Leaves members with embedded systems knowledge and resources for further learning"
             ]
         }
+    ],
+    "workshops": [
     ]
 }

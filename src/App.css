@@ -70,6 +70,17 @@ h5 {
   border-radius: 3px;
 }
 
+.smallBreak {
+  display: flex;
+  height: 7px;
+  width: 45%;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  margin-inline: auto;
+  background-color: #cfb991;
+  border-radius: 3px;
+}
+
 .sectionTitleDiv {
   display: flex;
   justify-content: center;
@@ -89,4 +100,13 @@ h5 {
   width: 50%;
   justify-content: center;
   align-items: center;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 64px;
+  font-family: "Oranienbaum", serif;
+  font-size: 56px;
+  color: #8e6f3e;
 }

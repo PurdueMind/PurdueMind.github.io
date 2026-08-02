@@ -85,7 +85,13 @@ export default function HomePage() {
       </div>
       <div className='break'/>
       <div className='sectionDiv'>
-        <h2 className='minorTitle' id='projectDemoTitle'><b>Active Projects</b></h2>
+
+        <div className='sectionTitleDiv' id='peopleMiddleDiv'>
+          <div className='sectionTitleLeftDiv'>
+            <h1 className='sectionTitle'>Active Projects</h1>
+          </div>
+          <div className='sectionTitleRightDiv'/>
+        </div>
 
         <div className='projectTilesRow'>
           {projectTiles.map((tile) => (
@@ -123,7 +129,14 @@ export default function HomePage() {
       </div>
       <div className='break'/>
       <div className='sectionDiv'>
-        <h2 className='minorTitle'><b>Meetings & Events</b></h2>
+
+        <div className='sectionTitleDiv' id='peopleMiddleDiv'>
+          <div className='sectionTitleLeftDiv'>
+            <h1 className='sectionTitle'>Meetings & Events</h1>
+          </div>
+          <div className='sectionTitleRightDiv'/>
+        </div>
+
         <iframe 
             id='calendar' title='MIND Calendar'
             src='https://calendar.google.com/calendar/embed?src=purdueuniversitymind%40gmail.com&ctz=America%2FNew_York'

@@ -1,6 +1,6 @@
 import './OnboardingPage.css';
 import '../../App.css';
-import Project from './Project';
+import Workshop from './Workshop';
 
 import mlFiles from '../../assets/onboarding/Arduino-Onboarding.pdf';
 import cadFiles from '../../assets/onboarding/cad-workshop-2025.zip';
@@ -15,24 +15,42 @@ const fileList = {
 }
 
 export default function OnboardingPage() {
-    // get current year
-    const date = new Date();
-    const year = date.getFullYear();
     return (
         <div className='OnboardingPage'>
-            <h1 className='header'>Onboarding</h1>
-            
-            <div className="onboardingInformation">
-                <ul>
-                    <li>Onboarding takes place every Monday and Thursday from September 4th to September 18th</li>
-                    <li>All sessions are held in person in MJIS 1001 at 6:30 PM</li>
-                    <li>Learn circuit & PCB design, SolidWorks (CAD), and Arduino circuitry and programming</li>
-                </ul>
+            <div className='majorTitleDiv'>
+                <h1 className='majorTitle' id='onboardingTitle'>Onboarding & Workshops</h1>
             </div>
 
-            <div className='projectContainer'>
-                <h2 className="sectionHeader">{year} Onboarding Projects</h2>
-                {getProjects(projectList.projects)}
+            <div className='peoplePitchDiv'>
+                <h3 id='peoplePitch'>
+                    INSERT SCROLLING IMAGES OF WORKSHOPS HERE
+                </h3>
+            </div>
+
+            <div className='break'/>
+
+            <div className='sectionTitleDiv'>
+                <div className='sectionTitleLeftDiv'>
+                    <h1 className='sectionTitle'>Onboarding</h1>
+                </div>
+                <div className='sectionTitleRightDiv'/>
+            </div>
+
+            <div className='onboardingContainer'>
+                {getProjects(projectList.onboarding)}
+            </div>
+
+            <div className='smallBreak'/>
+
+            <div className='sectionTitleDiv'>
+                <div className='sectionTitleLeftDiv'>
+                    <h1 className='sectionTitle'>Workshops</h1>
+                </div>
+                <div className='sectionTitleRightDiv'/>
+            </div>
+
+            <div className='onboardingContainer'>
+                {getProjects(projectList.workshops)}
             </div>
         </div>
     );
@@ -42,11 +60,13 @@ function getProjects(projects) {
     const formattedProjects = [];
     for (const index in projects) {
         const workshop = projects[index];
-        formattedProjects.push(<Project
+        formattedProjects.push(<Workshop
             id={workshop.title}
             title={workshop.title}
             buttonName={workshop.buttonName}
             description={workshop.description}
+            imgSrc={workshop.imgSrc}
+            alt={workshop.alt}
             downloadFile={fileList[workshop.id]}
             downloadFilename={workshop.filename}
         />);

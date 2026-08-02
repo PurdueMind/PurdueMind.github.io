@@ -8,49 +8,34 @@ import OfficerProfile from './components/Officer';
 import AdvisorProfile from './components/Advisor';
 import LeadProfile from './components/Lead';
 
-import aaron from '../../assets/headshots/aaron.jpeg';
-import defaultHeadshot from '../../assets/headshots/default.png';
-
-import uday from '../../assets/headshots/uday.jpg';
-import scout from '../../assets/headshots/scout.jpeg';
-import shivum from '../../assets/headshots/shivum.jpg';
-import ghosh from '../../assets/headshots/ghosh.jpeg';
-import anaya from '../../assets/headshots/anaya.png';
-import tashi from '../../assets/headshots/tashi.png';
-import varun from '../../assets/headshots/varun.png';
-
-import ian from '../../assets/headshots/ian.jpeg';
-import isha from '../../assets/headshots/isha.jpeg';
-import khushi from '../../assets/headshots/khushi.jpeg';
-import shreyap from '../../assets/headshots/shreyap.jpeg';
+import defaultHeadshot from '../../assets/people/default.png';
 
 const leaderList = require('./leaderList.json');
 
-// Static map of headshot filename (as referenced in leaderList.json) to its imported asset
-const images = {
-  'aaron.jpeg': aaron,
-  'default.png': defaultHeadshot,
-  'uday.jpg': uday,
-  'scout.jpeg': scout,
-  'shivum.jpg': shivum,
-  'ghosh.jpeg': ghosh,
-  'anaya.png': anaya,
-  'tashi.png': tashi,
-  'varun.png': varun,
-  'ian.jpeg': ian,
-  'isha.jpeg': isha,
-  'khushi.jpeg': khushi,
-  'shreyap.jpeg': shreyap,
-};
+// Each role's photos live in their own folder; require.context loads them all
+// so new headshots just need to be dropped in without touching this file.
+const execContext = require.context('../../assets/people/exec', false, /\.(png|jpe?g)$/);
+const leadContext = require.context('../../assets/people/leads', false, /\.(png|jpe?g)$/);
+const advisorContext = require.context('../../assets/people/advisors', false, /\.(png|jpe?g)$/);
 
-// Function to get image source with fallback
-function getImageSrc(imageName) {
-  return images[imageName] || images['default.png'];
+function buildImageMap(context) {
+  const images = {};
+  context.keys().forEach((key) => {
+    const filename = key.replace('./', '');
+    const mod = context(key);
+    images[filename] = mod && mod.default ? mod.default : mod;
+  });
+  return images;
 }
 
-function getImageForMember(memberId) {
-  const member = leaderList.officers.find(m => m.id === memberId) || leaderList.advisors.find(m => m.id === memberId) || leaderList.leads.find(m => m.id === memberId);
-  return member ? getImageSrc(member.headshot) : getImageSrc('default.png');
+const imagesByType = {
+  Officers: buildImageMap(execContext),
+  'Team Leads': buildImageMap(leadContext),
+  Advisors: buildImageMap(advisorContext),
+};
+
+function getImageSrc(type, filename) {
+  return (imagesByType[type] && imagesByType[type][filename]) || defaultHeadshot;
 }
 
 const NAVBAR_HEIGHT = 90;
@@ -81,7 +66,7 @@ export default function PeoplePage() {
 
       <div className='peoplePitchDiv'>
         <h3 id='peoplePitch'>
-          Clearing roadblocks to foster MedTech innovation
+          INSERT IMAGES OF EXEC AND LEADS HERE
         </h3>
       </div>
 
@@ -89,7 +74,7 @@ export default function PeoplePage() {
 
       <div className='sectionTitleDiv'>
         <div className='sectionTitleLeftDiv'>
-          <h1 id='peopleTitle'>Executive Board</h1>
+          <h1 className='sectionTitle'>Executive Board</h1>
         </div>
         <div className='sectionTitleRightDiv'/>
       </div>
@@ -102,7 +87,7 @@ export default function PeoplePage() {
 
       <div className='sectionTitleDiv' id='peopleMiddleDiv'>
         <div className='sectionTitleLeftDiv'>
-          <h1 id='peopleTitle'>Team Leads</h1>
+          <h1 className='sectionTitle'>Team Leads</h1>
         </div>
         <div className='sectionTitleRightDiv'/>
       </div>
@@ -115,7 +100,7 @@ export default function PeoplePage() {
 
       <div className='sectionTitleDiv' id='peopleBottomDiv'>
         <div className='sectionTitleLeftDiv'>
-          <h1 id='peopleTitle'>Faculty Advisor</h1>
+          <h1 className='sectionTitle'>Advisors</h1>
         </div>
         <div className='sectionTitleRightDiv'/>
       </div>
@@ -135,7 +120,7 @@ function getProfile(memberList, type) {
     if (type === 'Officers') {
       formattedProfiles.push(<OfficerProfile
         id={member.id}
-        imgSrc={getImageForMember(member.id)}
+        imgSrc={getImageSrc(type, member.filename)}
         name={member.name}
         position={member.position}
         major={member.major}
@@ -145,7 +130,7 @@ function getProfile(memberList, type) {
     else if (type === 'Team Leads') {
       formattedProfiles.push(<LeadProfile
         id={member.id}
-        imgSrc={getImageForMember(member.id)}
+        imgSrc={getImageSrc(type, member.filename)}
         name={member.name}
         team={member.team}
         major={member.major}
@@ -154,7 +139,7 @@ function getProfile(memberList, type) {
     } else {
       formattedProfiles.push(<AdvisorProfile
         id={member.id}
-        imgSrc={getImageForMember(member.id)}
+        imgSrc={getImageSrc(type, member.filename)}
         name={member.name}
         position={member.position}
         email={member.email}/>)
