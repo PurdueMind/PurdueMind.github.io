@@ -4,6 +4,7 @@ import Footer from './footer/Footer';
 import HomePage from './pages/home/HomePage'
 import PeoplePage from './pages/people/PeoplePage'
 import ProjectsPage from './pages/projects/ProjectsPage'
+import ProjectDetailPage from './pages/projects/ProjectDetailPage'
 import OnboardingPage from './pages/onboarding/OnboardingPage'
 
 import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom';
@@ -49,8 +50,12 @@ export default function App() {
             <PeoplePage/>
             <Footer/>
           </Route>
-          <Route path='/Projects'>
+          <Route exact path='/Projects'>
             <ProjectsPage/>
+            <Footer/>
+          </Route>
+          <Route path='/Projects/:slug'>
+            <ProjectDetailPage/>
             <Footer/>
           </Route>
           <Route path='/Onboarding'>

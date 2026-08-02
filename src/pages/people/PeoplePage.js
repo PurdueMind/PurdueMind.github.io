@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import './PeoplePage.css';
 import '../../App.css';
 
@@ -48,41 +51,71 @@ function getImageForMember(memberId) {
   return member ? getImageSrc(member.headshot) : getImageSrc('default.png');
 }
 
+const NAVBAR_HEIGHT = 90;
+
 export default function PeoplePage() {
+  const location = useLocation();
+
+  // Scroll to the section named in the URL hash (e.g. #teamLeads), or
+  // to the top of the page when navigating here with no hash.
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
+
   return (
     <div className='peoplePage'>
 
-      <div className='peopleTitleDiv'>
-        <div className='peopleTitleLeftDiv'>
+      <div className='majorTitleDiv'>
+        <h1 className='majorTitle' id='majorPeopleTitle'>Our People</h1>
+      </div>
+
+      <div className='peoplePitchDiv'>
+        <h3 id='peoplePitch'>
+          Clearing roadblocks to foster MedTech innovation
+        </h3>
+      </div>
+
+      <div className='break'/>
+
+      <div className='sectionTitleDiv'>
+        <div className='sectionTitleLeftDiv'>
           <h1 id='peopleTitle'>Executive Board</h1>
         </div>
-        <div className='peopleTitleRightDiv'/>
+        <div className='sectionTitleRightDiv'/>
       </div>
 
       <div className='memberProfiles' id='officers'>
         {getProfile(leaderList.officers, 'Officers')}
       </div>
 
-      <div className='break'/>
+      <div className='break' id='teamLeadsBreak'/>
 
-      <div className='peopleTitleDiv' id='peopleMiddleDiv'>
-        <div className='peopleTitleLeftDiv'>
+      <div className='sectionTitleDiv' id='peopleMiddleDiv'>
+        <div className='sectionTitleLeftDiv'>
           <h1 id='peopleTitle'>Team Leads</h1>
         </div>
-        <div className='peopleTitleRightDiv'/>
+        <div className='sectionTitleRightDiv'/>
       </div>
 
       <div className='memberProfiles' id='teamLeads'>
         {getProfile(leaderList.leads, 'Team Leads')}
       </div>
 
-      <div className='break'/>
+      <div className='break' id='advisorsBreak'/>
 
-      <div className='peopleTitleDiv' id='peopleBottomDiv'>
-        <div className='peopleTitleLeftDiv'>
+      <div className='sectionTitleDiv' id='peopleBottomDiv'>
+        <div className='sectionTitleLeftDiv'>
           <h1 id='peopleTitle'>Faculty Advisor</h1>
         </div>
-        <div className='peopleTitleRightDiv'/>
+        <div className='sectionTitleRightDiv'/>
       </div>
 
       <div className='memberProfiles' id='advisors'>

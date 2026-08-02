@@ -3,7 +3,7 @@
     {
       "id": "biomechanics",
       "alt": "",
-      "title": "Biomechanics (2024-2026)",
+      "title": "Biomechanics",
       "imgSrc": "gripAssist.jpg",
       "lead": "Shreya Prakash & Isha Varshney",
       "description": ["Last year a sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
@@ -16,8 +16,9 @@
     },
     {
       "id": "dvt",
+      "slug": "DVT",
       "alt": "DVT CAD rendering",
-      "title": "DVT Detection Sleeve (2025-2026)",
+      "title": "DVT Detection Sleeve",
       "imgSrc": "defaultImg.jpg",
       "lead": "Ian Lam",
       "description": ["Post surgery patients are at elevated risk for deep vein thrombosis (DVT) which occurs when a thrombus (blood clot) develops in the veins",
@@ -28,8 +29,9 @@
     },
     {
       "id": "CTS",
+      "slug": "CTS",
       "alt": "CTS CAD rendering",
-      "title": "CTS Smart Brace (2024-2025)",
+      "title": "CTS Smart Brace",
       "imgSrc": "defaultImg.jpg",
       "lead": "Khushi Choksi",
       "description": ["Wearable designed to assist individuals with carpal tunnel syndrome by tracking wrist and finger movement and delivering heat/cold therapy for symptom relief.",
@@ -39,6 +41,24 @@
                       "Finalized materials (dual layered cotton and nylon glove), silicon rubber for insulation",
                       "Determined mechanism of heat flow and grip strength",
                       "Met with Lauren Conner, OT (Occupational Therapist) at Team Rehabilitation Physical Therapy"]
+    },
+    {
+      "id": "tremor-glove",
+      "slug": "TremorGlove",
+      "alt": "",
+      "title": "Tremor Glove",
+      "imgSrc": "defaultImg.jpg",
+      "lead": "",
+      "description": ["Details coming soon."]
+    },
+    {
+      "id": "alyssa",
+      "slug": "Alyssa",
+      "alt": "",
+      "title": "Alyssa",
+      "imgSrc": "defaultImg.jpg",
+      "lead": "",
+      "description": ["Details coming soon."]
     }
   ],
   "pastProjects": [

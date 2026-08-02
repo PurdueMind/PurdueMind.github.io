@@ -64,26 +64,12 @@
   cursor: text;
 }
 
-.peopleTitleDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+#majorPeopleTitle {
+  padding-left: 2.5%;
 }
 
-.peopleTitleLeftDiv {
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  background-color: #9d9795;
-  border-radius: 0px 20px 20px 0px;
-}
-
-.peopleTitleRightDiv {
-  width: 50%;
-  justify-content: center;
-  align-items: center;
-  
+#peoplePitch {
+  font-size: 36px;
 }
 
 #peopleTitle {

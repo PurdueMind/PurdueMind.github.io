@@ -23,33 +23,6 @@ p {
   background-color: #c4bfc0;
 }
 
-.pitchDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  width: 100%;
-  box-sizing: border-box;
-  padding: 60px 0 160px;
-
-  background-color: #9d9795;
-  clip-path: polygon(
-    0% 100%,
-    0% 0%,
-    100% 0%,
-    100% calc(100% - 140px),
-    67% calc(100% - 74px),
-    63% calc(100% - 70px),
-    37% calc(100% - 70px),
-    33% calc(100% - 66px)
-  );
-}
-
-.pitchTitle {
-  font-size: 96px;
-  line-height: 1.1;
-}
-
 #pitchWord1 {
   margin-left: 2.5%;
 }

@@ -71,19 +71,10 @@ export default function Navbar(props) {
 
   // Function to determine which nav item should be active based on current route
   const getActiveItem = () => {
-    switch(location.pathname) {
-      case '/':
-      case '/PurdueMIND/':
-        return 'Home';
-      case '/People':
-        return 'People';
-      case '/Projects':
-        return 'Projects';
-      case '/Onboarding':
-        return 'Onboarding';
-      default:
-        return 'Home';
-    }
+    if (location.pathname.startsWith('/People')) return 'People';
+    if (location.pathname.startsWith('/Projects')) return 'Projects';
+    if (location.pathname.startsWith('/Onboarding')) return 'Onboarding';
+    return 'Home';
   };
 
   const active = getActiveItem();
@@ -109,17 +100,32 @@ export default function Navbar(props) {
               ><b>Home</b></button>
             </Link>
 
-            <Link to='/People'>
-              <button
-                className={`btn navBtn ${active === 'People' ? 'activeBtn' : ''}`}
-              ><b>People</b></button>
-            </Link>
+            <div className='navDropdown'>
+              <Link to='/People'>
+                <button
+                  className={`btn navBtn ${active === 'People' ? 'activeBtn' : ''}`}
+                ><b>People</b></button>
+              </Link>
+              <div className='dropdownMenu'>
+                <Link className='dropdownItem' to='/People'>Executive Board</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#teamLeadsBreak' }}>Team Leads</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#advisorsBreak' }}>Advisors</Link>
+              </div>
+            </div>
 
-            <Link to='/Projects'>
-              <button
-                className={`btn navBtn ${active === 'Projects' ? 'activeBtn' : ''}`}
-              ><b>Projects</b></button>
-            </Link>
+            <div className='navDropdown'>
+              <Link to='/Projects'>
+                <button
+                  className={`btn navBtn ${active === 'Projects' ? 'activeBtn' : ''}`}
+                ><b>Projects</b></button>
+              </Link>
+              <div className='dropdownMenu'>
+                <Link className='dropdownItem' to='/Projects/DVT'>DVT</Link>
+                <Link className='dropdownItem' to='/Projects/CTS'>CTS</Link>
+                <Link className='dropdownItem' to='/Projects/TremorGlove'>Tremor Glove</Link>
+                <Link className='dropdownItem' to='/Projects/Alyssa'>Alyssa</Link>
+              </div>
+            </div>
 
             <Link to='/Onboarding'>
               <button
@@ -156,6 +162,11 @@ export default function Navbar(props) {
                       onClick={() => setOpen(!isOpen)}
                     >People</button>
                   </Link>
+                  <div className='burgerSubLinks'>
+                    <Link to='/People' onClick={() => setOpen(!isOpen)}>Executive Board</Link>
+                    <Link to={{ pathname: '/People', hash: '#teamLeadsBreak' }} onClick={() => setOpen(!isOpen)}>Team Leads</Link>
+                    <Link to={{ pathname: '/People', hash: '#advisorsBreak' }} onClick={() => setOpen(!isOpen)}>Advisors</Link>
+                  </div>
 
                   <Link to='/Projects'>
                     <button
@@ -163,6 +174,12 @@ export default function Navbar(props) {
                       onClick={() => setOpen(!isOpen)}
                     >Projects</button>
                   </Link>
+                  <div className='burgerSubLinks'>
+                    <Link to='/Projects/DVT' onClick={() => setOpen(!isOpen)}>DVT</Link>
+                    <Link to='/Projects/CTS' onClick={() => setOpen(!isOpen)}>CTS</Link>
+                    <Link to='/Projects/TremorGlove' onClick={() => setOpen(!isOpen)}>Tremor Glove</Link>
+                    <Link to='/Projects/Alyssa' onClick={() => setOpen(!isOpen)}>Alyssa</Link>
+                  </div>
 
                   <Link to='/Onboarding'>
                     <button

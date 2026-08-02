@@ -62,8 +62,8 @@ export default function HomePage() {
 
   return (
     <div className='homePage'>
-      <div className='pitchDiv'>
-        <h1 className='pitchTitle' id='pitchWord1'>Solutions That Heal</h1>
+      <div className='majorTitleDiv'>
+        <h1 className='majorTitle' id='pitchWord1'>Medical Innovation, Networking,<br/>and Design Club</h1>
       </div>
       <div className='statDiv'>
         <div className='descDiv'>
@@ -92,8 +92,7 @@ export default function HomePage() {
             <div
               className='projectTile'
               key={tile.id}
-              style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }}
-            >
+              style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }}>
               <span className='tileLabel'>{tile.team}</span>
               <div className='tileOverlay'>
                 <p>{tile.info}</p>
