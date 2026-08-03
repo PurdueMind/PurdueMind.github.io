@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box;
 
   height: auto;
   max-width: 230px;
@@ -21,6 +22,16 @@
   transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
 }
 
+/* Below this width even a 200px min-width card plus its margins can no
+   longer fit without forcing horizontal overflow (which clips the card
+   via `overflow: hidden` and reads as the image being squished). Let the
+   card and its photo keep shrinking together instead. */
+@media (max-width: 420px) {
+  .profile {
+    min-width: 160px;
+  }
+}
+
 .profile:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 22px 34px rgba(0, 0, 0, 0.28);
@@ -37,6 +48,12 @@
   margin: 8px auto 14px;
 
   border-radius: 14px;
+}
+
+@media (max-width: 420px) {
+  .profilePic {
+    min-width: 144px;
+  }
 }
 
 .name {

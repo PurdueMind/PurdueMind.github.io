@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import './PeoplePage.css';
@@ -30,7 +30,7 @@ function buildImageMap(context) {
 
 const imagesByType = {
   Officers: buildImageMap(execContext),
-  'Team Leads': buildImageMap(leadContext),
+  Leads: buildImageMap(leadContext),
   Advisors: buildImageMap(advisorContext),
 };
 
@@ -38,10 +38,19 @@ function getImageSrc(type, filename) {
   return (imagesByType[type] && imagesByType[type][filename]) || defaultHeadshot;
 }
 
+// Slideshow of exec/leads photos shown at the top of the page
+const slideshowContext = require.context('../../assets/people/slideshow', false, /\.(png|jpe?g)$/);
+const slideshowImages = Object.values(buildImageMap(slideshowContext));
+const IMAGE_SLIDE_INTERVAL_MS = 4500;
+const IMAGE_SLIDE_ANIMATION_MS = 800;
+
 const NAVBAR_HEIGHT = 90;
 
 export default function PeoplePage() {
   const location = useLocation();
+
+  const [imageIndex, setImageIndex] = useState(0);
+  const [prevImageIndex, setPrevImageIndex] = useState(null);
 
   // Scroll to the section named in the URL hash (e.g. #teamLeads), or
   // to the top of the page when navigating here with no hash.
@@ -57,6 +66,25 @@ export default function PeoplePage() {
     }
   }, [location]);
 
+  useEffect(() => {
+    if (slideshowImages.length === 0) return;
+    const interval = setInterval(() => {
+      setImageIndex((i) => {
+        setPrevImageIndex(i);
+        return (i + 1) % slideshowImages.length;
+      });
+    }, IMAGE_SLIDE_INTERVAL_MS);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Drop the outgoing image from the DOM once its slide-out animation finishes
+  useEffect(() => {
+    if (prevImageIndex === null) return;
+    const timeout = setTimeout(() => setPrevImageIndex(null), IMAGE_SLIDE_ANIMATION_MS);
+    return () => clearTimeout(timeout);
+  }, [prevImageIndex]);
+
   return (
     <div className='peoplePage'>
 
@@ -64,15 +92,24 @@ export default function PeoplePage() {
         <h1 className='majorTitle' id='majorPeopleTitle'>Our People</h1>
       </div>
 
-      <div className='peoplePitchDiv'>
-        <h3 id='peoplePitch'>
-          INSERT IMAGES OF EXEC AND LEADS HERE
-        </h3>
-      </div>
+      {slideshowImages.length > 0 && (
+        <div className='peopleImageSlideshow'>
+          {prevImageIndex !== null && (
+            <div key={`prev-${prevImageIndex}`} className='peopleImageSlideshowSlide peopleImageSlideshowSlideOut'>
+              <img className='peopleImageSlideshowBg' src={slideshowImages[prevImageIndex]} alt='' aria-hidden='true' />
+              <img className='peopleImageSlideshowImg' src={slideshowImages[prevImageIndex]} alt='' />
+            </div>
+          )}
+          <div key={`current-${imageIndex}`} className='peopleImageSlideshowSlide peopleImageSlideshowSlideIn'>
+            <img className='peopleImageSlideshowBg' src={slideshowImages[imageIndex]} alt='' aria-hidden='true' />
+            <img className='peopleImageSlideshowImg' src={slideshowImages[imageIndex]} alt='Exec and team leads' />
+          </div>
+        </div>
+      )}
 
       <div className='break'/>
 
-      <div className='sectionTitleDiv'>
+      <div className='sectionTitleDiv' id='officersBreak'>
         <div className='sectionTitleLeftDiv'>
           <h1 className='sectionTitle'>Executive Board</h1>
         </div>
@@ -83,7 +120,7 @@ export default function PeoplePage() {
         {getProfile(leaderList.officers, 'Officers')}
       </div>
 
-      <div className='break' id='teamLeadsBreak'/>
+      <div className='break'/>
 
       <div className='sectionTitleDiv' id='peopleMiddleDiv'>
         <div className='sectionTitleLeftDiv'>
@@ -93,7 +130,7 @@ export default function PeoplePage() {
       </div>
 
       <div className='memberProfiles' id='teamLeads'>
-        {getProfile(leaderList.leads, 'Team Leads')}
+        {getProfile(leaderList.leads, 'Leads')}
       </div>
 
       <div className='break' id='advisorsBreak'/>
@@ -127,7 +164,7 @@ function getProfile(memberList, type) {
         email={member.email}
         linkedIn={member.linkedIn} />)
     }
-    else if (type === 'Team Leads') {
+    else if (type === 'Leads') {
       formattedProfiles.push(<LeadProfile
         id={member.id}
         imgSrc={getImageSrc(type, member.filename)}
@@ -136,7 +173,8 @@ function getProfile(memberList, type) {
         major={member.major}
         email={member.email}
         linkedIn={member.linkedIn} />)
-    } else {
+    }
+    else {
       formattedProfiles.push(<AdvisorProfile
         id={member.id}
         imgSrc={getImageSrc(type, member.filename)}

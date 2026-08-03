@@ -1,40 +1,33 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+
 import './HomePage.css';
 import '../../App.css';
-
-import defaultImg from '../../assets/projects/defaultImg.jpg';
-import exomindGlove from '../../assets/projects/exomindGlove.jpeg';
-import gripAssist from '../../assets/projects/gripAssist.jpg';
-import hydraCheck from '../../assets/projects/hydraCheck.png';
-import ptsdCollar from '../../assets/projects/ptsdCollar.jpg';
-import smartSock from '../../assets/projects/smartSock.jpeg';
-import tmap from '../../assets/projects/tmap.png';
-import vertiFix from '../../assets/projects/vertiFix.jpeg';
-import walkerProject from '../../assets/projects/walkerProject.png';
 
 const statsList = require('./stats.json');
 const projectTilesList = require('./projectTiles.json');
 
-// Static map of image filename (as referenced in projectTiles.json) to its imported asset
-const projectImages = {
-  'defaultImg.jpg': defaultImg,
-  'exomindGlove.jpeg': exomindGlove,
-  'gripAssist.jpg': gripAssist,
-  'hydraCheck.png': hydraCheck,
-  'ptsdCollar.jpg': ptsdCollar,
-  'smartSock.jpeg': smartSock,
-  'tmap.png': tmap,
-  'vertiFix.jpeg': vertiFix,
-  'walkerProject.png': walkerProject,
-};
+// Each section's images live in their own folder; require.context loads them
+// all so new photos just need to be dropped in without touching this file.
+function buildImageMap(context) {
+  const images = {};
+  context.keys().forEach((key) => {
+    const mod = context(key);
+    images[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
+  });
+  return images;
+}
+
+const activeProjectImages = buildImageMap(require.context('../../assets/home/activeProjects', false, /\.(png|jpe?g)$/));
+const slideshowImages = buildImageMap(require.context('../../assets/home/slideshow', false, /\.(png|jpe?g)$/));
 
 // Function to get image source with fallback
 function getImageSrc(imageName) {
-  return projectImages[imageName] || projectImages['defaultImg.jpg'];
+  return activeProjectImages[imageName] || activeProjectImages['defaultImg.jpg'];
 }
 
 // Placeholder rotation of images for the image slideshow until real photos are ready
-const slideshowPlaceholderImages = Object.values(projectImages);
+const slideshowPlaceholderImages = Object.values(slideshowImages);
 const IMAGE_SLIDE_INTERVAL_MS = 4500;
 const IMAGE_FADE_DURATION_MS = 1500;
 
@@ -99,13 +92,16 @@ export default function HomePage() {
               className='projectTile'
               key={tile.id}
               style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }}>
-              <span className='tileLabel'>{tile.team}</span>
-              <div className='tileOverlay'>
-                <p>{tile.info}</p>
-              </div>
+              <Link to={`/Projects/${tile.projectPage}`}>
+                <span className='tileLabel'>{tile.team}</span>
+                <div className='tileOverlay'>
+                  <p className='projectTileDescription'>{tile.info}</p>
+                </div>
+              </Link>
             </div>
           ))}
         </div>
+
       </div>
       <div className='break'/>
       <div className='sectionDiv'>

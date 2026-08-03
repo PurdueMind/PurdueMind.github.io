@@ -13,28 +13,23 @@ export const DownloadButton = ({downloadFile, filename, buttonName}) => {
         document.body.removeChild(link);
     }
     return (
-        <button className="downloadButton" onClick={handleDownload}>{buttonName}</button>
+        <button className="downloadButton" onClick={handleDownload}>Download Workshop</button>
     )
 }
 
-export default function Workshop({id, title, buttonName, description, imgSrc, alt, downloadFile, downloadFilename}) {
+export default function Workshop({id, pitch, buttonName, description, imgSrc, alt, downloadFile, downloadFilename}) {
     return (
         <div className='workshopDiv' id={id}>
-            <div className='workshopImageDiv'>
-                <img className='workshopImg' src={imgSrc} alt={alt} />
-            </div>
-            <div id='workshopInfoDiv'>
-                <h4 className='title'>{title}</h4>
+            {imgSrc && (
+                <div className='workshopImageDiv'>
+                    <img className='workshopImg' src={imgSrc} alt={alt} />
+                </div>
+            )}
+            <div className='workshopInfoDiv'>
+                <h3 className='workshopPitch'><b>{pitch}</b></h3>
                 <DownloadButton downloadFile={downloadFile} filename={downloadFilename} buttonName={buttonName} />
                 <button className='downloadButton' onClick={() => {}}>I know what I'm doing</button>
             </div>
         </div>
     )
 };
-
-// function that takes a list of strings and return a unorder list of html elements
-// function expandDescription(description) {
-//     const listItems = [];
-//     for (const item of description) { listItems.push(<li>{item}</li>); }
-//     return (<ul>{listItems}</ul>);
-//   }

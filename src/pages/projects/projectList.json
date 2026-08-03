@@ -1,20 +1,6 @@
 {
   "currentProjects": [
     {
-      "id": "biomechanics",
-      "alt": "",
-      "title": "Biomechanics",
-      "imgSrc": "gripAssist.jpg",
-      "lead": "Shreya Prakash & Isha Varshney",
-      "description": ["Last year a sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
-                      "By integrating EMG and flex sensors with a mechanical pulley-motor system, the glove detects user intent and provides personalized grip assistance",
-                      "The final product will aim to prioritize affordability, user-friendliness, and portability to increase accessibility beyond research settings",
-                      "Refined motor design, transitioning from stepper motor to servo for light weight and space efficient alternative",
-                      "Pivoted from use of EMG sensors (commercial availability not sensitive enough) to force sensors on finger tips",
-                      "Incorporated asynchronous programming for flex sensor and motor software",
-                      "Designing custom servo reel mount in CAD"]
-    },
-    {
       "id": "dvt",
       "slug": "DVT",
       "alt": "DVT CAD rendering",
@@ -62,6 +48,20 @@
     }
   ],
   "pastProjects": [
+    {
+      "id": "biomechanics",
+      "alt": "",
+      "title": "Biomechanics",
+      "imgSrc": "gripAssist.jpg",
+      "lead": "Shreya Prakash & Isha Varshney",
+      "description": ["Last year a sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
+                      "By integrating EMG and flex sensors with a mechanical pulley-motor system, the glove detects user intent and provides personalized grip assistance",
+                      "The final product will aim to prioritize affordability, user-friendliness, and portability to increase accessibility beyond research settings",
+                      "Refined motor design, transitioning from stepper motor to servo for light weight and space efficient alternative",
+                      "Pivoted from use of EMG sensors (commercial availability not sensitive enough) to force sensors on finger tips",
+                      "Incorporated asynchronous programming for flex sensor and motor software",
+                      "Designing custom servo reel mount in CAD"]
+    },
     {
       "id": "muscle-computer",
       "alt": "",

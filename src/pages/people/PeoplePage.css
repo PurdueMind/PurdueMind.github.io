@@ -41,7 +41,9 @@
 }
 
 @media (max-width: 700px) {
-  #officers .profile {
+  #officers .profile,
+  #teamLeads .profile,
+  #advisors .profile {
     flex: 1 1 200px;
     width: auto;
   }
@@ -98,4 +100,73 @@
 
 #peopleBottomDiv {
   margin-top: 30px;
+}
+
+.peopleImageSlideshow {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 350px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.peopleImageSlideshowSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Blurred, scaled-up copy of the same photo fills the whole box so every
+   image occupies a uniform area, even when its aspect ratio doesn't match
+   the slideshow's. */
+.peopleImageSlideshowBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(25px) brightness(0.7);
+  transform: scale(1.15);
+}
+
+.peopleImageSlideshowImg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.peopleImageSlideshowSlideIn {
+  animation: peopleImageSlideInFromRight 0.8s ease forwards;
+}
+
+.peopleImageSlideshowSlideOut {
+  animation: peopleImageSlideOutToLeft 0.8s ease forwards;
+}
+
+@keyframes peopleImageSlideInFromRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes peopleImageSlideOutToLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

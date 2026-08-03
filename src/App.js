@@ -5,14 +5,14 @@ import HomePage from './pages/home/HomePage'
 import PeoplePage from './pages/people/PeoplePage'
 import ProjectsPage from './pages/projects/ProjectsPage'
 import ProjectDetailPage from './pages/projects/ProjectDetailPage'
-import OnboardingPage from './pages/onboarding/OnboardingPage'
+import LearningPage from './pages/learning/LearningPage'
 
-import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function RedirectHandler() {
   const history = useHistory();
-  
+
   useEffect(() => {
     const search = window.location.search;
     if (search.startsWith('?/')) {
@@ -22,7 +22,17 @@ function RedirectHandler() {
       history.replace(cleanPath || '/');
     }
   }, [history]);
-  
+
+  return null;
+}
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+
   return null;
 }
 
@@ -30,6 +40,7 @@ export default function App() {
   return (
     <Router>
     <RedirectHandler />
+    <ScrollToTop />
     <div className='App'>
       <link rel='preconnect' href='https://fonts.googleapis.com'/>
       <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="true"/>
@@ -58,8 +69,8 @@ export default function App() {
             <ProjectDetailPage/>
             <Footer/>
           </Route>
-          <Route path='/Onboarding'>
-            <OnboardingPage/>
+          <Route path='/Learning'>
+            <LearningPage/>
             <Footer/>
           </Route>
       </Switch>

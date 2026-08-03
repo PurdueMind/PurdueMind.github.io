@@ -336,17 +336,24 @@ p {
   box-sizing: border-box;
 
   background: linear-gradient(to top, rgba(142, 111, 62, 0.95) 0%, rgba(142, 111, 62, 0.95) 40%, rgba(142, 111, 62, 0) 100%);
-  color: #ffffff;
   text-align: center;
-  font-size: 14px;
-  line-height: 1.4;
 
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
+.projectTileDescription {
+  z-index: 1;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Oranienbaum", serif;
+  line-height: 1.4;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
 .projectTile:hover .tileOverlay {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 #calendar {

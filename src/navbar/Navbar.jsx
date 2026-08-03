@@ -107,9 +107,9 @@ export default function Navbar(props) {
                 ><b>People</b></button>
               </Link>
               <div className='dropdownMenu'>
-                <Link className='dropdownItem' to='/People'>Executive Board</Link>
-                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#teamLeadsBreak' }}>Team Leads</Link>
-                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#advisorsBreak' }}>Advisors</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#officersBreak' }}>Executive Board</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#peopleMiddleDiv' }}>Team Leads</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#peopleBottomDiv' }}>Advisors</Link>
               </div>
             </div>
 
@@ -126,12 +126,18 @@ export default function Navbar(props) {
                 <Link className='dropdownItem' to='/Projects/Alyssa'>Alyssa</Link>
               </div>
             </div>
-
-            <Link to='/Onboarding'>
-              <button
-                className={`btn navBtn ${active === 'Onboarding' ? 'activeBtn' : ''}`}
-              ><b>Onboarding</b></button>
-            </Link>
+          
+            <div className='navDropdown'>
+              <Link to='/Learning'>
+                <button
+                  className={`btn navBtn ${active === 'Learning' ? 'activeBtn' : ''}`}
+                ><b>Learning</b></button>
+              </Link>
+              <div className='dropdownMenu'>
+                <Link className='dropdownItem' to={{ pathname: '/Learning', hash: '#onboardingBreak' }}>Onboarding</Link>
+                <Link className='dropdownItem' to={{ pathname: '/Learning', hash: '#workshopsBreak' }}>Workshops</Link>
+              </div>
+            </div>
 
             <a href='https://www.coolfaces.net/TooCOOLPUWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=BHSiXXqQ0BU%3d' target='_blank' rel='noopener noreferrer'>
               <button
@@ -163,7 +169,7 @@ export default function Navbar(props) {
                     >People</button>
                   </Link>
                   <div className='burgerSubLinks'>
-                    <Link to='/People' onClick={() => setOpen(!isOpen)}>Executive Board</Link>
+                    <Link to={{ pathname: '/People', hash: '#officersBreak' }} onClick={() => setOpen(!isOpen)}>Executive Board</Link>
                     <Link to={{ pathname: '/People', hash: '#teamLeadsBreak' }} onClick={() => setOpen(!isOpen)}>Team Leads</Link>
                     <Link to={{ pathname: '/People', hash: '#advisorsBreak' }} onClick={() => setOpen(!isOpen)}>Advisors</Link>
                   </div>

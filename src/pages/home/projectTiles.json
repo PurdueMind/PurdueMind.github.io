@@ -1,28 +1,32 @@
 {
   "projectTiles": [
     {
-      "id": "biomechanics",
-      "team": "Biomechanics",
-      "imgSrc": "defaultImg.jpg",
-      "info": ""
-    },
-    {
       "id": "dvt",
-      "team": "DVT Detection",
+      "team": "DVT Detection Sleeve",
       "imgSrc": "defaultImg.jpg",
-      "info": ""
+      "info": "",
+      "projectPage": "DVT"
     },
     {
       "id": "cts",
-      "team": "CTS",
+      "team": "CTS Smart Brace",
       "imgSrc": "defaultImg.jpg",
-      "info": ""
+      "info": "",
+      "projectPage": "CTS"
     },
     {
-      "id": "exomind",
-      "team": "ExoMIND",
+      "id": "tremorGlove",
+      "team": "Tremor Glove",
       "imgSrc": "defaultImg.jpg",
-      "info": ""
+      "info": "",
+      "projectPage": "TremorGlove"
+    },
+    {
+      "id": "alyssa",
+      "team": "Alyssa",
+      "imgSrc": "defaultImg.jpg",
+      "info": "",
+      "projectPage": "Alyssa"
     }
   ]
 }

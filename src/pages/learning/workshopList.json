@@ -2,8 +2,10 @@
     "onboarding": [
         {
             "id": "electronics-project",
-            "title": "Learn to design a PCB from scratch!",
+            "title": "Electronics Onboarding Project",
+            "pitch": "Design a PCB from scratch",
             "filename": "Electronics-Onboarding.pdf",
+            "imgSrc": "defaultImg.jpg",
             "buttonName": "Download Electronics Onboarding Files",
             "description": [
                 "Guides members through bandpass filter circuit simulation using LTSpice",
@@ -14,7 +16,9 @@
         {
             "id": "cad-project",
             "title": "SolidWorks Onboarding Project",
+            "pitch": "Model a hand in SolidWorks",
             "filename": "CAD-Onboarding.zip",
+            "imgSrc": "defaultImg.jpg",
             "buttonName": "Download CAD Onboarding Files",
             "description": [
                 "Introduces SolidWorks for Computer-aided Design (CAD)",
@@ -27,7 +31,9 @@
         {
             "id": "ml-project",
             "title": "Arduino Onboarding Project",
-            "filename": "",
+            "pitch": "Create a heart rate monitor with Arduino",
+            "filename": "Arduino-Onboarding.pdf",
+            "imgSrc": "defaultImg.jpg",
             "buttonName": "Download Arduino Onboarding Files",
             "description": [
                 "Learn about Arduino circuit design and programming",
