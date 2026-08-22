@@ -5,18 +5,14 @@ import './LearningPage.css';
 import '../../App.css';
 import Workshop from './Workshop';
 
-import mlFiles from '../../assets/learning/Arduino-Onboarding.pdf';
-import cadFiles from '../../assets/learning/cad-workshop-2025.zip';
-import electronicsFiles from '../../assets/learning/Electronics-Onboarding.pdf';
+// import mlFiles from '../../assets/learning/Arduino-Onboarding.pdf';
+// import cadFiles from '../../assets/learning/cad-workshop-2025.zip';
+// import electronicsFiles from '../../assets/learning/Electronics-Onboarding.pdf';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const workshopList = require('./workshopList.json');
 
-const fileList = {
-    'ml-project': mlFiles,
-    'cad-project': cadFiles,
-    'electronics-project': electronicsFiles
-}
+const fileList = {}
 
 // Onboarding project images live in src/assets/learning/onboarding; new ones
 // just need to be dropped in without touching this file.
@@ -158,6 +154,7 @@ function getProjects(projects) {
         formattedProjects.push(<Workshop
             id={workshop.title}
             pitch={workshop.pitch}
+            dates={workshop.dates}
             buttonName={workshop.buttonName}
             description={workshop.description}
             imgSrc={getImageSrc(workshop.imgSrc)}

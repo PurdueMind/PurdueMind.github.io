@@ -4,9 +4,22 @@ import './ProjectsPage.css';
 import '../../App.css';
 
 import Project from './Project';
-import { getImageSrc } from './projectImages';
 
 const projectList = require('./projectList.json');
+
+// Project detail page images live in src/assets/projects/detailed; new ones
+// just need to be dropped in without touching this file.
+const detailedImageContext = require.context('../../assets/projects/detailed', false, /\.(png|jpe?g)$/);
+
+const detailedImages = {};
+detailedImageContext.keys().forEach((key) => {
+  const mod = detailedImageContext(key);
+  detailedImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
+});
+
+function getImageSrc(filename) {
+  return detailedImages[filename] || detailedImages['defaultImg.jpg'];
+}
 
 function findProject(slug) {
   const allProjects = [...projectList.currentProjects, ...projectList.pastProjects];
@@ -29,11 +42,10 @@ export default function ProjectDetailPage() {
   return (
     <div className='projectsPage'>
       <Project
-        id={project.id}
-        imgSrc={getImageSrc(project.imgSrc)}
+        imgSrc={getImageSrc(project.feature)}
         alt={project.alt}
         title={project.title}
-        lead={project.lead}
+        projectCode={project.projectCode}
         description={project.description} />
     </div>
   );

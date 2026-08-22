@@ -2,9 +2,22 @@ import './ProjectsPage.css';
 import '../../App.css';
 
 import ProjectTile from './ProjectTile';
-import { getImageSrc } from './projectImages';
 
 const projectList = require('./projectList.json');
+
+// Project tile images live in src/assets/projects/main; new ones just need
+// to be dropped in without touching this file.
+const mainImageContext = require.context('../../assets/projects/main', false, /\.(png|jpe?g)$/);
+
+const mainImages = {};
+mainImageContext.keys().forEach((key) => {
+  const mod = mainImageContext(key);
+  mainImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
+});
+
+function getImageSrc(filename) {
+  return mainImages[filename] || mainImages['defaultImg.jpg'];
+}
 
 export default function ProjectsPage() {
   return (
@@ -38,9 +51,8 @@ function getProjectTiles(projects) {
     <div className='projectsGrid'>
       {projects.map((project) => (
         <ProjectTile
-          key={project.id}
           slug={project.slug || project.id}
-          imgSrc={getImageSrc(project.imgSrc)}
+          imgSrc={getImageSrc(project.thumbnail)}
           alt={project.alt}
           title={project.title}
           description={project.description} />

@@ -12,22 +12,22 @@ export default function Footer() {
   return (
     <div className='footer'>
       <div id='socials'>
-        <a href='https://www.facebook.com/PurdueMIND/'>
+        <a href='https://www.facebook.com/PurdueMIND/' target='_blank' rel='noreferrer'>
           <img id='facebookLogo' className='socialLogo'
             src={facebookLogo} alt='Facebook Logo' />
         </a>
 
-        <a href='https://www.instagram.com/purdue.mind/'>
+        <a href='https://www.instagram.com/purdue.mind/' target='_blank' rel='noreferrer'>
           <img id='instagramLogo' className='socialLogo'
             src={instagramLogo} alt='Instagram Logo' />
         </a>
 
-        <a href='https://twitter.com/purduemind?lang=en'>
+        <a href='https://twitter.com/purduemind?lang=en' target='_blank' rel='noreferrer'>
           <img id='twitterLogo' className='socialLogo'
             src={twitterLogo} alt='Twitter Logo' />
         </a>
 
-        <a href='https://www.youtube.com/channel/UC6Dv-UygUz6vUts8L8hGi8g/featured'>
+        <a href='https://www.youtube.com/channel/UC6Dv-UygUz6vUts8L8hGi8g/featured' target='_blank' rel='noreferrer'>
           <img id='youtubeLogo' className='socialLogo'
             src={youtubeLogo} alt='YouTube Logo' />
         </a>

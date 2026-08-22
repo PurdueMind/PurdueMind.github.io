@@ -3,14 +3,14 @@
     {
       "id": "dvt",
       "team": "DVT Detection Sleeve",
-      "imgSrc": "defaultImg.jpg",
+      "imgSrc": "dvt-team.jpeg",
       "info": "",
       "projectPage": "DVT"
     },
     {
       "id": "cts",
       "team": "CTS Smart Brace",
-      "imgSrc": "defaultImg.jpg",
+      "imgSrc": "cts-clip.jpg",
       "info": "",
       "projectPage": "CTS"
     },
@@ -22,11 +22,11 @@
       "projectPage": "TremorGlove"
     },
     {
-      "id": "alyssa",
-      "team": "Alyssa",
+      "id": "mend",
+      "team": "MEND",
       "imgSrc": "defaultImg.jpg",
       "info": "",
-      "projectPage": "Alyssa"
+      "projectPage": "MEND"
     }
   ]
 }

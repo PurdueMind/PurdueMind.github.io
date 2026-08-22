@@ -74,6 +74,7 @@ export default function Navbar(props) {
     if (location.pathname.startsWith('/People')) return 'People';
     if (location.pathname.startsWith('/Projects')) return 'Projects';
     if (location.pathname.startsWith('/Onboarding')) return 'Onboarding';
+    if (location.pathname.startsWith('/Contact')) return 'Contact';
     return 'Home';
   };
 
@@ -123,7 +124,7 @@ export default function Navbar(props) {
                 <Link className='dropdownItem' to='/Projects/DVT'>DVT</Link>
                 <Link className='dropdownItem' to='/Projects/CTS'>CTS</Link>
                 <Link className='dropdownItem' to='/Projects/TremorGlove'>Tremor Glove</Link>
-                <Link className='dropdownItem' to='/Projects/Alyssa'>Alyssa</Link>
+                <Link className='dropdownItem' to='/Projects/MEND'>MEND</Link>
               </div>
             </div>
           
@@ -138,6 +139,12 @@ export default function Navbar(props) {
                 <Link className='dropdownItem' to={{ pathname: '/Learning', hash: '#workshopsBreak' }}>Workshops</Link>
               </div>
             </div>
+
+            <Link to='/Contact'>
+              <button
+                className={`btn navBtn ${active === 'Contact' ? 'activeBtn' : ''}`}
+              ><b>Contact</b></button>
+            </Link>
 
             <a href='https://www.coolfaces.net/TooCOOLPUWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=BHSiXXqQ0BU%3d' target='_blank' rel='noopener noreferrer'>
               <button
@@ -192,6 +199,13 @@ export default function Navbar(props) {
                       className='btn burgerBtn'
                       onClick={() => setOpen(!isOpen)}
                     >Onboarding</button>
+                  </Link>
+
+                  <Link to='/Contact'>
+                    <button
+                      className='btn burgerBtn'
+                      onClick={() => setOpen(!isOpen)}
+                    >Contact</button>
                   </Link>
 
                   <Marginer />

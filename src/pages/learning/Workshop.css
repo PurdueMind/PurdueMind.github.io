@@ -44,13 +44,18 @@
 .workshopPitch {
   font-size: 30px;
   font-family: "Oranienbaum", serif;
-  /* color: #8e6f3e; */
   text-align: center;
-  /* background-color: #9d9795; */
-  padding-top: 10px;
-  padding-bottom: 10px;
+  
   border-radius: 10px;
   margin-bottom: 0px;
+  margin-top: -10px;
+}
+
+.workshopDates {
+  font-size: 18px;
+  font-family: "Oranienbaum", serif;
+  color: black;
+  margin-top: -10px;
 }
 
 .downloadButton {

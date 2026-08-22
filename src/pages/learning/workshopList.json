@@ -1,11 +1,12 @@
 {
     "onboarding": [
         {
-            "id": "electronics-project",
-            "title": "Electronics Onboarding Project",
-            "pitch": "Design a PCB from scratch",
-            "filename": "Electronics-Onboarding.pdf",
-            "imgSrc": "defaultImg.jpg",
+            "id": "arduino-project",
+            "title": "Arduino Onboarding Project",
+            "pitch": "Program an Arduino",
+            "dates": "9/3/2026 | 9/10/2026",
+            "filename": "",
+            "imgSrc": "arduino-onboarding.png",
             "buttonName": "Download Electronics Onboarding Files",
             "description": [
                 "Guides members through bandpass filter circuit simulation using LTSpice",
@@ -17,8 +18,9 @@
             "id": "cad-project",
             "title": "SolidWorks Onboarding Project",
             "pitch": "Model a hand in SolidWorks",
-            "filename": "CAD-Onboarding.zip",
-            "imgSrc": "defaultImg.jpg",
+            "dates": "9/14/2026 | 9/17/2026",
+            "filename": "",
+            "imgSrc": "cad-onboarding.png",
             "buttonName": "Download CAD Onboarding Files",
             "description": [
                 "Introduces SolidWorks for Computer-aided Design (CAD)",
@@ -29,11 +31,12 @@
             ]
         },
         {
-            "id": "ml-project",
-            "title": "Arduino Onboarding Project",
-            "pitch": "Create a heart rate monitor with Arduino",
-            "filename": "Arduino-Onboarding.pdf",
-            "imgSrc": "defaultImg.jpg",
+            "id": "ltspice-project",
+            "title": "LT Spice Onboarding Project",
+            "pitch": "Simulate a circuit in LTSpice",
+            "dates": "9/21/2026 | 9/24/2026",
+            "filename": "",
+            "imgSrc": "ltspice-onboarding.png",
             "buttonName": "Download Arduino Onboarding Files",
             "description": [
                 "Learn about Arduino circuit design and programming",

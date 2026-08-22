@@ -191,6 +191,8 @@ p {
 .sectionDiv {
   width: 100%;
   box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .sectionDiv::after {
@@ -208,7 +210,7 @@ p {
 .imageSlideshowImg {
   display: block;
   width: 100%;
-  max-height: 350px;
+  max-height: 500px;
   object-fit: cover;
 
   border-radius: 10px;
@@ -335,7 +337,6 @@ p {
   padding: 15px;
   box-sizing: border-box;
 
-  background: linear-gradient(to top, rgba(142, 111, 62, 0.95) 0%, rgba(142, 111, 62, 0.95) 40%, rgba(142, 111, 62, 0) 100%);
   text-align: center;
 
   opacity: 0;

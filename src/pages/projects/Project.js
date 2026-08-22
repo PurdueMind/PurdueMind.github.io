@@ -15,23 +15,21 @@ leadContext.keys().forEach((key) => {
   leadImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
 });
 
-function getImageForMember(memberId) {
-  const member = leaderList.leads.find(m => m.id === memberId);
+function getImageForMember(member) {
   return (member && leadImages[member.filename]) || defaultHeadshot;
 }
 
 export default function Projects(
   {
-    id,
     imgSrc,
     alt = '404: No Image',
     title,
     description,
-    lead = '' // name of the team lead (optional)
+    projectCode = '' // matches a lead's teamCode in leaderList.json
   }) {
   description = expandDescription(description);
   return (
-    <div className='project' id={id}>
+    <div className='project'>
       <div className='majorTitleDiv'>
         <h1 className='majorTitle' id='projectTitle'>{title}</h1>
       </div>
@@ -54,7 +52,7 @@ export default function Projects(
       </div>
 
       <div className='projectLeadDiv'>
-        {getProfile(leaderList, lead)}
+        {getProfile(leaderList, projectCode)}
       </div>
 
     </div>
@@ -68,16 +66,21 @@ function expandDescription(description) {
   return (<ul>{listItems}</ul>);
 }
 
-function getProfile(memberList, name) {
-  const allMembers = [...memberList.officers, ...memberList.leads, ...memberList.advisors];
-  const member = allMembers.find(m => m.name === name);
-  if (!member) return null;
-  return <LeadProfile
-    id={member.id}
-    imgSrc={getImageForMember(member.id)}
-    name={member.name}
-    team={"Project Lead"}
-    major={member.major}
-    email={member.email}
-    linkedIn={member.linkedIn} />
+function getProfile(memberList, projectCode) {
+  if (!projectCode) return [];
+
+  const allLeads = [...memberList.leads, ...memberList.subleads];
+  const projectLeads = allLeads.filter(m => m.teamCode === projectCode);
+
+  return projectLeads.map(member => (
+    <LeadProfile
+      key={`${member.teamCode}-${member.name}`}
+      id={`${member.teamCode}-${member.name}`}
+      imgSrc={getImageForMember(member)}
+      name={member.name}
+      team={"Project Lead"}
+      major={member.major}
+      email={member.email}
+      linkedIn={member.linkedIn} />
+  ));
 }

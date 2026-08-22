@@ -6,6 +6,7 @@ import PeoplePage from './pages/people/PeoplePage'
 import ProjectsPage from './pages/projects/ProjectsPage'
 import ProjectDetailPage from './pages/projects/ProjectDetailPage'
 import LearningPage from './pages/learning/LearningPage'
+import ContactPage from './pages/contact/ContactPage'
 
 import { BrowserRouter as Router, Switch, Route, useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -71,6 +72,10 @@ export default function App() {
           </Route>
           <Route path='/Learning'>
             <LearningPage/>
+            <Footer/>
+          </Route>
+          <Route path='/Contact'>
+            <ContactPage/>
             <Footer/>
           </Route>
       </Switch>

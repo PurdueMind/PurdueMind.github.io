@@ -47,16 +47,24 @@
   width: 50%;
   align-items: flex-start;
   justify-content: center;
+  align-items: left;
+  text-align: left;
 
   margin-left: 20px;
+}
+
+.projectDescription {
+  text-align: left;
 }
 
 .projectLeadDiv {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
   align-items: center;
   justify-content: center;
+  gap: 24px;
   margin-top: 30px;
   margin-bottom: 30px;
 }

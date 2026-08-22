@@ -2,6 +2,7 @@
   "stats": [
     { "number": 100, "unit": "+", "description": "Active members across project teams" },
     { "number": 4, "unit": "", "description": "Active projects" },
-    { "number": 3, "unit": "", "description": "Research and engineering fair awards" }
+    { "number": 10, "unit": "+", "description": "Years of operation"},
+    { "number": 7, "unit": "+", "description": "Majors"}
   ]
 }

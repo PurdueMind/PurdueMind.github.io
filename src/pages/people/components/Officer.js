@@ -17,7 +17,7 @@ export default function OfficerProfile(
   }) {
   return (
     <div className='profile'>
-      <img className='profilePic' id={id} src={imgSrc} alt={alt} />
+      <img className='profilePic' src={imgSrc} alt={alt} />
 
       <div id='eboardInfo'>
         <h3 className='name'>{name}</h3>
