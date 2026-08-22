@@ -1,6 +1,7 @@
 h1 {
-  color: #cfb991;
+  color: #8e6f3e;
   margin-bottom: 5px;
+  font-family: "Oranienbaum", serif;
 }
 
 p {
@@ -15,19 +16,125 @@ p {
 .homePage {
   display: flex;
   flex-direction: column;
-  
+
   justify-content: center;
   align-items: center;
+
+  background-color: #c4bfc0;
 }
 
-.break {
-  height: 7px;
-  width: 35vw;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-inline: auto;
+#pitchWord1 {
+  margin-left: 2.5%;
+}
+#pitchWord2 {
+  margin-left: 300px;
+  margin-top: 10px;
+}
 
-  background-color: #C9B38C;
+.statDiv {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.descDiv {
+  width: 35%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+.slideshowDiv {
+  width: 64%;
+  box-sizing: border-box;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  min-height: 220px;
+}
+
+.statTrack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  animation: scrollStats 25s linear infinite;
+}
+
+@keyframes scrollStats {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.statItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  padding: 0 40px;
+}
+
+.statDivider {
+  width: 2px;
+  height: 70px;
+  flex-shrink: 0;
+
+  background-color: #8e6f3e;
+}
+
+.statNumber {
+  font-size: 56px;
+  font-weight: bold;
+  font-family: "Oranienbaum", serif;
+  color: #8e6f3e;
+}
+
+.statDescription {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.minorTitle {
+  text-align: left;
+  font-size: 56px;
+  font-family: "Oranienbaum", serif;
+  color: #8e6f3e;
+  margin-left: 2.5%;
+  margin-top: 0px;
+}
+
+.desc-text {
+  font-size: 36px;
+  font-family: "Oranienbaum", serif;
+  background-color: #9d9795;
+  border-radius: 10px;
+  line-height: 1.5;
+}
+
+#slogan {
+  padding: 16px 16px;
+  box-sizing: border-box;
 }
 
 #homeHeader {
@@ -73,5 +180,184 @@ p {
 }
 
 #calendar {
+  margin-top: 30px;
   margin-bottom: 50px;
+}
+
+#calendar {
+  background-color: black;
+}
+
+.sectionDiv {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sectionDiv::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.imageSlideshow {
+  width: 90%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.imageSlideshowImg {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  opacity: 1;
+  transition: opacity 1.5s ease;
+}
+
+.imageSlideshowImgHidden {
+  opacity: 0;
+}
+
+.leftHalfDiv {
+  float: left;
+  width: 50%;
+  height: 400px;
+  margin-top: 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightHalfDiv {
+  float: right;
+  width: 50%;
+  height: 400px;
+  margin-top: 25px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.upperHalfDiv {
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+}
+
+.lowerHalfDiv {
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sectionButton {
+  padding: 14px 36px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #8e6f3e;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in;
+}
+
+.sectionButton:hover {
+  background-color: #c9b38c;
+}
+
+.projectTilesRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 100%;
+  box-sizing: border-box;
+  row-gap: 30px;
+  margin-top: 50px;
+}
+
+.projectTile {
+  position: relative;
+  overflow: hidden;
+
+  width: 250px;
+  height: 450px;
+  flex-shrink: 0;
+
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+
+  background-size: cover;
+  background-position: center;
+}
+
+.tileLabel {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 1;
+
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Oranienbaum", serif;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.tileOverlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  padding: 15px;
+  box-sizing: border-box;
+
+  text-align: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.projectTileDescription {
+  z-index: 1;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Oranienbaum", serif;
+  line-height: 1.4;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.projectTile:hover .tileOverlay {
+  opacity: 1;
+}
+
+#calendar {
+  display: block;
+  margin-inline: auto;
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
@@ -18,6 +18,7 @@ const NavLinksContainer = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  margin-left: auto;
 `;
 
 const LinksWrapper = styled.ul`
@@ -32,7 +33,7 @@ const LinksWrapper = styled.ul`
   width: 100%;
   
   position: fixed;
-  top: 65px;
+  top: 95px;
   left: 0;
 `;
 
@@ -45,28 +46,42 @@ export default function Navbar(props) {
   const isMobile = useMediaQuery({ maxWidth: DeviceSize.mobile });
   const location = useLocation();
   const [isOpen, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  // Hide the navbar when scrolling down, reveal it when scrolling up or at the top
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 0) {
+        setHidden(false);
+      } else if (currentScrollY > lastScrollY.current) {
+        setHidden(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        setHidden(false);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Function to determine which nav item should be active based on current route
   const getActiveItem = () => {
-    switch(location.pathname) {
-      case '/':
-      case '/PurdueMIND/':
-        return 'Home';
-      case '/AboutUs':
-        return 'About Us';
-      case '/Projects':
-        return 'Projects';
-      case '/Onboarding':
-        return 'Onboarding';
-      default:
-        return 'Home';
-    }
+    if (location.pathname.startsWith('/People')) return 'People';
+    if (location.pathname.startsWith('/Projects')) return 'Projects';
+    if (location.pathname.startsWith('/Onboarding')) return 'Onboarding';
+    if (location.pathname.startsWith('/Contact')) return 'Contact';
+    return 'Home';
   };
 
   const active = getActiveItem();
 
   return (
-    <div className='navbarContainer'>
+    <div className={`navbarContainer ${hidden ? 'navbarHidden' : ''}`}>
       <div className='section'>
         <Link to='/'>
           <button className='btn' id='mindLogoBtn'>
@@ -77,39 +92,69 @@ export default function Navbar(props) {
         </Link>
       </div>
 
-      <div className='section' id='middle'>
+      <div className='section' id='navSection'>
         {!isMobile &&
           <div className='navbar'>
-            <div id='navPaths'>
-              <Link to='/'>
-                <button
-                  className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
-                >Home</button>
-              </Link>
+            <Link to='/'>
+              <button
+                className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
+              ><b>Home</b></button>
+            </Link>
 
-              <Link to='/AboutUs'>
+            <div className='navDropdown'>
+              <Link to='/People'>
                 <button
-                  className={`btn navBtn ${active === 'About Us' ? 'activeBtn' : ''}`}
-                >About Us</button>
+                  className={`btn navBtn ${active === 'People' ? 'activeBtn' : ''}`}
+                ><b>People</b></button>
               </Link>
+              <div className='dropdownMenu'>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#officersBreak' }}>Executive Board</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#peopleMiddleDiv' }}>Team Leads</Link>
+                <Link className='dropdownItem' to={{ pathname: '/People', hash: '#peopleBottomDiv' }}>Advisors</Link>
+              </div>
+            </div>
 
+            <div className='navDropdown'>
               <Link to='/Projects'>
                 <button
                   className={`btn navBtn ${active === 'Projects' ? 'activeBtn' : ''}`}
-                >Projects</button>
+                ><b>Projects</b></button>
               </Link>
-
-              <Link to='/Onboarding'>
-                <button
-                  className={`btn navBtn ${active === 'Onboarding' ? 'activeBtn' : ''}`}
-                >Onboarding</button>
-              </Link>
+              <div className='dropdownMenu'>
+                <Link className='dropdownItem' to='/Projects/DVT'>DVT</Link>
+                <Link className='dropdownItem' to='/Projects/CTS'>CTS</Link>
+                <Link className='dropdownItem' to='/Projects/TremorGlove'>Tremor Glove</Link>
+                <Link className='dropdownItem' to='/Projects/MEND'>MEND</Link>
+              </div>
             </div>
+          
+            <div className='navDropdown'>
+              <Link to='/Learning'>
+                <button
+                  className={`btn navBtn ${active === 'Learning' ? 'activeBtn' : ''}`}
+                ><b>Learning</b></button>
+              </Link>
+              <div className='dropdownMenu'>
+                <Link className='dropdownItem' to={{ pathname: '/Learning', hash: '#onboardingBreak' }}>Onboarding</Link>
+                <Link className='dropdownItem' to={{ pathname: '/Learning', hash: '#workshopsBreak' }}>Workshops</Link>
+              </div>
+            </div>
+
+            <Link to='/Contact'>
+              <button
+                className={`btn navBtn ${active === 'Contact' ? 'activeBtn' : ''}`}
+              ><b>Contact</b></button>
+            </Link>
+
+            <a href='https://www.coolfaces.net/TooCOOLPUWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=BHSiXXqQ0BU%3d' target='_blank' rel='noopener noreferrer'>
+              <button
+                className={`btn navBtn ${active === 'Donate' ? 'activeBtn': ''}`}
+                id={`donateBtn`}
+                ><b>Storefront</b></button>
+            </a>
           </div>
         }
-      </div>
 
-      <div className='section'>
         {isMobile &&
           <NavLinksContainer>
             <MenuToggle isOpen={isOpen} toggle={() => setOpen(!isOpen)} />
@@ -124,12 +169,17 @@ export default function Navbar(props) {
                     >Home</button>
                   </Link>
 
-                  <Link to='/AboutUs'>
+                  <Link to='/People'>
                     <button
                       className='btn burgerBtn'
                       onClick={() => setOpen(!isOpen)}
-                    >About Us</button>
+                    >People</button>
                   </Link>
+                  <div className='burgerSubLinks'>
+                    <Link to={{ pathname: '/People', hash: '#officersBreak' }} onClick={() => setOpen(!isOpen)}>Executive Board</Link>
+                    <Link to={{ pathname: '/People', hash: '#teamLeadsBreak' }} onClick={() => setOpen(!isOpen)}>Team Leads</Link>
+                    <Link to={{ pathname: '/People', hash: '#advisorsBreak' }} onClick={() => setOpen(!isOpen)}>Advisors</Link>
+                  </div>
 
                   <Link to='/Projects'>
                     <button
@@ -137,12 +187,25 @@ export default function Navbar(props) {
                       onClick={() => setOpen(!isOpen)}
                     >Projects</button>
                   </Link>
+                  <div className='burgerSubLinks'>
+                    <Link to='/Projects/DVT' onClick={() => setOpen(!isOpen)}>DVT</Link>
+                    <Link to='/Projects/CTS' onClick={() => setOpen(!isOpen)}>CTS</Link>
+                    <Link to='/Projects/TremorGlove' onClick={() => setOpen(!isOpen)}>Tremor Glove</Link>
+                    <Link to='/Projects/Alyssa' onClick={() => setOpen(!isOpen)}>Alyssa</Link>
+                  </div>
 
                   <Link to='/Onboarding'>
                     <button
                       className='btn burgerBtn'
                       onClick={() => setOpen(!isOpen)}
                     >Onboarding</button>
+                  </Link>
+
+                  <Link to='/Contact'>
+                    <button
+                      className='btn burgerBtn'
+                      onClick={() => setOpen(!isOpen)}
+                    >Contact</button>
                   </Link>
 
                   <Marginer />

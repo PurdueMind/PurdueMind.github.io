@@ -1,12 +1,62 @@
 {
   "currentProjects": [
     {
+      "projectCode": "dvt",
+      "slug": "DVT",
+      "alt": "DVT CAD rendering",
+      "title": "DVT Detection Sleeve",
+      "thumbnail": "dvt-team.jpeg",
+      "feature": "dvt-poster.png",
+      "lead": ["Ian Lam", "Shreya Krishna", "Twinkal Barai"],
+      "description": ["Post surgery patients are at elevated risk for deep vein thrombosis (DVT) which occurs when a thrombus (blood clot) develops in the veins",
+                      "This project aims to develop a wearable sleeve that detects blood clots by tracking symptoms and alerts healthcare practitioners upon detection",
+                      "Identified circuit design necessary to create tetrapolar impedance in order to identify blood clots",
+                      "Split into three subteams: generator circuit, notch filter, band pass filter",
+                      "Sleeve design in process, discussing materials and how to keep sleeve secure"]
+    },
+    {
+      "projectCode": "cts",
+      "slug": "CTS",
+      "alt": "CTS CAD rendering",
+      "title": "CTS Smart Brace",
+      "thumbnail": "cts-clip.jpg",
+      "feature": "cts-team.jpeg",
+      "lead": ["Khushi Choksi"],
+      "description": ["Wearable designed to assist individuals with carpal tunnel syndrome by tracking wrist and finger movement and delivering heat/cold therapy for symptom relief.",
+                      "Using 3D printing and CAD design to prototype a custom ergonomic and comfortable wearable band, ensuring both functionality, optimal sensor placement and user comfort.",
+                      "Real-time feedback, therapy guidance, and clinician-integrated progress tracking",
+                      "Configured design of sensors and heating placement",
+                      "Finalized materials (dual layered cotton and nylon glove), silicon rubber for insulation",
+                      "Determined mechanism of heat flow and grip strength",
+                      "Met with Lauren Conner, OT (Occupational Therapist) at Team Rehabilitation Physical Therapy"]
+    },
+    {
+      "projectCode": "tremor",
+      "slug": "TremorGlove",
+      "alt": "",
+      "title": "Tremor Glove",
+      "imgSrc": "defaultImg.jpg",
+      "lead": ["Dhruti Ivaturi"],
+      "description": ["Details coming soon."]
+    },
+    {
+      "projectCode": "mend",
+      "slug": "MEND",
+      "alt": "",
+      "title": "MEND",
+      "imgSrc": "defaultImg.jpg",
+      "lead": ["Alyssa Wan"],
+      "description": ["Details coming soon."]
+    }
+  ],
+  "pastProjects": [
+    {
       "id": "biomechanics",
       "alt": "",
-      "title": "Biomechanics (2024-2026)",
+      "title": "Grip Assist Glove (2024-2026)",
       "imgSrc": "gripAssist.jpg",
       "lead": "Shreya Prakash & Isha Varshney",
-      "description": ["Last year a sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
+      "description": ["A sensor-based motorized glove was developed to assist individuals with neurodegenerative or muscular disorders that impair grip strength and hand control",
                       "By integrating EMG and flex sensors with a mechanical pulley-motor system, the glove detects user intent and provides personalized grip assistance",
                       "The final product will aim to prioritize affordability, user-friendliness, and portability to increase accessibility beyond research settings",
                       "Refined motor design, transitioning from stepper motor to servo for light weight and space efficient alternative",
@@ -15,39 +65,13 @@
                       "Designing custom servo reel mount in CAD"]
     },
     {
-      "id": "dvt",
-      "alt": "DVT CAD rendering",
-      "title": "DVT Detection Sleeve (2025-2026)",
-      "imgSrc": "defaultImg.jpg",
-      "lead": "Ian Lam",
-      "description": ["Post surgery patients are at elevated risk for deep vein thrombosis (DVT) which occurs when a thrombus (blood clot) develops in the veins",
-                      "This project aims to develop a wearable sleeve that detects blood clots by tracking symptoms and alerts healthcare practitioners upon detection",
-                      "Identified circuit design necessary to create tetrapolar impedance in order to identify blood clots",
-                      "Split into three subteams: generator circuit, notch filter, band pass filter",
-                      "Sleeve design in process, discussing materials and how to keep sleeve secure"]
-    },
-    {
-      "id": "CTS",
-      "alt": "CTS CAD rendering",
-      "title": "CTS Smart Brace (2024-2025)",
-      "imgSrc": "defaultImg.jpg",
-      "lead": "Khushi Choksi",
-      "description": ["Wearable designed to assist individuals with carpal tunnel syndrome by tracking wrist and finger movement and delivering heat/cold therapy for symptom relief.",
-                      "Using 3D printing and CAD design to prototype a custom ergonomic and comfortable wearable band, ensuring both functionality, optimal sensor placement and user comfort.",
-                      "Real-time feedback, therapy guidance, and clinician-integrated progress tracking",
-                      "Configured design of sensors and heating placement",
-                      "Finalized materials (dual layered cotton and nylon glove), silicon rubber for insulation",
-                      "Determined mechanism of heat flow and grip strength",
-                      "Met with Lauren Conner, OT (Occupational Therapist) at Team Rehabilitation Physical Therapy"]
-    }
-  ],
-  "pastProjects": [
-    {
       "id": "muscle-computer",
       "alt": "",
       "title": "EMG-Integrated Controller for Muscular Dystrophy Rehabilitation (2024-2025)",
       "imgSrc": "defaultImg.jpg",
-      "description": ["Supports the treatment of children affected with muscular dystrophic diseases like cerebral palsy and Duchenne's by increasing their adherence to their rehabilitation protocol via gamifying the treatment",
+      "description": [
+                      "Gamifies rehabilitation for children affected with muscular dystrophic diseases like cerebral palsy and Duchenne's",
+                      "Supports the treatment of children affected with muscular dystrophic diseases like cerebral palsy and Duchenne's by increasing their adherence to their rehabilitation protocol via gamifying the treatment",
                       "A Raspberry Pi Pico W was used to leverage its WiFi capabilities and small size to send EMG data to an offsite at Amazon Web Services (AWS) database",
                       "A WebSocket API integration request was set up on a React server to allow users to use movement as input for an Angry Birds-like game"]
     },

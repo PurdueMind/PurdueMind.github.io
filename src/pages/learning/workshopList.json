@@ -1,0 +1,51 @@
+{
+    "onboarding": [
+        {
+            "id": "arduino-project",
+            "title": "Arduino Onboarding Project",
+            "pitch": "Program an Arduino",
+            "dates": "9/3/2026 | 9/10/2026",
+            "filename": "",
+            "imgSrc": "arduino-onboarding.png",
+            "buttonName": "Download Electronics Onboarding Files",
+            "description": [
+                "Guides members through bandpass filter circuit simulation using LTSpice",
+                "Demonstrates how to design and construct a PCB using KiCad",
+                "Leaves members with a basic understanding of electronics design and simulation"
+            ]
+        },
+        {
+            "id": "cad-project",
+            "title": "SolidWorks Onboarding Project",
+            "pitch": "Model a hand in SolidWorks",
+            "dates": "9/14/2026 | 9/17/2026",
+            "filename": "",
+            "imgSrc": "cad-onboarding.png",
+            "buttonName": "Download CAD Onboarding Files",
+            "description": [
+                "Introduces SolidWorks for Computer-aided Design (CAD)",
+                "Guides members through the 3D design process",
+                "Teaches beginner and intermediate tools and assemblies as well as CAD best practices",
+                "Leaves members with printable CAD models and resources for designing more complex models",
+                "The downloaded zip file has 2 files; one for Fusion and one for SolidWorks - FYE students need to complete the Fusion workshop (no SolidWorks access) and upperclassmen can complete either"
+            ]
+        },
+        {
+            "id": "ltspice-project",
+            "title": "LT Spice Onboarding Project",
+            "pitch": "Simulate a circuit in LTSpice",
+            "dates": "9/21/2026 | 9/24/2026",
+            "filename": "",
+            "imgSrc": "ltspice-onboarding.png",
+            "buttonName": "Download Arduino Onboarding Files",
+            "description": [
+                "Learn about Arduino circuit design and programming",
+                "Utilize different types of sensor input",
+                "Measure and visualize temperature and heart rate data",
+                "Leaves members with embedded systems knowledge and resources for further learning"
+            ]
+        }
+    ],
+    "workshops": [
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "projectTiles": [
+    {
+      "id": "dvt",
+      "team": "DVT Detection Sleeve",
+      "imgSrc": "dvt-team.jpeg",
+      "info": "",
+      "projectPage": "DVT"
+    },
+    {
+      "id": "cts",
+      "team": "CTS Smart Brace",
+      "imgSrc": "cts-clip.jpg",
+      "info": "",
+      "projectPage": "CTS"
+    },
+    {
+      "id": "tremorGlove",
+      "team": "Tremor Glove",
+      "imgSrc": "defaultImg.jpg",
+      "info": "",
+      "projectPage": "TremorGlove"
+    },
+    {
+      "id": "mend",
+      "team": "MEND",
+      "imgSrc": "defaultImg.jpg",
+      "info": "",
+      "projectPage": "MEND"
+    }
+  ]
+}

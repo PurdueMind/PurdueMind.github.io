@@ -1,0 +1,90 @@
+.contactPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #c4bfc0;
+}
+
+#majorContactTitle {
+  padding-left: 2.5%;
+}
+
+.contactSection {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 80px;
+
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.contactColTitle {
+  font-family: "Oranienbaum", serif;
+  font-size: 38px;
+  color: #8e6f3e;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.contactLeadershipCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactLeadershipRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contactInfoCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.contactIconRow {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Scoped to this page so the shared .iconButton/.iconImg used on the
+   People and Project cards stay their smaller default size. */
+.contactIconRow .iconButton {
+  width: 56px;
+  height: 56px;
+}
+
+.contactIconRow .iconImg {
+  width: 32px;
+  height: 32px;
+}
+
+.contactSlackButton {
+  padding: 14px 36px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #8e6f3e;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+
+  transition: background-color 0.2s ease-in;
+}
+
+.contactSlackButton:hover {
+  background-color: #c9b38c;
+}

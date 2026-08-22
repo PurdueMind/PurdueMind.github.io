@@ -1,0 +1,87 @@
+
+.workshopDiv {
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.workshopImageDiv {
+  width: 50%;
+  margin-right: 5px;
+}
+
+.workshopImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.workshopInfoDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5em;
+  width: 50%;
+  margin-left: 5px;
+}
+
+.workshopPitch {
+  font-size: 30px;
+  font-family: "Oranienbaum", serif;
+  text-align: center;
+  
+  border-radius: 10px;
+  margin-bottom: 0px;
+  margin-top: -10px;
+}
+
+.workshopDates {
+  font-size: 18px;
+  font-family: "Oranienbaum", serif;
+  color: black;
+  margin-top: -10px;
+}
+
+.downloadButton {
+  padding: 0.5em 1em;
+  background-color: #cfb991;
+  color: black;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: fit-content;
+  align-self: center;
+  margin-top: 0px;
+}
+
+.downloadButton:hover {
+  background-color: #8e6f3e;
+  text-decoration: underline;
+}
+
+#projectInfo {
+  display: inline-flexbox;
+  flex-direction: column;
+  height: fit-content;
+
+  padding: 0px;
+  margin-left: 20px;
+  text-align: center;
+}

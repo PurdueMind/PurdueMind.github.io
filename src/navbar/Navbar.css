@@ -1,13 +1,35 @@
 .navbarContainer {
-  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  height: 90px;
+  width: 100%;
+  box-sizing: border-box;
   box-shadow: 0 1px 1px #000000;
   display: flex;
   align-items: center;
   padding: 0 1.5em;
   background-color: #000000;
+
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.navbarHidden {
+  transform: translateY(-100%);
 }
 
 .section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#navSection {
+  flex: 1;
+  height: 100%;
   display: flex;
 }
 
@@ -17,13 +39,14 @@
   display: flex;
   position: relative;
 
-  justify-content: flex-end;
+  justify-content: space-evenly;
   align-items: center;
 
   top: 0px;
   margin-inline: 0px;
-  padding-block: 5px;
-  height: 50px;
+  padding-block: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .btn {
@@ -33,11 +56,6 @@
   border: 0cm;
   margin: 0px;
 
-  font-family: inherit;
-}
-
-.btn:hover {
-  cursor: pointer;
 }
 
 .navBtn {
@@ -45,16 +63,18 @@
   padding-bottom: 5px;
   padding-inline: 20px;
   
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .btn:hover {
+  cursor: pointer;
+  color: #8e6f3e;
   transition: 0.2s ease-in;
   text-decoration: underline;
 }
 
 .activeBtn {
-  text-decoration: underline;
+  color: #ebd99f;
 }
 
 .burgerBtn {  
@@ -65,25 +85,19 @@
 }
 
 #mindLogoBtn {
-  position: absolute;
-  left: 4px;
-  top: 4px;
+  display: flex;
+  align-items: center;
 
-  height: 50px;
+  height: 75px;
   padding: 0px;
-  margin: 0px;
+  margin: 0px 0px 0px 1.5em;
+
+  perspective: 700px;
 }
 
 #mindLogo {
-  width: inherit;
+  width: auto;
   height: inherit;
-}
-
-#middle {
-  flex: 2;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
 }
 
 #hamburger {
@@ -91,8 +105,80 @@
   flex-direction: column;
 }
 
+.navDropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 180px;
+  padding: 8px 0;
+
+  background-color: #000000;
+  border-radius: 8px;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: opacity 0.2s ease;
+}
+
+.navDropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dropdownItem {
+  padding: 10px 20px;
+  color: #c9b38c;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.dropdownItem:hover {
+  color: #8e6f3e;
+  background-color: rgba(201, 179, 140, 0.12);
+}
+
+.burgerSubLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.burgerSubLinks a {
+  color: #000000;
+  font-size: 18px;
+  padding: 8px 40px;
+  text-decoration: none;
+}
+
 #marginer {
   height: 2em;
   position: absolute;
   z-index: 999;
+}
+
+#donateBtn {
+  background-color: #c9b38c;
+  color: #000000;
+  border-radius: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-inline: 44px;
+}
+
+#donateBtn:hover {
+  background-color: #8e6f3e;
 }

@@ -1,0 +1,139 @@
+{
+  "officers": [
+    {
+      "name": "Uday Mittal",
+      "position": "President",
+      "major": "Mechanical Engineering '27",
+      "email": "mitta106@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/mittal-uday/",
+      "filename": "uday.jpg"
+    },
+    {
+      "name": "Scout Hudson",
+      "position": "Vice President",
+      "major": "Biomedical Engineering '28",
+      "email": "hudso195@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/ariel-scout-hudson-b5b151183/",
+      "filename": "scout.jpeg"
+    },
+    {
+      "name": "Shivum Nijhawan",
+      "position": "Treasurer",
+      "major": "Mechanical Engineering '27",
+      "email": "snijhaw@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/shivumnijhawan/",
+      "filename": "shivum.jpg"
+    },
+    {
+      "name": "Sounish Ghosh",
+      "position": "Secretary",
+      "major": "Biomedical Engineering '27",
+      "email": "ghosh155@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/sounishghosh/",
+      "filename": "ghosh.jpeg"
+    },
+    {
+      "name": "Anaya Parikh",
+      "position": "Director of Research & Development",
+      "major": "Biomedical Engineering '28",
+      "email": "parik113@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/anayaparikh/",
+      "filename": "anaya.png"
+    },
+    {
+      "name": "Tashi Vasudeva",
+      "position": "Director of Networking & Events",
+      "major": "Biomedical Sciences '28",
+      "email": "vasudevt@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/tashi-vasudeva-4a2668347/",
+      "filename": "tashi.png"
+    },
+    {
+      "name": "Varun Senthil",
+      "position": "Director of Entrepreneurship & Ideation",
+      "major": "Biomedical Engineering '28",
+      "email": "senthi42@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/varun-senthil-b90097320/",
+      "filename": "varun.png"
+    }
+  ],
+  "leads": [
+    {
+      "name": "Khushi Choksi",
+      "team": "CTS Smart Brace",
+      "teamCode": "cts",
+      "major": "Biomedical Engineering '27",
+      "email": "choksik@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/khushichoksipurdue/",
+      "filename": "khushi.jpeg"
+    },
+    {
+      "name": "Ian Lam",
+      "team": "DVT Detection Sleeve",
+      "teamCode": "dvt",
+      "major": "Computer Science '27",
+      "email": "lam180@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/ilam180/",
+      "filename": "ian.jpeg"
+    },
+    {
+      "name": "Shreya Krishna",
+      "team": "DVT Detection Sleeve",
+      "teamCode": "dvt",
+      "major": "Biomedical Engineering '27",
+      "email": "krish269@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/shreya-krishnan1/",
+      "filename": "shreyak.jpeg"
+    },
+    {
+      "name": "Twinkal Barai",
+      "team": "DVT Detection Sleeve",
+      "teamCode": "dvt",
+      "major": "Electrial Engineering '27",
+      "email": "tbarai@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/twinkalbarai/",
+      "filename": "twinkal.png"
+    },
+    {
+      "name": "Dhruti Ivaturi",
+      "team": "Tremor Glove",
+      "teamCode": "tremor",
+      "major": "Mechanical Engineering '28",
+      "email": "divatur@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/dhruti-ivaturi/",
+      "filename": "dhruti.jpeg"
+    },
+    {
+      "name": "Alyssa Wan",
+      "team": "MEND",
+      "teamCode": "mend",
+      "major": "Biomedical Engineering '28",
+      "email": "wan143@purdue.edu",
+      "linkedIn": "https://www.linkedin.com/in/alyssa-wan/",
+      "filename": "alyssa.jpeg"
+    }
+  ],
+  "advisors": [
+    {
+      "name": "Dr. Aaron Lottes",
+      "position": "Faculty Advisor",
+      "filename": "aaron.jpeg",
+      "email": "lottes@purdue.edu"
+    },
+    {
+      "name": "Grant Congdon",
+      "position": "Graduate Advisor",
+      "filename": "grant.jpeg",
+      "email": "gcongdon@purdue.edu"
+    },
+    {
+      "name": "Supreet Mishra",
+      "position": "Graduate Advisor",
+      "filename": "supreet.jpeg",
+      "email": "mishr193@purdue.edu"
+    }
+  ],
+  "subleads": [
+    {}
+  ]
+}

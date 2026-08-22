@@ -2,16 +2,18 @@ import './App.css';
 import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 import HomePage from './pages/home/HomePage'
-import AboutPage from './pages/about/AboutPage'
+import PeoplePage from './pages/people/PeoplePage'
 import ProjectsPage from './pages/projects/ProjectsPage'
-import OnboardingPage from './pages/onboarding/OnboardingPage'
+import ProjectDetailPage from './pages/projects/ProjectDetailPage'
+import LearningPage from './pages/learning/LearningPage'
+import ContactPage from './pages/contact/ContactPage'
 
-import { BrowserRouter as Router, Switch, Route, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
 function RedirectHandler() {
   const history = useHistory();
-  
+
   useEffect(() => {
     const search = window.location.search;
     if (search.startsWith('?/')) {
@@ -21,7 +23,17 @@ function RedirectHandler() {
       history.replace(cleanPath || '/');
     }
   }, [history]);
-  
+
+  return null;
+}
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+
   return null;
 }
 
@@ -29,6 +41,7 @@ export default function App() {
   return (
     <Router>
     <RedirectHandler />
+    <ScrollToTop />
     <div className='App'>
       <link rel='preconnect' href='https://fonts.googleapis.com'/>
       <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="true"/>
@@ -45,16 +58,24 @@ export default function App() {
             <HomePage/>
             <Footer/>
           </Route>
-          <Route path='/AboutUs'>
-            <AboutPage/>
+          <Route path='/People'>
+            <PeoplePage/>
             <Footer/>
           </Route>
-          <Route path='/Projects'>
+          <Route exact path='/Projects'>
             <ProjectsPage/>
             <Footer/>
           </Route>
-          <Route path='/Onboarding'>
-            <OnboardingPage/>
+          <Route path='/Projects/:slug'>
+            <ProjectDetailPage/>
+            <Footer/>
+          </Route>
+          <Route path='/Learning'>
+            <LearningPage/>
+            <Footer/>
+          </Route>
+          <Route path='/Contact'>
+            <ContactPage/>
             <Footer/>
           </Route>
       </Switch>

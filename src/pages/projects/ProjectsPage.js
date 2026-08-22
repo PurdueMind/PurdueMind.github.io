@@ -1,60 +1,62 @@
 import './ProjectsPage.css';
 import '../../App.css';
 
-import Project from './Project';
+import ProjectTile from './ProjectTile';
 
 const projectList = require('./projectList.json');
 
-// Function to dynamically import all images from the projects folder
-function importAll(r) {
-  let images = {};
-  r.keys().forEach((item, _) => {
-    images[item.replace('./', '')] = r(item).default;
-  });
-  return images;
-}
+// Project tile images live in src/assets/projects/main; new ones just need
+// to be dropped in without touching this file.
+const mainImageContext = require.context('../../assets/projects/main', false, /\.(png|jpe?g)$/);
 
-// Import all images from the projects directory
-const images = importAll(
-  require.context('../../assets/projects', false, /\.(png|jpe?g)$/i)
-);
+const mainImages = {};
+mainImageContext.keys().forEach((key) => {
+  const mod = mainImageContext(key);
+  mainImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
+});
 
-// Function to get image source with fallback
-function getImageSrc(imageName) {
-  return images[imageName] || images['defaultImg.jpg'];
+function getImageSrc(filename) {
+  return mainImages[filename] || mainImages['defaultImg.jpg'];
 }
 
 export default function ProjectsPage() {
   return (
     <div className='projectsPage'>
-      <h1 className='header'>Projects</h1>
-      
-      <div className='projectsContainer'>
-        <h2 className="sectionHeader">Current Mind Projects</h2>
-        {getProjects(projectList.currentProjects)}
+      <div className='majorTitleDiv'>
+        <h1 className='majorTitle' id='projectsTitle'>Active Projects</h1>
       </div>
 
-      <div id='spacer'/>
-
       <div className='projectsContainer'>
-        <h2 className="sectionHeader">Past Mind Projects</h2>
-        {getProjects(projectList.pastProjects)}
+        {getProjectTiles(projectList.currentProjects)}
+      </div>
+
+      <div className='break'/>
+
+      <div className='sectionTitleDiv' id='previousProjectsTitleDiv'>
+        <div className='sectionTitleLeftDiv'>
+          <h1 className='sectionTitle'>Previous Projects</h1>
+        </div>
+        <div className='sectionTitleRightDiv'/>
+      </div>
+
+      <div className='projectsContainer' id='previousProjectsContainer'>
+        {getProjectTiles(projectList.pastProjects)}
       </div>
     </div>
   );
 };
 
-function getProjects(projects) {
-  const formattedProjects = [];
-  for (const index in projects) {
-    const project = projects[index];
-    formattedProjects.push(<Project
-      id={project.title}
-      imgSrc={getImageSrc(project.imgSrc)}
-      alt={project.alt}
-      title={project.title}
-      lead={project.lead}
-      description={project.description} />)
-  }
-  return formattedProjects;
+function getProjectTiles(projects) {
+  return (
+    <div className='projectsGrid'>
+      {projects.map((project) => (
+        <ProjectTile
+          slug={project.slug || project.id}
+          imgSrc={getImageSrc(project.thumbnail)}
+          alt={project.alt}
+          title={project.title}
+          description={project.description} />
+      ))}
+    </div>
+  );
 }
