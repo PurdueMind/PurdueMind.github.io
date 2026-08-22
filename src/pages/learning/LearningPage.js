@@ -108,7 +108,7 @@ export default function OnboardingPage() {
                 <div className='learningDescriptionRightDiv'>
                     <h3 id='learningDescription'>
                         The MIND onboarding projects are aimed to help new members gain the necessary skills to contribute to project teams.
-                        For the second 2.5 weeks of the fall semester, MIND will host meetings dedicated to help members work through these projects.
+                        For the first month of the fall semester, MIND will host meetings dedicated to help members work through these projects.
                         After these meetings, anyone interested in joining will need to work through the projects on their own time before joining a project team.
                         If you already have the skills outlined in any of the workshops, click "I know what I'm doing" to be brought to a Google form where you can show another project that you've done accomplishing similar skills.
                         Please <Link to={{ pathname: '/People', hash: '#officersBreak' }} id='learningReachOutLink'>reach out</Link> if you have any questions
