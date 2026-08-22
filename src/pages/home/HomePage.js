@@ -30,6 +30,7 @@ function getImageSrc(imageName) {
 const slideshowPlaceholderImages = Object.values(slideshowImages);
 const IMAGE_SLIDE_INTERVAL_MS = 4500;
 const IMAGE_FADE_DURATION_MS = 1500;
+const SLACK_INVITE_URL = 'https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-47kw5vc6b-DeXzB8Jmg2IsORDEC_c2fg';
 
 export default function HomePage() {
   const stats = statsList.stats;
@@ -60,7 +61,7 @@ export default function HomePage() {
       </div>
       <div className='statDiv'>
         <div className='descDiv'>
-          <p className='desc-text'>Purdue's <b>only</b> project-based <br/> biomedical engineering club</p>
+          <p className='desc-text'>Purdue's <b>largest</b> project-based <br/> biomedical engineering club</p>
         </div>
         <div className='slideshowDiv'>
           <div className='statTrack'>
@@ -119,7 +120,12 @@ export default function HomePage() {
             <p className='desc-text' id='slogan'>Connecting students, faculty,<br/>and industry leaders to build<br/>Purdue's MedTech community</p>
           </div>
           <div className='lowerHalfDiv'>
-            <button className='sectionButton'><b>Join our Slack</b></button>
+            <a
+              className='sectionButton'
+              href={SLACK_INVITE_URL}
+              target='_blank'
+              rel='noopener noreferrer'
+            ><b>Join our Slack</b></a>
           </div>
         </div>
       </div>

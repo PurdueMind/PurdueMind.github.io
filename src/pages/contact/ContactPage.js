@@ -21,6 +21,7 @@ function getImageSrc(filename) {
 
 const CONTACT_EMAIL = 'purdueuniversitymind@gmail.com';
 const INSTAGRAM_URL = 'https://www.instagram.com/purdue.mind/';
+const SLACK_INVITE_URL = 'https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-47kw5vc6b-DeXzB8Jmg2IsORDEC_c2fg';
 
 const president = leaderList.officers.find((officer) => officer.position === 'President');
 const vicePresident = leaderList.officers.find((officer) => officer.position === 'Vice President');
@@ -73,8 +74,12 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Placeholder until we have a permanent Slack invite link */}
-          <button className='contactSlackButton'><b>Join our Slack</b></button>
+          <a
+            className='contactSlackButton'
+            href={SLACK_INVITE_URL}
+            target='_blank'
+            rel='noopener noreferrer'
+          ><b>Join our Slack</b></a>
         </div>
       </div>
     </div>

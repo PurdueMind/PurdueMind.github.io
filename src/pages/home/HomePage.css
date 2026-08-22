@@ -269,6 +269,7 @@ p {
 }
 
 .sectionButton {
+  display: inline-block;
   padding: 14px 36px;
   border: none;
   border-radius: 8px;
@@ -276,6 +277,7 @@ p {
   background-color: #8e6f3e;
   color: #ffffff;
   font-size: 24px;
+  text-decoration: none;
   cursor: pointer;
 
   transition: background-color 0.2s ease-in;
