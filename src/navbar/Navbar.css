@@ -133,6 +133,11 @@
   transition: opacity 0.2s ease;
 }
 
+.dropdownMenuRight {
+  left: 0;
+  transform: translateX(0px);
+}
+
 .navDropdown:hover .dropdownMenu {
   opacity: 1;
   visibility: visible;
