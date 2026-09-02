@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import './HomePage.css';
 import '../../App.css';
@@ -31,8 +31,10 @@ const slideshowPlaceholderImages = Object.values(slideshowImages);
 const IMAGE_SLIDE_INTERVAL_MS = 4500;
 const IMAGE_FADE_DURATION_MS = 1500;
 const SLACK_INVITE_URL = 'https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-47kw5vc6b-DeXzB8Jmg2IsORDEC_c2fg';
+const NAVBAR_HEIGHT = 90;
 
 export default function HomePage() {
+  const location = useLocation();
   const stats = statsList.stats;
   // duplicated so the CSS scroll animation can loop seamlessly at -50%
   const loopedStats = [...stats, ...stats];
@@ -40,6 +42,20 @@ export default function HomePage() {
 
   const [imageIndex, setImageIndex] = useState(0);
   const [imageVisible, setImageVisible] = useState(true);
+
+  // Scroll to the section named in the URL hash (e.g. #calendarBreak), or
+  // to the top of the page when navigating here with no hash.
+  useEffect(() => {
+    if (location.hash) {
+      const target = document.querySelector(location.hash);
+      if (target) {
+        const top = target.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [location]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -129,10 +145,10 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className='break'/>
+      <div className='break' id='calendarBreak'/>
       <div className='sectionDiv'>
 
-        <div className='sectionTitleDiv' id='peopleMiddleDiv'>
+        <div className='sectionTitleDiv'>
           <div className='sectionTitleLeftDiv'>
             <h1 className='sectionTitle'>Meetings & Events</h1>
           </div>
@@ -151,23 +167,3 @@ export default function HomePage() {
     </div>
   );
 };
-/*
-<div id='imageContainer' style={{ display: 'flex', justifyContent: 'center'}}>
-        <img
-          src={ToDisplay}
-          alt='Purdue MIND'
-          style={{ width: '80%', maxWidth: 900, height: 'auto', border: 'solid 1px #777' }}
-        />
-      </div>
-<h2><a href="https://forms.gle/AW5sP5hvR4kH7YYG9" target="_blank" rel="noopener noreferrer">Click Here for Submission Form!</a></h2>
-
-<h1>Purdue MIND</h1>
-
-      <p>Purdue MIND is a multidisciplinary student organization that promotes and grows the biomedical engineering community by providing undergraduates with hands-on experience in medical technology innovation—from research and design to commercialization—while fostering collaboration, professional networking, and participation in national design competitions.</p>
-
-      <h2><a href="https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-3cy3ljpxd-RqL5fJwChYdRKniiasXepw" target="_blank" rel="noopener noreferrer">Join our Slack!</a></h2>
-
-      <h2 id='eventsTxt'>Calendar</h2>
-
-      
-*/

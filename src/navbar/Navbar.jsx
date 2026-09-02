@@ -95,11 +95,16 @@ export default function Navbar(props) {
       <div className='section' id='navSection'>
         {!isMobile &&
           <div className='navbar'>
-            <Link to='/'>
-              <button
-                className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
-              ><b>Home</b></button>
-            </Link>
+            <div className='navDropdown'>
+              <Link to='/'>
+                <button
+                  className={`btn navBtn ${active === 'Home' ? 'activeBtn' : ''}`}
+                ><b>Home</b></button>
+              </Link>
+              <div className='dropdownMenu dropdownMenuRight'>
+                <Link className='dropdownItem' to={{ pathname: '/', hash: '#calendarBreak' }}>Calendar</Link>
+              </div>
+            </div>
 
             <div className='navDropdown'>
               <Link to='/People'>
@@ -168,6 +173,9 @@ export default function Navbar(props) {
                       onClick={() => setOpen(!isOpen)}
                     >Home</button>
                   </Link>
+                  <div className='burgerSubLinks'>
+                    <Link to={{ pathname: '/', hash: '#calendarBreak' }} onClick={() => setOpen(!isOpen)}>Calendar</Link>
+                  </div>
 
                   <Link to='/People'>
                     <button
