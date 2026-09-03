@@ -199,7 +199,7 @@ export default function Navbar(props) {
                     <Link to='/Projects/DVT' onClick={() => setOpen(!isOpen)}>DVT</Link>
                     <Link to='/Projects/CTS' onClick={() => setOpen(!isOpen)}>CTS</Link>
                     <Link to='/Projects/TremorGlove' onClick={() => setOpen(!isOpen)}>Tremor Glove</Link>
-                    <Link to='/Projects/Alyssa' onClick={() => setOpen(!isOpen)}>Alyssa</Link>
+                    <Link to='/Projects/MEND' onClick={() => setOpen(!isOpen)}>MEND</Link>
                   </div>
 
                   <Link to='/Onboarding'>
