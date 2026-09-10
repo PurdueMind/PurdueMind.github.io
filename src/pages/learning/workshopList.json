@@ -16,10 +16,10 @@
         },
         {
             "id": "cad-project",
-            "title": "SolidWorks Onboarding Project",
-            "pitch": "Model a hand in SolidWorks",
+            "title": "Fusion Onboarding Project",
+            "pitch": "Model a hand in Fusion",
             "dates": "9/14/2026 | 9/17/2026",
-            "filename": "",
+            "filename": "CAD Workshop 2026.pdf",
             "imgSrc": "cad-onboarding.png",
             "buttonName": "Download CAD Onboarding Files",
             "description": [

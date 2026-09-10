@@ -6,7 +6,7 @@ import '../../App.css';
 import Workshop from './Workshop';
 
 import arduinoFile from '../../assets/learning/Arduino-Onboarding.pdf';
-// import cadFiles from '../../assets/learning/cad-workshop-2025.zip';
+import cadFiles from '../../assets/learning/CAD-Onboarding.pdf';
 // import electronicsFiles from '../../assets/learning/Electronics-Onboarding.pdf';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
@@ -14,7 +14,7 @@ const workshopList = require('./workshopList.json');
 
 const fileList = {
     'arduino-project': arduinoFile,
-    // 'cad': cadFiles,
+    'cad-project': cadFiles,
     // 'electronics': electronicsFiles,
 }
 
