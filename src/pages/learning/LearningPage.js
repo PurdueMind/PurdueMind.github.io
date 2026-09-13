@@ -7,7 +7,7 @@ import Workshop from './Workshop';
 
 import arduinoFile from '../../assets/learning/Arduino-Onboarding.pdf';
 import cadFiles from '../../assets/learning/CAD-Onboarding.pdf';
-// import electronicsFiles from '../../assets/learning/Electronics-Onboarding.pdf';
+import spiceFiles from '../../assets/learning/LTSpice-Onboarding.pdf';
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 const workshopList = require('./workshopList.json');
@@ -15,7 +15,7 @@ const workshopList = require('./workshopList.json');
 const fileList = {
     'arduino-project': arduinoFile,
     'cad-project': cadFiles,
-    // 'electronics': electronicsFiles,
+    'ltspice-project': spiceFiles,
 }
 
 // Onboarding project images live in src/assets/learning/onboarding; new ones
