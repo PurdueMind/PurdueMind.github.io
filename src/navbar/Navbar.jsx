@@ -151,7 +151,7 @@ export default function Navbar(props) {
               ><b>Contact</b></button>
             </Link>
 
-            <a href='https://www.coolfaces.net/TooCOOLPUWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=BHSiXXqQ0BU%3d' target='_blank' rel='noopener noreferrer'>
+            <a href='https://www.TooCOOLPurdue.com/TooCOOLPurdueWL/vECItemCatalogOrganizationItems/OrganizationItemsGallery.aspx?Organization=5346' target='_blank' rel='noopener noreferrer'>
               <button
                 className={`btn navBtn ${active === 'Donate' ? 'activeBtn': ''}`}
                 id={`donateBtn`}
