@@ -143,34 +143,21 @@
 }
 
 /* ---------- Community ---------- */
-.communityGrid {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 48px;
-  align-items: center;
+.communitySection {
+  padding-top: 56px;
 }
 
-@media (max-width: 860px) {
-  .communityGrid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-}
-
-.communityText {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 28px;
-  padding-left: 24px;
-  border-left: 4px solid var(--gold-dark);
+.communitySection .sectionHeader {
+  margin-bottom: 0;
 }
 
 .communitySlogan {
-  font-size: clamp(22px, 2.4vw, 30px);
-  font-weight: 500;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
+  margin-bottom: 28px;
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 /* ---------- Alumni ---------- */

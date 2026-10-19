@@ -5,7 +5,7 @@ import '../../App.css';
 
 import PageHero from '../../components/PageHero';
 import SectionHeader from '../../components/SectionHeader';
-import Slideshow from '../../components/Slideshow';
+import CommunityBanner from './CommunityBanner';
 import useHashScroll from '../../hooks/useHashScroll';
 import { buildImageMap } from '../../utils/images';
 
@@ -16,7 +16,13 @@ const alumniList = require('./alumni.json');
 // Each section's images live in their own folder, so new photos just need to
 // be dropped in without touching this file.
 const activeProjectImages = buildImageMap(require.context('../../assets/home/activeProjects', false, /\.(png|jpe?g)$/));
-const slideshowImages = Object.values(buildImageMap(require.context('../../assets/home/slideshow', false, /\.(png|jpe?g)$/)));
+const slideshowImageMap = buildImageMap(require.context('../../assets/home/slideshow', false, /\.(png|jpe?g)$/));
+
+// Community photos in the order listed in communityPhotos.json; names that
+// don't match a file in the folder are skipped.
+const communityPhotos = require('./communityPhotos.json').photos
+  .map((name) => slideshowImageMap[name])
+  .filter(Boolean);
 
 function getImageSrc(imageName) {
   return activeProjectImages[imageName] || activeProjectImages['defaultImg.jpg'];
@@ -75,18 +81,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='section container'>
-        <SectionHeader index='02' title='Community' />
-
-        <div className='communityGrid'>
-          <Slideshow images={slideshowImages} alt='MIND project photo' caption='Fig. 01 — Project gallery' height={380} />
-          <div className='communityText'>
-            <p className='communitySlogan'>
-              Connecting students, faculty, and industry leaders to build Purdue's MedTech community.
-            </p>
-            <a className='button buttonPrimary' href={SLACK_INVITE_URL} target='_blank' rel='noopener noreferrer'>Join our Slack</a>
-          </div>
+      <section className='communitySection'>
+        <div className='container'>
+          <SectionHeader index='02' title='Community' />
         </div>
+
+        <CommunityBanner images={communityPhotos}>
+          <p className='communitySlogan'>
+            Connecting students, faculty, and industry leaders to build Purdue's MedTech community.
+          </p>
+          <a className='button buttonGold' href={SLACK_INVITE_URL} target='_blank' rel='noopener noreferrer'>Join our Slack</a>
+        </CommunityBanner>
       </section>
 
       <section className='section container'>

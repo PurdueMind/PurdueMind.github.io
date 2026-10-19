@@ -1,0 +1,107 @@
+.communityBanner {
+  position: relative;
+  overflow: hidden;
+  min-height: clamp(440px, 72vh, 760px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.communityBannerPhotos {
+  position: absolute;
+  inset: 0;
+}
+
+/* Inactive photos sit transparent and slightly zoomed; the active one fades
+   in and drifts slowly back to scale, so changes feel continuous. */
+.communityBannerPhoto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transform: scale(1.08);
+  transition: opacity 1.6s ease, transform 7s ease-out;
+}
+
+.communityBannerPhotoActive {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .communityBannerPhoto {
+    transform: none;
+    transition: opacity 0.6s ease;
+  }
+}
+
+/* Darkens the left for legible text, and fades the top and bottom edges into
+   the page background so the band blends into the sections around it. */
+.communityBannerShade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, var(--bg) 0%, rgba(196, 191, 192, 0) 14%, rgba(196, 191, 192, 0) 86%, var(--bg) 100%),
+    linear-gradient(to right, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.55) 38%, rgba(0, 0, 0, 0.05) 70%);
+}
+
+.communityBannerContent {
+  position: relative;
+  z-index: 1;
+  padding-block: 96px;
+}
+
+.communityBannerContent > * {
+  max-width: 560px;
+}
+
+.communityBannerTicks {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* Above the faded bottom edge so the ticks stay visible on the photo */
+  bottom: 18%;
+  z-index: 1;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.communityBannerTick {
+  width: 18px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.35);
+  transition: background-color 0.4s ease, width 0.4s ease;
+}
+
+.communityBannerTickActive {
+  width: 36px;
+  background-color: var(--gold);
+}
+
+@media (max-width: 760px) {
+  .communityBanner {
+    justify-content: flex-end;
+    min-height: 520px;
+  }
+
+  .communityBannerShade {
+    background:
+      linear-gradient(to bottom, var(--bg) 0%, rgba(196, 191, 192, 0) 10%),
+      linear-gradient(to top, rgba(0, 0, 0, 0.88) 0%, rgba(0, 0, 0, 0.6) 45%, rgba(0, 0, 0, 0.05) 80%);
+  }
+
+  .communityBannerContent {
+    padding-block: 64px 72px;
+  }
+
+  .communityBannerTicks {
+    justify-content: flex-start;
+    bottom: 32px;
+  }
+}
