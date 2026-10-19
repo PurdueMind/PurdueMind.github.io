@@ -1,47 +1,105 @@
 .footer {
-  background-color: black;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
-
-  text-align: center;
+  background-color: var(--black);
+  color: var(--gold);
+  border-top: 4px solid var(--gold-dark);
 }
 
-.socialLogo {
-  padding-inline: 13px;
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr;
+  gap: 48px;
+  padding-block: 48px;
+}
+
+@media (max-width: 760px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.footerCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.footerLogo {
+  height: 40px;
+  width: auto;
+  margin-bottom: 8px;
+}
+
+.footerTagline {
+  max-width: 320px;
+  font-size: 14px;
+  color: var(--steel);
+}
+
+.footerHeading {
+  margin-bottom: 4px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.footerLink {
+  font-size: 14px;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: var(--gold-bright);
+  text-decoration: underline;
+}
+
+.footerSocials {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.footerSocial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line-gold);
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.footerSocial:hover {
+  border-color: var(--gold);
+  background-color: rgba(201, 179, 140, 0.12);
+}
+
+.footerSocial img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
   filter: brightness(0) invert(1);
 }
 
-#socials {
-  margin-top: 60px;
+.footerBar {
+  border-top: 1px solid var(--line-gold);
 }
 
-#facebookLogo {
-  width: 35px;
-  height: 35px;
-}
+.footerBarInner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px;
+  padding-block: 16px;
 
-#instagramLogo {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 2px;
-}
-
-#twitterLogo {
-  width: 35px;
-  height: 30px;
-  margin-bottom: 2px;
-}
-
-#youtubeLogo {
-  width: 33px;
-  height: 26px;
-  margin-bottom: 3px;
-}
-
-#copyright {
-  width: 80%;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
 }

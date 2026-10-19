@@ -1,98 +1,70 @@
 .profile {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
 
-  height: auto;
-  max-width: 230px;
-  width: 30vw;
-  min-width: 200px;
+  border: 1px solid var(--line-strong);
+  background-color: var(--panel);
 
-  padding: 16px 14px 14px;
-  margin: 14px;
-
-  border-radius: 20px;
-  overflow: hidden;
-
-  text-align: center;
-  background-color: #9d9795;
-
-  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
-}
-
-/* Below this width even a 200px min-width card plus its margins can no
-   longer fit without forcing horizontal overflow (which clips the card
-   via `overflow: hidden` and reads as the image being squished). Let the
-   card and its photo keep shrinking together instead. */
-@media (max-width: 420px) {
-  .profile {
-    min-width: 160px;
-  }
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .profile:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 22px 34px rgba(0, 0, 0, 0.28);
-  z-index: 5;
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--gold-dark);
 }
 
 .profilePic {
   display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center top;
 
-  width: calc(100% - 16px);
-  max-width: 259px;
-  min-width: 184px;
-
-  margin: 8px auto 14px;
-
-  border-radius: 14px;
+  border-bottom: 1px solid var(--line-strong);
+  background-color: var(--steel);
 }
 
-@media (max-width: 420px) {
-  .profilePic {
-    min-width: 144px;
-  }
+/* Text block grows so every card's icon row sits on the same bottom line */
+.profileText {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .name {
-  margin-top: 0px;
-  text-align: left;
-  margin-left: 0%;
-  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .position {
-  text-align: left;
-  align-items: left;
-  margin-left: 0%;
-  margin-top: 5px;
+  margin-top: 2px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
 }
 
-#eboardInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  width: 100%;
-}
-
-/* Degree / grad-date line, always visible between position and the icon row. */
 .major {
-  text-align: left;
-  margin-top: 5px;
-  color: #8e6f3e;
-  font-weight: 600;
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: #4a4646;
 }
 
 .iconRow {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 4px;
 
-  width: 100%;
-  margin-top: 12px;
+  margin-top: auto;
+  padding: 6px 10px;
+  border-top: 1px solid var(--line);
 }
 
 .iconButton {
@@ -103,22 +75,23 @@
 
   width: 34px;
   height: 34px;
+  padding: 0;
 
   background: none;
-  border: none;
-  padding: 0;
+  border: 1px solid transparent;
   cursor: pointer;
 
-  transition: transform 0.2s ease;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
 .iconButton:hover {
-  transform: scale(1.15);
+  border-color: var(--line-strong);
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 .iconImg {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
   object-fit: contain;
 }
 
@@ -130,45 +103,63 @@
   left: 50%;
   transform: translateX(-50%) translateY(-6px);
 
-  background-color: #000;
-  color: #fff;
-  font-size: 12px;
-  font-weight: normal;
   padding: 4px 8px;
-  border-radius: 6px;
+  background-color: var(--black);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   white-space: nowrap;
 
-  opacity: 0;
+  /* display: none (not opacity: 0) so hidden tooltips near the screen
+     edge don't widen the page on phones */
+  display: none;
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .iconButton:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) translateY(-10px);
+  display: block;
 }
 
 .copyToast {
   position: fixed;
-  top: 50%;
+  bottom: 32px;
   left: 50%;
-  transform: translate(-50%, -50%);
-
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  padding: 14px 22px;
-  border-radius: 10px;
-  font-size: 16px;
-
+  transform: translateX(-50%);
   z-index: 1000;
-  pointer-events: none;
 
+  padding: 12px 20px;
+  background-color: var(--black);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  pointer-events: none;
   animation: copyToastFade 1.8s ease forwards;
 }
 
 @keyframes copyToastFade {
-  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
-  15% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  85% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-  100% { opacity: 0; transform: translate(-50%, -50%) scale(0.95); }
+  0% { opacity: 0; transform: translate(-50%, 8px); }
+  15% { opacity: 1; transform: translate(-50%, 0); }
+  85% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, 0); }
+}
+
+@media (max-width: 520px) {
+  .profileText {
+    padding: 10px 12px;
+  }
+  .name {
+    font-size: 15px;
+  }
+  .position {
+    font-size: 13px;
+  }
+  .major {
+    font-size: 11px;
+  }
 }

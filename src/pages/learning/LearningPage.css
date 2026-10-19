@@ -1,129 +1,79 @@
-.OnboardingPage {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-  
-    justify-content: center;
-    align-items: center;
-
-    background-color: #c4bfc0;
+.learningSectionFollow {
+  padding-top: 0;
 }
 
-.learningDescriptionDiv {
-  width: 95%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 25px;
+.learningIntro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
 }
 
-.learningDescriptionLeftDiv {
+@media (max-width: 860px) {
+  .learningIntro {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.learningIntroText {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: auto;
-  width: 45%;
-  padding-right: 10px;
+  gap: 24px;
 }
 
-.learningDescriptionRightDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: auto;
-  width: 55%;
-  padding-left: 10px;
-  line-height: 2em;
-  font-family: 'Times New Roman', Times, serif;
-}
-  
-.onboardingContainer {
-  width: 100%;
-  text-align: center;
-  flex-direction: column;
-  margin-top: 25px;
+.learningSteps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line-strong);
 }
 
-#onboardingTitle {
-  margin-left: 2.5%;
+.learningSteps li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
 }
 
-#workshopsComingSoon {
-  margin-bottom: 50px;
-  font-family: "Oranienbaum", serif;
+.learningStepIndex {
+  padding-top: 3px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: #4a4646;
 }
 
-#learningReachOutLink {
-  color: black;
-  text-decoration: underline;
+.learningStepTitle {
+  margin-bottom: 4px;
+  font-size: 18px;
 }
 
-.learningImageSlideshow {
-  position: relative;
-  width: 100%;
-  height: 300px;
-  overflow: hidden;
+.learningNote {
+  padding: 14px 16px;
+  border-left: 4px solid var(--gold-dark);
+  background-color: var(--panel);
+  font-size: 15px;
 }
 
-.learningImageSlideshowSlide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+.learningNote a {
+  font-weight: 600;
 }
 
-/* Blurred, scaled-up copy of the same photo fills the whole box so every
-   image occupies a uniform area, even when its aspect ratio doesn't match
-   the slideshow's. */
-.learningImageSlideshowBg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: blur(25px) brightness(0.7);
-  transform: scale(1.15);
+.workshopGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 
-.learningImageSlideshowImg {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
+.workshopsComingSoon {
+  margin-top: 24px;
+  padding: 14px 16px;
+  border: 1px dashed var(--line-strong);
 
-.learningImageSlideshowSlideIn {
-  animation: learningImageSlideInFromRight 0.8s ease forwards;
-}
-
-.learningImageSlideshowSlideOut {
-  animation: learningImageSlideOutToLeft 0.8s ease forwards;
-}
-
-@keyframes learningImageSlideInFromRight {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-
-@keyframes learningImageSlideOutToLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }

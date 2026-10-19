@@ -6,7 +6,6 @@ import LinkedInLink from './LinkedInLink';
 
 export default function LeadProfile(
     {
-        id,
         imgSrc = "",
         alt = "Headshot",
         name,
@@ -18,10 +17,12 @@ export default function LeadProfile(
     return (
         <div className='profile'>
             <img className='profilePic' src={imgSrc} alt={alt} />
-            <div id='eboardInfo'>
-                <h3 className='name'>{name}</h3>
-                <h4 className='position'><i>{team}</i></h4>
-                <span className='major'>{major}</span>
+            <div className='profileInfo'>
+                <div className='profileText'>
+                    <h3 className='name'>{name}</h3>
+                    <h4 className='position'>{team}</h4>
+                    <span className='major'>{major}</span>
+                </div>
                 <div className='iconRow'>
                     <LinkedInLink linkedIn={linkedIn} name={name} />
                     <EmailLink email={email} />
@@ -29,4 +30,4 @@ export default function LeadProfile(
             </div>
         </div>
     );
-    }
+}

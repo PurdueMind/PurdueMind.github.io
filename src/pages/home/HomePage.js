@@ -1,169 +1,119 @@
-import { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './HomePage.css';
 import '../../App.css';
 
+import PageHero from '../../components/PageHero';
+import SectionHeader from '../../components/SectionHeader';
+import Slideshow from '../../components/Slideshow';
+import useHashScroll from '../../hooks/useHashScroll';
+import { buildImageMap } from '../../utils/images';
+
 const statsList = require('./stats.json');
 const projectTilesList = require('./projectTiles.json');
+const alumniList = require('./alumni.json');
 
-// Each section's images live in their own folder; require.context loads them
-// all so new photos just need to be dropped in without touching this file.
-function buildImageMap(context) {
-  const images = {};
-  context.keys().forEach((key) => {
-    const mod = context(key);
-    images[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
-  });
-  return images;
-}
-
+// Each section's images live in their own folder, so new photos just need to
+// be dropped in without touching this file.
 const activeProjectImages = buildImageMap(require.context('../../assets/home/activeProjects', false, /\.(png|jpe?g)$/));
-const slideshowImages = buildImageMap(require.context('../../assets/home/slideshow', false, /\.(png|jpe?g)$/));
+const slideshowImages = Object.values(buildImageMap(require.context('../../assets/home/slideshow', false, /\.(png|jpe?g)$/)));
 
-// Function to get image source with fallback
 function getImageSrc(imageName) {
   return activeProjectImages[imageName] || activeProjectImages['defaultImg.jpg'];
 }
 
-// Placeholder rotation of images for the image slideshow until real photos are ready
-const slideshowPlaceholderImages = Object.values(slideshowImages);
-const IMAGE_SLIDE_INTERVAL_MS = 4500;
-const IMAGE_FADE_DURATION_MS = 1500;
 const SLACK_INVITE_URL = 'https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-47kw5vc6b-DeXzB8Jmg2IsORDEC_c2fg';
-const NAVBAR_HEIGHT = 90;
+const CALENDAR_URL = 'https://calendar.google.com/calendar/embed?src=purdueuniversitymind%40gmail.com&ctz=America%2FNew_York';
+
+const pad = (n) => String(n).padStart(2, '0');
 
 export default function HomePage() {
-  const location = useLocation();
+  useHashScroll();
   const stats = statsList.stats;
-  // duplicated so the CSS scroll animation can loop seamlessly at -50%
-  const loopedStats = [...stats, ...stats];
   const projectTiles = projectTilesList.projectTiles;
-
-  const [imageIndex, setImageIndex] = useState(0);
-  const [imageVisible, setImageVisible] = useState(true);
-
-  // Scroll to the section named in the URL hash (e.g. #calendarBreak), or
-  // to the top of the page when navigating here with no hash.
-  useEffect(() => {
-    if (location.hash) {
-      const target = document.querySelector(location.hash);
-      if (target) {
-        const top = target.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, [location]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // fade the current image out, swap the source, then fade the new one in
-      setImageVisible(false);
-      setTimeout(() => {
-        setImageIndex((i) => (i + 1) % slideshowPlaceholderImages.length);
-        setImageVisible(true);
-      }, IMAGE_FADE_DURATION_MS);
-    }, IMAGE_SLIDE_INTERVAL_MS);
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className='homePage'>
-      <div className='majorTitleDiv'>
-        <h1 className='majorTitle' id='pitchWord1'>Medical Innovation, Networking,<br/>and Design Club</h1>
-      </div>
-      <div className='statDiv'>
-        <div className='descDiv'>
-          <p className='desc-text'>Purdue's <b>largest</b> project-based <br/> biomedical engineering club</p>
+      <PageHero
+        eyebrow='Purdue University · Biomedical Engineering'
+        title={<><span className='acronym'>M</span>edical <span className='acronym'>I</span>nnovation, <span className='acronym'>N</span>etworking, and <span className='acronym'>D</span>esign Club</>}
+      >
+        <p className='heroBody'>Purdue's largest project-based biomedical engineering club.</p>
+        <div className='heroActions'>
+          <a className='button buttonGold' href={SLACK_INVITE_URL} target='_blank' rel='noopener noreferrer'>Join our Slack</a>
+          <Link className='button buttonGhost' to='/Projects'>View projects →</Link>
         </div>
-        <div className='slideshowDiv'>
-          <div className='statTrack'>
-            {loopedStats.map((stat, i) => (
-              <div className='statItem' key={i}>
-                <div className='statBox'>
-                  <span className='statNumber'>{stat.number}{stat.unit}</span>
-                  <p className='statDescription'>{stat.description}</p>
-                </div>
-                <div className='statDivider' />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      <div className='break'/>
-      <div className='sectionDiv'>
+      </PageHero>
 
-        <div className='sectionTitleDiv' id='peopleMiddleDiv'>
-          <div className='sectionTitleLeftDiv'>
-            <h1 className='sectionTitle'>Active Projects</h1>
-          </div>
-          <div className='sectionTitleRightDiv'/>
-        </div>
-
-        <div className='projectTilesRow'>
-          {projectTiles.map((tile) => (
-            <div
-              className='projectTile'
-              key={tile.id}
-              style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }}>
-              <Link to={`/Projects/${tile.projectPage}`}>
-                <span className='tileLabel'>{tile.team}</span>
-                <div className='tileOverlay'>
-                  <p className='projectTileDescription'>{tile.info}</p>
-                </div>
-              </Link>
+      <div className='statStrip'>
+        {/* The list is rendered twice so the track can loop seamlessly at -50% */}
+        <div className='statTrack'>
+          {[...stats, ...stats].map((stat, i) => (
+            <div className='statCell' key={i} aria-hidden={i >= stats.length}>
+              <span className='statNumber'>{stat.number}{stat.unit}</span>
+              <span className='statDescription'>{stat.description}</span>
             </div>
           ))}
         </div>
-
       </div>
-      <div className='break'/>
-      <div className='sectionDiv'>
-        <div className='leftHalfDiv'>
-          <div className='imageSlideshow'>
-            <img
-              className={`imageSlideshowImg ${imageVisible ? '' : 'imageSlideshowImgHidden'}`}
-              src={slideshowPlaceholderImages[imageIndex]}
-              alt='Project preview placeholder'
-            />
+
+      <section className='section container'>
+        <SectionHeader id='activeProjects' index='01' title='Active Projects' meta={`${projectTiles.length} teams`} />
+
+        <div className='projectTilesRow'>
+          {projectTiles.map((tile, i) => (
+            <Link className='homeProjectCard' key={tile.id} to={`/Projects/${tile.projectPage}`}>
+              <div className='homeProjectImg' style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }} />
+              <div className='homeProjectInfo'>
+                <span className='homeProjectCode'>P-{pad(i + 1)}</span>
+                <h3 className='homeProjectTitle'>{tile.team}</h3>
+                {tile.info && <p className='homeProjectDescription'>{tile.info}</p>}
+                <span className='homeProjectLink'>View project →</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className='section container'>
+        <SectionHeader index='02' title='Community' />
+
+        <div className='communityGrid'>
+          <Slideshow images={slideshowImages} alt='MIND project photo' caption='Fig. 01 — Project gallery' height={380} />
+          <div className='communityText'>
+            <p className='communitySlogan'>
+              Connecting students, faculty, and industry leaders to build Purdue's MedTech community.
+            </p>
+            <a className='button buttonPrimary' href={SLACK_INVITE_URL} target='_blank' rel='noopener noreferrer'>Join our Slack</a>
           </div>
         </div>
-        <div className='rightHalfDiv'>
-          <div className='upperHalfDiv'>
-            <p className='desc-text' id='slogan'>Connecting students, faculty,<br/>and industry leaders to build<br/>Purdue's MedTech community</p>
-          </div>
-          <div className='lowerHalfDiv'>
-            <a
-              className='sectionButton'
-              href={SLACK_INVITE_URL}
-              target='_blank'
-              rel='noopener noreferrer'
-            ><b>Join our Slack</b></a>
-          </div>
-        </div>
-      </div>
-      <div className='break' id='calendarBreak'/>
-      <div className='sectionDiv'>
+      </section>
 
-        <div className='sectionTitleDiv'>
-          <div className='sectionTitleLeftDiv'>
-            <h1 className='sectionTitle'>Meetings & Events</h1>
-          </div>
-          <div className='sectionTitleRightDiv'/>
-        </div>
+      <section className='section container'>
+        <SectionHeader id='alumni' index='03' title='Where Our Alumni Go' />
 
-        <iframe 
-            id='calendar' title='MIND Calendar'
-            src='https://calendar.google.com/calendar/embed?src=purdueuniversitymind%40gmail.com&ctz=America%2FNew_York'
-            style={{border: 'solid 1px #777', filter: 'invert(90%) hue-rotate(180deg)'}}
-            width={window.innerWidth * .8}
-            height='600'
-            frameborder='0'
-        />
-      </div>
+        <div className='alumniGrid'>
+          {alumniList.companies.map((company, i) => (
+            <div className={`alumniTile ${company.placeholder ? 'alumniTilePlaceholder' : ''}`} key={i}>
+              <span className='alumniName'>{company.placeholder ? 'Company TBD' : company.name}</span>
+              <span className='alumniSector'>{company.sector}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className='section container'>
+        <SectionHeader id='calendarBreak' index='04' title='Meetings & Events' meta='Eastern Time' />
+
+        <div className='figure calendarFrame'>
+          <iframe
+            id='calendar'
+            title='MIND Calendar'
+            src={CALENDAR_URL}
+            frameBorder='0'
+          />
+        </div>
+      </section>
     </div>
   );
 };

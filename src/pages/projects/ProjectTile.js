@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 import './ProjectTile.css';
 
-export default function ProjectTile({ slug, imgSrc, alt = '404: No Image', title, description }) {
+export default function ProjectTile({ slug, code, imgSrc, alt = '404: No Image', title, awardCount = 0, description }) {
   const shortDescription = Array.isArray(description) ? description[0] : description;
 
   return (
@@ -11,12 +11,15 @@ export default function ProjectTile({ slug, imgSrc, alt = '404: No Image', title
         <img className='projectTileImg' src={imgSrc} alt={alt} />
       </div>
       <div className='projectTileInfo'>
-        <div className='projectTileInfoTop'>
-          <h4 className='projectTileTitle'>{title}</h4>
+        <div className='projectTileMeta'>
+          <span className='projectTileCode'>{code}</span>
+          {awardCount > 0 &&
+            <span className='projectTileAward'>{awardCount} {awardCount === 1 ? 'award' : 'awards'}</span>
+          }
         </div>
-        <div className='projectTileInfoBottom'>
-          <p className='projectTileDescription'>{shortDescription}</p>
-        </div>
+        <h3 className='projectTileTitle'>{title}</h3>
+        <p className='projectTileDescription'>{shortDescription}</p>
+        <span className='projectTileLink'>View details →</span>
       </div>
     </Link>
   );

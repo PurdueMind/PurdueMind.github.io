@@ -2,86 +2,93 @@ import './ContactPage.css';
 import '../../App.css';
 
 import OfficerProfile from '../people/components/Officer';
+import LeadProfile from '../people/components/Lead';
 import EmailLink from '../people/components/EmailLink';
-import instagramLogo from '../../assets/logos/instagram.png';
+import PageHero from '../../components/PageHero';
+import SectionHeader from '../../components/SectionHeader';
+import { buildImageMap } from '../../utils/images';
 import defaultHeadshot from '../../assets/people/default.png';
 
 const leaderList = require('../people/leaderList.json');
 
-const execContext = require.context('../../assets/people/exec', false, /\.(png|jpe?g)$/);
-const execImages = {};
-execContext.keys().forEach((key) => {
-  const mod = execContext(key);
-  execImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
-});
+const execImages = buildImageMap(require.context('../../assets/people/exec', false, /\.(png|jpe?g)$/));
+const leadImages = buildImageMap(require.context('../../assets/people/leads', false, /\.(png|jpe?g)$/));
 
-function getImageSrc(filename) {
-  return execImages[filename] || defaultHeadshot;
+function getImageSrc(images, filename) {
+  return images[filename] || defaultHeadshot;
 }
 
 const CONTACT_EMAIL = 'purdueuniversitymind@gmail.com';
 const INSTAGRAM_URL = 'https://www.instagram.com/purdue.mind/';
 const SLACK_INVITE_URL = 'https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-47kw5vc6b-DeXzB8Jmg2IsORDEC_c2fg';
 
-const president = leaderList.officers.find((officer) => officer.position === 'President');
-const vicePresident = leaderList.officers.find((officer) => officer.position === 'Vice President');
-
 export default function ContactPage() {
   return (
     <div className='contactPage'>
-      <div className='majorTitleDiv'>
-        <h1 className='majorTitle' id='majorContactTitle'>Contact Us</h1>
-      </div>
+      <PageHero eyebrow='Contact · Get in touch' title='Contact Us'>
+        <p className='heroBody'>Questions about joining, projects, or partnering with MIND? Reach us through any channel below.</p>
+      </PageHero>
 
-      <div className='contactSection'>
-        <div className='contactLeadershipCol'>
-          <h2 className='contactColTitle'>Reach Our Leadership</h2>
-          <div className='contactLeadershipRow'>
-            {president &&
-              <OfficerProfile
-                imgSrc={getImageSrc(president.filename)}
-                name={president.name}
-                position={president.position}
-                major={president.major}
-                email={president.email}
-                linkedIn={president.linkedIn} />
-            }
-            {vicePresident &&
-              <OfficerProfile
-                imgSrc={getImageSrc(vicePresident.filename)}
-                name={vicePresident.name}
-                position={vicePresident.position}
-                major={vicePresident.major}
-                email={vicePresident.email}
-                linkedIn={vicePresident.linkedIn} />
-            }
-          </div>
-        </div>
-
+      <section className='section container'>
         <div className='contactInfoCol'>
-          <h2 className='contactColTitle'>Get In Touch</h2>
-          <div className='contactIconRow'>
-            <EmailLink email={CONTACT_EMAIL} />
-            <a
-              className='iconButton'
-              href={INSTAGRAM_URL}
-              target='_blank'
-              rel='noopener noreferrer'
-              aria-label='Purdue MIND on Instagram'
-              data-tooltip='Instagram'
-            >
-              <img className='iconImg' src={instagramLogo} alt='Instagram' />
-            </a>
-          </div>
-
+          <SectionHeader index='01' title='Channels' />
+          <dl className='contactTable'>
+            <div className='contactRow'>
+              <dt>Email</dt>
+              <dd>
+                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                <EmailLink email={CONTACT_EMAIL} />
+              </dd>
+            </div>
+            <div className='contactRow'>
+              <dt>Instagram</dt>
+              <dd><a href={INSTAGRAM_URL} target='_blank' rel='noopener noreferrer'>@purdue.mind</a></dd>
+            </div>
+            <div className='contactRow'>
+              <dt>Slack</dt>
+              <dd><a href={SLACK_INVITE_URL} target='_blank' rel='noopener noreferrer'>Purdue MIND workspace</a></dd>
+            </div>
+          </dl>
           <a
-            className='contactSlackButton'
+            className='button buttonPrimary'
             href={SLACK_INVITE_URL}
             target='_blank'
             rel='noopener noreferrer'
-          ><b>Join our Slack</b></a>
+          >Join our Slack</a>
         </div>
-      </div>
+      </section>
+
+      <section className='section container contactSectionFollow'>
+        <SectionHeader index='02' title='Executive Board' meta={`${leaderList.officers.length} members`} />
+        <div className='cardGrid'>
+          {leaderList.officers.map((officer) => (
+            <OfficerProfile
+              key={officer.name}
+              imgSrc={getImageSrc(execImages, officer.filename)}
+              name={officer.name}
+              position={officer.position}
+              major={officer.major}
+              email={officer.email}
+              linkedIn={officer.linkedIn} />
+          ))}
+        </div>
+      </section>
+
+      <section className='section container contactSectionFollow'>
+        <SectionHeader index='03' title='Team Leads' meta={`${leaderList.leads.length} members`} />
+        <div className='cardGrid'>
+          {leaderList.leads.map((lead) => (
+            <LeadProfile
+              key={lead.name}
+              imgSrc={getImageSrc(leadImages, lead.filename)}
+              name={lead.name}
+              team={lead.team}
+              major={lead.major}
+              email={lead.email}
+              linkedIn={lead.linkedIn} />
+          ))}
+        </div>
+      </section>
     </div>
   );
 };
