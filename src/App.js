@@ -43,44 +43,33 @@ export default function App() {
     <RedirectHandler />
     <ScrollToTop />
     <div className='App'>
-      <link rel='preconnect' href='https://fonts.googleapis.com'/>
-      <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin="true"/>
-      <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel="stylesheet" />
-        
       <Navbar />
 
-      <Switch>
-          <Route exact path='/'>
+      <main>
+        <Switch>
+          <Route exact path={['/', '/PurdueMIND/']}>
             <HomePage />
-            <Footer/>
-          </Route>
-          <Route exact path='/PurdueMIND/'>
-            <HomePage/>
-            <Footer/>
           </Route>
           <Route path='/People'>
-            <PeoplePage/>
-            <Footer/>
+            <PeoplePage />
           </Route>
           <Route exact path='/Projects'>
-            <ProjectsPage/>
-            <Footer/>
+            <ProjectsPage />
           </Route>
           <Route path='/Projects/:slug'>
-            <ProjectDetailPage/>
-            <Footer/>
+            <ProjectDetailPage />
           </Route>
           <Route path='/Learning'>
-            <LearningPage/>
-            <Footer/>
+            <LearningPage />
           </Route>
           <Route path='/Contact'>
-            <ContactPage/>
-            <Footer/>
+            <ContactPage />
           </Route>
-      </Switch>
-      
-      </div>
+        </Switch>
+      </main>
+
+      <Footer />
+    </div>
     </Router>
   );
 };

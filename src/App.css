@@ -1,112 +1,317 @@
+/* ==========================================================================
+   Design tokens
+   Palette is the original MIND scheme (black / Purdue gold / steel grey);
+   everything else on the site should reference these variables.
+   ========================================================================== */
+:root {
+  --black: #000000;
+  --ink: #141414;
+  --gold: #c9b38c;
+  --gold-light: #cfb991;
+  --gold-bright: #ebd99f;
+  --gold-dark: #8e6f3e;
+  --steel: #9d9795;
+  --bg: #c4bfc0;
+  --panel: #d3cfd0;
+
+  --line: rgba(0, 0, 0, 0.2);
+  --line-strong: #000000;
+  --line-gold: rgba(201, 179, 140, 0.25);
+
+  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --font-mono: 'IBM Plex Mono', Menlo, Consolas, monospace;
+
+  --nav-height: 72px;
+  --container: 1200px;
+  --gutter: 32px;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --gutter: 16px;
+  }
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .App {
-  padding-top: 90px;
-}
-
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 24px;
-  font-weight: normal;
-}
-
-h4 {
-  font-size: 22px;
-  font-weight: normal;
-  
-  margin: 0px;
-}
-
-h5 {
-  font-size: 16px;
-  font-weight: lighter;
-  color: #c9b38c;
-}
-
-.majorTitleDiv {
+  padding-top: var(--nav-height);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+}
 
+.App > main {
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
   width: 100%;
-  box-sizing: border-box;
-  padding: 60px 0 160px;
-
-  background-color: #9d9795;
-  clip-path: polygon(
-    0% 100%,
-    0% 0%,
-    100% 0%,
-    100% calc(100% - 140px),
-    67% calc(100% - 74px),
-    63% calc(100% - 70px),
-    37% calc(100% - 70px),
-    33% calc(100% - 66px)
-  );
-}
-
-.majorTitle {
-  font-size: 96px;
-  line-height: 1.1;
-}
-
-.break {
-  display: flex;
-  height: 7px;
-  width: 95%;
-  margin-top: 50px;
-  margin-bottom: 25px;
+  max-width: var(--container);
   margin-inline: auto;
-  background-color: #8e6f3e;
-  border-radius: 3px;
+  padding-inline: var(--gutter);
 }
 
-.smallBreak {
+.section {
+  padding-block: 56px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================================
+   Page hero: black title block with a blueprint grid
+   ========================================================================== */
+.pageHero {
+  position: relative;
+  background-color: var(--black);
+  color: var(--gold);
+  border-top: 1px solid var(--line-gold);
+  border-bottom: 4px solid var(--gold-dark);
+
+  background-image:
+    linear-gradient(var(--line-gold) 1px, transparent 1px),
+    linear-gradient(90deg, var(--line-gold) 1px, transparent 1px);
+  background-size: 32px 32px;
+  background-position: -1px -1px;
+}
+
+.pageHero .container {
+  padding-block: 64px 56px;
+}
+
+.heroEyebrow {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.heroEyebrow::before {
+  content: '';
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  background-color: var(--gold-dark);
+}
+
+.heroTitle {
+  max-width: 960px;
+  font-size: clamp(36px, 5.5vw, 68px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--gold);
+}
+
+.heroBody {
+  margin-top: 24px;
+  max-width: 640px;
+  font-size: 18px;
+  color: #d9d4d5;
+}
+
+.heroActions {
   display: flex;
-  height: 7px;
-  width: 45%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-inline: auto;
-  background-color: #cfb991;
-  border-radius: 3px;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
 }
 
-.sectionTitleDiv {
+/* ==========================================================================
+   Section header: "01  Title ———————— meta"
+   ========================================================================== */
+.sectionHeader {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  align-items: baseline;
+  gap: 16px;
+
+  padding-top: 14px;
+  margin-bottom: 32px;
+  border-top: 2px solid var(--line-strong);
+  scroll-margin-top: var(--nav-height);
 }
 
-.sectionTitleLeftDiv {
-  width: 50%;
-  justify-content: center;
+.sectionIndex {
+  display: inline-flex;
   align-items: center;
-  background-color: #9d9795;
-  border-radius: 0px 20px 20px 0px;
+  gap: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
 }
 
-.sectionTitleRightDiv {
-  width: 50%;
-  justify-content: center;
-  align-items: center;
+.sectionIndex::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--gold-dark);
 }
 
 .sectionTitle {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 64px;
-  font-family: "Oranienbaum", serif;
-  font-size: 56px;
-  color: #000000;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.sectionMeta {
+  margin-left: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a4646;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+  border: 1px solid var(--black);
+  border-radius: 0;
+
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  cursor: pointer;
+
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.buttonPrimary {
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+.buttonPrimary:hover {
+  background-color: var(--gold-dark);
+  border-color: var(--gold-dark);
+  color: var(--black);
+}
+
+.buttonSecondary {
+  background-color: transparent;
+  color: var(--black);
+}
+
+.buttonSecondary:hover {
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+/* Variants for use on the black hero */
+.buttonGold {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+
+.buttonGold:hover {
+  background-color: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+.buttonGhost {
+  background-color: transparent;
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.buttonGhost:hover {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+/* ==========================================================================
+   Framed figure (images, slideshows, calendar)
+   ========================================================================== */
+.figure {
+  margin: 0;
+  border: 1px solid var(--line-strong);
+  background-color: var(--black);
+}
+
+.figureCaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding: 8px 12px;
+  border-top: 1px solid var(--line-strong);
+  background-color: var(--bg);
+
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Card grid used for people
+   ========================================================================== */
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 520px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
 }

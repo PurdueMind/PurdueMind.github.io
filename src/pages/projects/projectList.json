@@ -7,6 +7,7 @@
       "title": "DVT Detection Sleeve",
       "thumbnail": "dvt-team.jpeg",
       "feature": "dvt-poster.png",
+      "teamPhoto": "dvt-team-2026.jpg",
       "lead": ["Ian Lam", "Shreya Krishna", "Twinkal Barai"],
       "description": ["Post surgery patients are at elevated risk for deep vein thrombosis (DVT) which occurs when a thrombus (blood clot) develops in the veins",
                       "This project aims to develop a wearable sleeve that detects blood clots by tracking symptoms and alerts healthcare practitioners upon detection",
@@ -17,10 +18,17 @@
     {
       "projectCode": "cts",
       "slug": "CTS",
+      "awards": [
+        { "title": "Audience Choice Award", "event": "Biomedical Engineering Research Symposium" }
+      ],
+      "awardPhotos": [
+        { "file": "cts-bme-symposium.jpg", "caption": "CTS team at the BME Research Symposium" }
+      ],
       "alt": "CTS CAD rendering",
       "title": "CTS Smart Brace",
       "thumbnail": "cts-clip.jpg",
-      "feature": "cts-team.jpeg",
+      "feature": "cts-clip.jpg",
+      "teamPhoto": "cts-team-2026.jpg",
       "lead": ["Khushi Choksi"],
       "description": ["Wearable designed to assist individuals with carpal tunnel syndrome by tracking wrist and finger movement and delivering heat/cold therapy for symptom relief.",
                       "Using 3D printing and CAD design to prototype a custom ergonomic and comfortable wearable band, ensuring both functionality, optimal sensor placement and user comfort.",
@@ -42,16 +50,22 @@
     {
       "projectCode": "mend",
       "slug": "MEND",
-      "alt": "",
+      "alt": "TENS unit with electrode pads",
       "title": "MEND",
-      "imgSrc": "defaultImg.jpg",
+      "imgSrc": "mend-tens.jpg",
       "lead": ["Alyssa Wan"],
-      "description": ["Details coming soon."]
+      "description": ["Developing a hat-like device with a built-in TENS (Transcutaneous Electrical Nerve Stimulation) unit that uses dry electrodes to help relieve migraines",
+                      "More than 1 billion people experience migraines worldwide, and college students are one of the most prone populations due to their high exposure to triggers like stress, irregular sleep, and elevated screen time",
+                      "Designed to be worn regularly without bringing unwanted attention to students, reducing the effects of migraines so they can continue their activities and avoid academic obstacles"]
     }
   ],
   "pastProjects": [
     {
       "id": "biomechanics",
+      "awards": [
+        { "title": "Top 3 Nominee, Most Innovative Concept", "event": "Burton D. Morgan Competition" }
+      ],
+      "teamPhoto": "grip-assist-team.jpg",
       "alt": "",
       "title": "Grip Assist Glove (2024-2026)",
       "imgSrc": "gripAssist.jpg",
@@ -77,9 +91,18 @@
     },
     {
       "id": "neurotech",
-      "alt": "",
+      "awards": [
+        { "title": "Most Creative Business", "event": "Burton D. Morgan Competition" },
+        { "title": "Audience Favourite Poster", "event": "BME Research Symposium" }
+      ],
+      "awardPhotos": [
+        { "file": "neurotech-burton-morgan.jpg", "caption": "Burton D. Morgan Competition" },
+        { "file": "neurotech-bme-poster.jpg", "caption": "Poster presentation, BME Research Symposium" },
+        { "file": "neurotech-audience-favourite.jpg", "caption": "Audience Favourite Poster award" }
+      ],
+      "alt": "fNIR TBI Detection presentation",
       "title": "fNIR TBI Detection (2024-2025)",
-      "imgSrc": "defaultImg.jpg",
+      "imgSrc": "neurotech-presentation.jpg",
       "description": ["Developed software capable of detecting various types of TBIs across different fNIR platforms",
                       "Using a Random Forest ML algorithm, analyzed key physiological constraints such as mean oxygenated blood levels by performing an analysis on specific data features and contrasting hemoglobin levels in healthy and unhealthy individuals",
                       "By integrating machine learning (ML), the software automates injury assessment, enabling early detection by providing accurate and real-time prognosis on the sidelines"]

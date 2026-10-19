@@ -1,7 +1,9 @@
 import '../../App.css';
 import './Workshop.css';
 
-export const DownloadButton = ({downloadFile, filename, buttonName}) => {
+const SKIP_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe1qXo_KUtuJfKfdbtoN5jIdKV0ntQNn9gHOpjK-QqUIl50tw/viewform';
+
+export const DownloadButton = ({downloadFile, filename}) => {
     const handleDownload = () => {
         const link = document.createElement("a");
         link.href = downloadFile;
@@ -13,24 +15,38 @@ export const DownloadButton = ({downloadFile, filename, buttonName}) => {
         document.body.removeChild(link);
     }
     return (
-        <button className="downloadButton" onClick={handleDownload}>Download Workshop</button>
+        <button className="button buttonPrimary" onClick={handleDownload}>Download workshop</button>
     )
 }
 
-export default function Workshop({id, pitch, dates, buttonName, description, imgSrc, alt, downloadFile, downloadFilename}) {
+export default function Workshop({id, index, title, pitch, dates, imgSrc, alt, downloadFile, downloadFilename}) {
+    const sessions = dates ? dates.split('|').map((d) => d.trim()) : [];
+
     return (
-        <div className='workshopDiv' id={id}>
+        <article className='workshopDiv' id={id}>
             {imgSrc && (
                 <div className='workshopImageDiv'>
                     <img className='workshopImg' src={imgSrc} alt={alt} />
                 </div>
             )}
             <div className='workshopInfoDiv'>
-                <h3 className='workshopPitch'><b>{pitch}</b></h3>
-                <h5 className='workshopDates'>{dates}</h5>
-                <DownloadButton downloadFile={downloadFile} filename={downloadFilename} buttonName={buttonName} />
-                <button className='downloadButton' onClick={() => window.open('https://docs.google.com/forms/d/e/1FAIpQLSe1qXo_KUtuJfKfdbtoN5jIdKV0ntQNn9gHOpjK-QqUIl50tw/viewform', '_blank')}>I know what I'm doing</button>
+                <span className='workshopCode'>W-{String(index).padStart(2, '0')} · {title}</span>
+                <h3 className='workshopPitch'>{pitch}</h3>
+                {sessions.length > 0 &&
+                    <dl className='workshopDates'>
+                        {sessions.map((date, i) => (
+                            <div className='workshopDateRow' key={date}>
+                                <dt>Session {i + 1}</dt>
+                                <dd>{date}</dd>
+                            </div>
+                        ))}
+                    </dl>
+                }
+                <div className='workshopActions'>
+                    <DownloadButton downloadFile={downloadFile} filename={downloadFilename} />
+                    <a className='button buttonSecondary' href={SKIP_FORM_URL} target='_blank' rel='noopener noreferrer'>I know what I'm doing</a>
+                </div>
             </div>
-        </div>
+        </article>
     )
 };

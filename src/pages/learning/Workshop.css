@@ -1,87 +1,72 @@
-
 .workshopDiv {
-  box-sizing: border-box;
-  width: calc(100% - 20px);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  padding: 20px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 10px 20px rgba(0, 0, 0, 0.2),
-    0 2px 4px rgba(0, 0, 0, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.06);
+  flex-direction: column;
+  border: 1px solid var(--line-strong);
+  background-color: var(--panel);
 }
 
 .workshopImageDiv {
-  width: 50%;
-  margin-right: 5px;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid var(--line-strong);
+  background-color: var(--black);
+  overflow: hidden;
 }
 
 .workshopImg {
+  display: block;
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
 }
 
 .workshopInfoDiv {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.5em;
-  width: 50%;
-  margin-left: 5px;
+  gap: 12px;
+  flex: 1;
+  padding: 18px 20px 20px;
+}
+
+.workshopCode {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: #4a4646;
 }
 
 .workshopPitch {
-  font-size: 30px;
-  font-family: "Oranienbaum", serif;
-  text-align: center;
-  
-  border-radius: 10px;
-  margin-bottom: 0px;
-  margin-top: -10px;
+  font-size: 21px;
 }
 
 .workshopDates {
-  font-size: 18px;
-  font-family: "Oranienbaum", serif;
-  color: black;
-  margin-top: -10px;
+  margin: 0;
+  border-top: 1px solid var(--line);
 }
 
-.downloadButton {
-  padding: 0.5em 1em;
-  background-color: #cfb991;
-  color: black;
-  font-size: 16px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  width: fit-content;
-  align-self: center;
-  margin-top: 0px;
+.workshopDateRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
 }
 
-.downloadButton:hover {
-  background-color: #8e6f3e;
-  text-decoration: underline;
+.workshopDateRow dt {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-#projectInfo {
-  display: inline-flexbox;
-  flex-direction: column;
-  height: fit-content;
+.workshopDateRow dd {
+  margin: 0;
+  font-family: var(--font-mono);
+}
 
-  padding: 0px;
-  margin-left: 20px;
-  text-align: center;
+.workshopActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
 }

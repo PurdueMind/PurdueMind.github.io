@@ -1,19 +1,18 @@
+import { Link } from 'react-router-dom';
+
 import './Project.css';
 import '../../App.css';
 import LeadProfile from '../people/components/Lead';
+import PageHero from '../../components/PageHero';
+import SectionHeader from '../../components/SectionHeader';
+import { buildImageMap } from '../../utils/images';
 
 import defaultHeadshot from '../../assets/people/default.png';
 
 const leaderList = require('../people/leaderList.json');
 
 // Team leads are the only role Project.js shows, so only that folder is needed here.
-const leadContext = require.context('../../assets/people/leads', false, /\.(png|jpe?g)$/);
-
-const leadImages = {};
-leadContext.keys().forEach((key) => {
-  const mod = leadContext(key);
-  leadImages[key.replace('./', '')] = mod && mod.default ? mod.default : mod;
-});
+const leadImages = buildImageMap(require.context('../../assets/people/leads', false, /\.(png|jpe?g)$/));
 
 function getImageForMember(member) {
   return (member && leadImages[member.filename]) || defaultHeadshot;
@@ -24,47 +23,100 @@ export default function Projects(
     imgSrc,
     alt = '404: No Image',
     title,
+    status,
+    teamPhoto,
+    awards = [],
+    awardPhotos = [],
     description,
     projectCode = '' // matches a lead's teamCode in leaderList.json
   }) {
-  description = expandDescription(description);
+  const leads = getProfile(leaderList, projectCode);
+  const eyebrow = ['Project', projectCode && projectCode.toUpperCase(), status].filter(Boolean).join(' · ');
+
+  // Sections after Overview are optional, so number them as they render
+  let sectionCount = 1;
+  const nextIndex = () => String(++sectionCount).padStart(2, '0');
+  let figureCount = 1;
+  const nextFigure = () => String(++figureCount).padStart(2, '0');
+
   return (
     <div className='project'>
-      <div className='majorTitleDiv'>
-        <h1 className='majorTitle' id='projectTitle'>{title}</h1>
-      </div>
-      <div className='projectInfoDiv'>
-        <div className='projectImageDiv'>
-          <img className='projectImage' src={imgSrc} alt={alt}/>
+      <PageHero eyebrow={eyebrow} title={title}>
+        <div className='heroActions'>
+          <Link className='button buttonGhost' to='/Projects'>← All projects</Link>
         </div>
-        <div className='projectDescriptionDiv'>
-          <p className='projectDescription'>{description}</p>
+      </PageHero>
+
+      <section className='section container'>
+        <SectionHeader index='01' title='Overview' />
+        <div className='projectInfoDiv'>
+          <figure className='figure projectFigure'>
+            <img className='projectImage' src={imgSrc} alt={alt}/>
+            <figcaption className='figureCaption'>
+              <span>Fig. 01 — {alt || title}</span>
+            </figcaption>
+          </figure>
+          <ol className='projectDescription'>
+            {description.map((item, i) => (
+              <li key={i}>
+                <span className='projectDescriptionIndex'>{String(i + 1).padStart(2, '0')}</span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ol>
         </div>
-      </div>
+      </section>
 
-      <div className='break'/>
+      {teamPhoto &&
+        <section className='section container projectLeadSection'>
+          <SectionHeader index={nextIndex()} title='Team' />
+          <figure className='figure projectTeamFigure'>
+            <img className='projectImage' src={teamPhoto} alt={`${title} team`} />
+            <figcaption className='figureCaption'>
+              <span>Fig. {nextFigure()} — {title} team</span>
+            </figcaption>
+          </figure>
+        </section>
+      }
 
-      <div className='sectionTitleDiv'>
-        <div className='sectionTitleLeftDiv'>
-          <h1 className='sectionTitle'>Project Leadership Team</h1>
-        </div>
-        <div className='sectionTitleRightDiv'/>
-      </div>
+      {awards.length > 0 &&
+        <section className='section container projectLeadSection'>
+          <SectionHeader index={nextIndex()} title='Awards & Recognition' meta={`${awards.length} ${awards.length === 1 ? 'award' : 'awards'}`} />
+          <dl className='awardTable'>
+            {awards.map((award, i) => (
+              <div className='awardRow' key={award.title}>
+                <dt className='awardIndex'>AW-{String(i + 1).padStart(2, '0')}</dt>
+                <dd className='awardTitle'>{award.title}</dd>
+                <dd className='awardEvent'>{award.event}</dd>
+              </div>
+            ))}
+          </dl>
+          {awardPhotos.length > 0 &&
+            <div className='awardPhotoGrid'>
+              {awardPhotos.map((photo) => (
+                <figure className='figure awardFigure' key={photo.file}>
+                  <img className='awardImage' src={photo.src} alt={photo.caption} />
+                  <figcaption className='figureCaption'>
+                    <span>Fig. {nextFigure()} — {photo.caption}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          }
+        </section>
+      }
 
-      <div className='projectLeadDiv'>
-        {getProfile(leaderList, projectCode)}
-      </div>
-
+      {leads.length > 0 &&
+        <section className='section container projectLeadSection'>
+          <SectionHeader index={nextIndex()} title='Project Leadership Team' meta={`${leads.length} ${leads.length === 1 ? 'lead' : 'leads'}`} />
+          <div className='cardGrid projectLeadGrid'>
+            {leads}
+          </div>
+        </section>
+      }
     </div>
   );
 };
-
-// function that takes a list of strings and return a unorder list of html elements
-function expandDescription(description) {
-  const listItems = [];
-  for (const item of description) { listItems.push(<li>{item}</li>); }
-  return (<ul>{listItems}</ul>);
-}
 
 function getProfile(memberList, projectCode) {
   if (!projectCode) return [];
@@ -75,7 +127,6 @@ function getProfile(memberList, projectCode) {
   return projectLeads.map(member => (
     <LeadProfile
       key={`${member.teamCode}-${member.name}`}
-      id={`${member.teamCode}-${member.name}`}
       imgSrc={getImageForMember(member)}
       name={member.name}
       team={"Project Lead"}

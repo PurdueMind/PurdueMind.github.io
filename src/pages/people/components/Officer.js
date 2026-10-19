@@ -6,7 +6,6 @@ import LinkedInLink from './LinkedInLink';
 
 export default function OfficerProfile(
   {
-    id,
     imgSrc = "",
     alt = "Headshot",
     name,
@@ -19,10 +18,12 @@ export default function OfficerProfile(
     <div className='profile'>
       <img className='profilePic' src={imgSrc} alt={alt} />
 
-      <div id='eboardInfo'>
-        <h3 className='name'>{name}</h3>
-        <h4 className='position'><i>{position}</i></h4>
-        <span className='major'>{major}</span>
+      <div className='profileInfo'>
+        <div className='profileText'>
+          <h3 className='name'>{name}</h3>
+          <h4 className='position'>{position}</h4>
+          <span className='major'>{major}</span>
+        </div>
         <div className='iconRow'>
           <LinkedInLink linkedIn={linkedIn} name={name} />
           <EmailLink email={email} />
