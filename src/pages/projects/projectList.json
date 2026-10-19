@@ -45,7 +45,11 @@
       "title": "Tremor Glove",
       "imgSrc": "defaultImg.jpg",
       "lead": ["Dhruti Ivaturi"],
-      "description": ["Details coming soon."]
+      "description": ["The tremor glove is designed to be a therapeutic tracker for hand tremors, which can be so severe that tasks like eating, grooming, and dressing become difficult",
+                      "Since tremors are a sign of many different conditions, they are often misdiagnosed and difficult to treat",
+                      "Using motion and EMG sensors, the device could classify tremors based on intensity, frequency, and circumstance",
+                      "This data can help doctors more accurately diagnose a patient's condition and prescribe medication or therapy",
+                      "The glove could also have mechanical components that dampen tremors, providing patients with more stability and autonomy"]
     },
     {
       "projectCode": "mend",

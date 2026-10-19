@@ -24,6 +24,18 @@
     {
       "name": "General Electric",
       "sector": "Engineering & Healthcare"
+    },
+    {
+      "name": "Hana Technologies",
+      "sector": "Technology"
+    },
+    {
+      "name": "SpaceX",
+      "sector": "Aerospace"
+    },
+    {
+      "name": "Merck",
+      "sector": "Pharmaceuticals"
     }
   ]
 }
