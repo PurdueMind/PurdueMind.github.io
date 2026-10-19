@@ -81,10 +81,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className='communitySection'>
-        <div className='container'>
-          <SectionHeader index='02' title='Community' />
-        </div>
+      <section className='section container'>
+        <SectionHeader index='02' title='Community' />
 
         <CommunityBanner images={communityPhotos}>
           <p className='communitySlogan'>

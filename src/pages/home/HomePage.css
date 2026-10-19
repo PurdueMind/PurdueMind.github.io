@@ -143,17 +143,9 @@
 }
 
 /* ---------- Community ---------- */
-.communitySection {
-  padding-top: 56px;
-}
-
-.communitySection .sectionHeader {
-  margin-bottom: 0;
-}
-
 .communitySlogan {
-  margin-bottom: 28px;
-  font-size: clamp(26px, 3.2vw, 40px);
+  margin-bottom: 24px;
+  font-size: clamp(22px, 2.6vw, 32px);
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
