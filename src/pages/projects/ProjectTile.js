@@ -2,12 +2,12 @@ import { Link } from 'react-router-dom';
 
 import './ProjectTile.css';
 
-export default function ProjectTile({ slug, code, imgSrc, alt = '404: No Image', title, awardCount = 0, description }) {
+export default function ProjectTile({ slug, code, imgSrc, alt = '404: No Image', title, awardCount = 0, fit, description }) {
   const shortDescription = Array.isArray(description) ? description[0] : description;
 
   return (
     <Link to={`/Projects/${slug}`} className='projectTile'>
-      <div className='projectTileImgContainer'>
+      <div className={`projectTileImgContainer ${fit === 'contain' ? 'projectTileImgContain' : ''}`}>
         <img className='projectTileImg' src={imgSrc} alt={alt} />
       </div>
       <div className='projectTileInfo'>

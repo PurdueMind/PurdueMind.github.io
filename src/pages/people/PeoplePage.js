@@ -7,7 +7,6 @@ import LeadProfile from './components/Lead';
 
 import PageHero from '../../components/PageHero';
 import SectionHeader from '../../components/SectionHeader';
-import Slideshow from '../../components/Slideshow';
 import useHashScroll from '../../hooks/useHashScroll';
 import { buildImageMap } from '../../utils/images';
 
@@ -27,9 +26,6 @@ function getImageSrc(type, filename) {
   return (imagesByType[type] && imagesByType[type][filename]) || defaultHeadshot;
 }
 
-// Executive board group photo(s) shown at the top of the page
-const slideshowImages = Object.values(buildImageMap(require.context('../../assets/people/slideshow', false, /\.(png|jpe?g)$/)));
-
 export default function PeoplePage() {
   useHashScroll();
 
@@ -38,10 +34,6 @@ export default function PeoplePage() {
       <PageHero eyebrow='People · Leadership' title='Our People'>
         <p className='heroBody'>The students and faculty who run MIND's project teams, events, and operations.</p>
       </PageHero>
-
-      <section className='section container'>
-        <Slideshow images={slideshowImages} alt='2026–2027 MIND executive board' caption='Fig. 01 — 2026–2027 Executive Board' maxWidth={560} />
-      </section>
 
       <section className='section container peopleSection'>
         <SectionHeader id='officersBreak' index='01' title='Executive Board' meta={`${leaderList.officers.length} members`} />

@@ -49,6 +49,7 @@ function getProjectTiles(projects, codePrefix) {
           alt={project.alt}
           title={project.title}
           awardCount={(project.awards || []).length}
+          fit={project.thumbnailFit}
           description={project.description} />
       ))}
     </div>

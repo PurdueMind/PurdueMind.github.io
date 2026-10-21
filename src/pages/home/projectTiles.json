@@ -3,9 +3,10 @@
     {
       "id": "dvt",
       "team": "DVT Detection Sleeve",
-      "imgSrc": "dvt-team.jpeg",
+      "imgSrc": "dvt-sleeve-diagram.jpg",
       "info": "",
-      "projectPage": "DVT"
+      "projectPage": "DVT",
+      "imgFit": "contain"
     },
     {
       "id": "cts",

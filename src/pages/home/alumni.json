@@ -2,72 +2,55 @@
   "_comment": "Companies where MIND members have interned and alumni now work. Shown on the Home page as two scrolling rows; add or remove entries freely.",
   "companies": [
     {
-      "name": "Eli Lilly",
-      "sector": "Pharmaceuticals"
+      "name": "Eli Lilly"
     },
     {
-      "name": "Stryker",
-      "sector": "Medical Devices"
+      "name": "Stryker"
     },
     {
-      "name": "Cook Medical",
-      "sector": "Medical Devices"
+      "name": "Cook Medical"
     },
     {
-      "name": "Texas Instruments",
-      "sector": "Semiconductors"
+      "name": "Texas Instruments"
     },
     {
-      "name": "Johnson & Johnson",
-      "sector": "Healthcare"
+      "name": "Johnson & Johnson"
     },
     {
-      "name": "General Electric",
-      "sector": "Engineering & Healthcare"
+      "name": "General Electric"
     },
     {
-      "name": "Hana Technologies",
-      "sector": "Technology"
+      "name": "Hana Technologies"
     },
     {
-      "name": "SpaceX",
-      "sector": "Aerospace"
+      "name": "SpaceX"
     },
     {
-      "name": "Merck",
-      "sector": "Pharmaceuticals"
+      "name": "Merck"
     },
     {
-      "name": "Werfen",
-      "sector": "Medical Diagnostics"
+      "name": "Werfen"
     },
     {
-      "name": "Cretex",
-      "sector": "Medical Device Manufacturing"
+      "name": "Cretex"
     },
     {
-      "name": "E-SENSE",
-      "sector": "Technology"
+      "name": "E-SENSE"
     },
     {
-      "name": "Sysmex",
-      "sector": "Medical Diagnostics"
+      "name": "Sysmex"
     },
     {
-      "name": "Fishbeck",
-      "sector": "Engineering"
+      "name": "Fishbeck"
     },
     {
-      "name": "Medtronic",
-      "sector": "Medical Devices"
+      "name": "Medtronic"
     },
     {
-      "name": "Procter & Gamble",
-      "sector": "Consumer Goods"
+      "name": "Procter & Gamble"
     },
     {
-      "name": "GE Vernova",
-      "sector": "Energy"
+      "name": "GE Vernova"
     }
   ]
 }

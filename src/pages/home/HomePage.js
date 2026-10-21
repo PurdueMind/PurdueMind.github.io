@@ -69,7 +69,9 @@ export default function HomePage() {
         <div className='projectTilesRow'>
           {projectTiles.map((tile, i) => (
             <Link className='homeProjectCard' key={tile.id} to={`/Projects/${tile.projectPage}`}>
-              <div className='homeProjectImg' style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }} />
+              <div
+                className={`homeProjectImg ${tile.imgFit === 'contain' ? 'homeProjectImgContain' : ''}`}
+                style={{ backgroundImage: `url(${getImageSrc(tile.imgSrc)})` }} />
               <div className='homeProjectInfo'>
                 <span className='homeProjectCode'>P-{pad(i + 1)}</span>
                 <h3 className='homeProjectTitle'>{tile.team}</h3>
@@ -110,7 +112,6 @@ export default function HomePage() {
                 {[...companies, ...companies].map((company, i) => (
                   <div className='alumniTile' key={i} aria-hidden={i >= companies.length}>
                     <span className='alumniName'>{company.name}</span>
-                    <span className='alumniSector'>{company.sector}</span>
                   </div>
                 ))}
               </div>

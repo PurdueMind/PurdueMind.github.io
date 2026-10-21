@@ -45,6 +45,15 @@
   object-fit: cover;
 }
 
+/* For diagrams and other images that shouldn't be cropped (`thumbnailFit`) */
+.projectTileImgContain {
+  background-color: #ffffff;
+}
+
+.projectTileImgContain .projectTileImg {
+  object-fit: contain;
+}
+
 .projectTileInfo {
   display: flex;
   flex-direction: column;
