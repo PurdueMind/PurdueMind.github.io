@@ -153,37 +153,76 @@
 }
 
 /* ---------- Alumni ---------- */
-.alumniGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line-strong);
-  border-left: 1px solid var(--line-strong);
+.alumniIntro {
+  margin: -16px 0 24px;
+  font-size: 16px;
+  color: #2d2a2a;
 }
 
-@media (max-width: 760px) {
-  .alumniGrid {
-    grid-template-columns: repeat(2, 1fr);
+.alumniMarquee {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+
+  /* Fade both ends so names drift in and out rather than being cut off */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.alumniTrack {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: alumniScroll var(--marquee-duration, 40s) linear infinite;
+}
+
+.alumniTrackReverse {
+  animation-direction: reverse;
+}
+
+.alumniMarquee:hover .alumniTrack {
+  animation-play-state: paused;
+}
+
+@keyframes alumniScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(calc(-50% - 6px)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .alumniMarquee {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  .alumniTrack {
+    flex-wrap: wrap;
+    width: auto;
+    animation: none;
+  }
+  .alumniTile[aria-hidden='true'] {
+    display: none;
   }
 }
 
 .alumniTile {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 4px;
-  min-height: 112px;
-  justify-content: flex-end;
-  padding: 16px 20px 20px;
-  border-right: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
+  flex-shrink: 0;
+  min-width: 200px;
+  padding: 18px 24px;
+  border: 1px solid var(--line-strong);
   background-color: var(--panel);
 }
 
 .alumniName {
-  margin-top: auto;
-  font-size: clamp(20px, 2.2vw, 26px);
+  font-size: 22px;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.15;
+  white-space: nowrap;
 }
 
 .alumniSector {
@@ -191,22 +230,8 @@
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: #4a4646;
-}
-
-.alumniTilePlaceholder {
-  background-color: transparent;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent 0,
-    transparent 8px,
-    rgba(0, 0, 0, 0.05) 8px,
-    rgba(0, 0, 0, 0.05) 9px
-  );
-}
-
-.alumniTilePlaceholder .alumniName {
-  color: #6b6566;
 }
 
 /* ---------- Calendar ---------- */

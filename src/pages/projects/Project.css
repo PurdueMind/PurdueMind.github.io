@@ -30,21 +30,10 @@
 }
 
 .projectDescription li {
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 12px;
   padding: 14px 0;
   border-bottom: 1px solid var(--line);
   font-size: 16px;
   line-height: 1.55;
-}
-
-.projectDescriptionIndex {
-  padding-top: 3px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: #4a4646;
 }
 
 .projectTeamFigure {

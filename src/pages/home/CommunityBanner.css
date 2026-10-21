@@ -20,26 +20,23 @@
   overflow: hidden;
 }
 
-/* Inactive slides sit transparent and slightly zoomed; the active one fades
-   in and drifts slowly back to scale, so changes feel continuous. */
+/* Crossfade only: scaling a photo resamples it, which softens it */
 .communityBannerSlide {
   position: absolute;
   inset: 0;
   overflow: hidden;
+  background-color: var(--black);
 
   opacity: 0;
-  transform: scale(1.05);
-  transition: opacity 1.6s ease, transform 7s ease-out;
+  transition: opacity 1.4s ease;
 }
 
 .communityBannerSlideActive {
   opacity: 1;
-  transform: scale(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .communityBannerSlide {
-    transform: none;
     transition: opacity 0.6s ease;
   }
 }

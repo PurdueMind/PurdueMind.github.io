@@ -6,7 +6,8 @@ const SLIDE_INTERVAL_MS = 5500;
 
 // Photos much taller or wider than the frame would lose too much to a crop
 // (heads, feet, the subject itself), so they're shown whole over a blurred
-// copy of themselves instead. Photos in between fill the frame.
+// copy of themselves instead.
+// Photos in between fill the frame.
 const FILL_MIN_ASPECT = 1.2;
 const FILL_MAX_ASPECT = 1.9;
 

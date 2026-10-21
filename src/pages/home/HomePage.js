@@ -93,15 +93,29 @@ export default function HomePage() {
       </section>
 
       <section className='section container'>
-        <SectionHeader id='alumni' index='03' title='Where Our Alumni Go' />
+        <SectionHeader id='alumni' index='03' title="Where We've Worked" />
+        <p className='alumniIntro'>Companies where MIND members have interned and alumni now work.</p>
 
-        <div className='alumniGrid'>
-          {alumniList.companies.map((company, i) => (
-            <div className={`alumniTile ${company.placeholder ? 'alumniTilePlaceholder' : ''}`} key={i}>
-              <span className='alumniName'>{company.placeholder ? 'Company TBD' : company.name}</span>
-              <span className='alumniSector'>{company.sector}</span>
-            </div>
-          ))}
+        {/* Companies alternate between two rows scrolling in opposite
+            directions; each row is rendered twice so it loops seamlessly. */}
+        <div className='alumniMarquee'>
+          {[0, 1].map((row) => {
+            const companies = alumniList.companies.filter((_, i) => i % 2 === row);
+            return (
+              <div
+                className={`alumniTrack ${row ? 'alumniTrackReverse' : ''}`}
+                key={row}
+                style={{ '--marquee-duration': `${companies.length * 5}s` }}
+              >
+                {[...companies, ...companies].map((company, i) => (
+                  <div className='alumniTile' key={i} aria-hidden={i >= companies.length}>
+                    <span className='alumniName'>{company.name}</span>
+                    <span className='alumniSector'>{company.sector}</span>
+                  </div>
+                ))}
+              </div>
+            );
+          })}
         </div>
       </section>
 

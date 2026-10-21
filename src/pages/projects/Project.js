@@ -36,8 +36,6 @@ export default function Projects(
   // Sections after Overview are optional, so number them as they render
   let sectionCount = 1;
   const nextIndex = () => String(++sectionCount).padStart(2, '0');
-  let figureCount = 1;
-  const nextFigure = () => String(++figureCount).padStart(2, '0');
 
   return (
     <div className='project'>
@@ -52,16 +50,10 @@ export default function Projects(
         <div className='projectInfoDiv'>
           <figure className='figure projectFigure'>
             <img className='projectImage' src={imgSrc} alt={alt}/>
-            <figcaption className='figureCaption'>
-              <span>Fig. 01 — {alt || title}</span>
-            </figcaption>
           </figure>
           <ol className='projectDescription'>
             {description.map((item, i) => (
-              <li key={i}>
-                <span className='projectDescriptionIndex'>{String(i + 1).padStart(2, '0')}</span>
-                <span>{item}</span>
-              </li>
+              <li key={i}>{item}</li>
             ))}
           </ol>
         </div>
@@ -72,9 +64,6 @@ export default function Projects(
           <SectionHeader index={nextIndex()} title='Team' />
           <figure className='figure projectTeamFigure'>
             <img className='projectImage' src={teamPhoto} alt={`${title} team`} />
-            <figcaption className='figureCaption'>
-              <span>Fig. {nextFigure()} — {title} team</span>
-            </figcaption>
           </figure>
         </section>
       }
@@ -97,7 +86,7 @@ export default function Projects(
                 <figure className='figure awardFigure' key={photo.file}>
                   <img className='awardImage' src={photo.src} alt={photo.caption} />
                   <figcaption className='figureCaption'>
-                    <span>Fig. {nextFigure()} — {photo.caption}</span>
+                    <span>{photo.caption}</span>
                   </figcaption>
                 </figure>
               ))}

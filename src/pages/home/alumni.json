@@ -1,5 +1,5 @@
 {
-  "_comment": "Companies where MIND alumni work. Entries with \"placeholder\": true render as dashed TBD tiles; replace them with real names.",
+  "_comment": "Companies where MIND members have interned and alumni now work. Shown on the Home page as two scrolling rows; add or remove entries freely.",
   "companies": [
     {
       "name": "Eli Lilly",
@@ -36,6 +36,38 @@
     {
       "name": "Merck",
       "sector": "Pharmaceuticals"
+    },
+    {
+      "name": "Werfen",
+      "sector": "Medical Diagnostics"
+    },
+    {
+      "name": "Cretex",
+      "sector": "Medical Device Manufacturing"
+    },
+    {
+      "name": "E-SENSE",
+      "sector": "Technology"
+    },
+    {
+      "name": "Sysmex",
+      "sector": "Medical Diagnostics"
+    },
+    {
+      "name": "Fishbeck",
+      "sector": "Engineering"
+    },
+    {
+      "name": "Medtronic",
+      "sector": "Medical Devices"
+    },
+    {
+      "name": "Procter & Gamble",
+      "sector": "Consumer Goods"
+    },
+    {
+      "name": "GE Vernova",
+      "sector": "Energy"
     }
   ]
 }
