@@ -113,6 +113,13 @@
   background-repeat: no-repeat;
 }
 
+/* Phones skip the project images so the four cards stay compact */
+@media (max-width: 760px) {
+  .homeProjectImg {
+    display: none;
+  }
+}
+
 .homeProjectInfo {
   display: flex;
   flex-direction: column;
@@ -177,39 +184,21 @@
   mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
+.alumniRow {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.alumniRow::-webkit-scrollbar {
+  display: none;
+}
+
 .alumniTrack {
   display: flex;
   gap: 12px;
   width: max-content;
-  animation: alumniScroll var(--marquee-duration, 40s) linear infinite;
-}
-
-.alumniTrackReverse {
-  animation-direction: reverse;
-}
-
-.alumniMarquee:hover .alumniTrack {
-  animation-play-state: paused;
-}
-
-@keyframes alumniScroll {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-50% - 6px)); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .alumniMarquee {
-    -webkit-mask-image: none;
-    mask-image: none;
-  }
-  .alumniTrack {
-    flex-wrap: wrap;
-    width: auto;
-    animation: none;
-  }
-  .alumniTile[aria-hidden='true'] {
-    display: none;
-  }
 }
 
 .alumniTile {
@@ -218,14 +207,41 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding: 20px 32px;
+  height: 88px;
+  min-width: 180px;
+  padding: 0 32px;
   border: 1px solid var(--line-strong);
   background-color: var(--panel);
 }
 
+/* Logos sit in a shared grayscale tone and reveal their brand colors when
+   the tile is hovered. Sizing comes from the area-based CompanyLogo. */
+.alumniLogo {
+  display: block;
+  width: 120px;
+  height: 40px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(0.7) contrast(1.6);
+  opacity: 0.85;
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.alumniTile:hover .alumniLogo {
+  filter: none;
+  opacity: 1;
+}
+
+/* White-on-transparent logos (alumni.json "logoTone": "light") stay solid
+   dark, or they'd vanish on the light tile */
+.alumniLogoLight,
+.alumniTile:hover .alumniLogoLight {
+  filter: brightness(0);
+}
+
 .alumniName {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
+  color: #3a3636;
   letter-spacing: -0.01em;
   line-height: 1.15;
   white-space: nowrap;

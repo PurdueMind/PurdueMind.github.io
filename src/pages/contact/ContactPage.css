@@ -53,3 +53,18 @@
 .contactRow a {
   font-weight: 500;
 }
+
+/* On phones the label sits above its value, giving the email address the full
+   width so it stays on one line */
+@media (max-width: 520px) {
+  .contactRow {
+    grid-template-columns: 1fr;
+    gap: 4px;
+    padding: 10px 0;
+  }
+
+  .contactEmail {
+    white-space: nowrap;
+    font-size: 15px;
+  }
+}

@@ -11,6 +11,8 @@ import ContactPage from './pages/contact/ContactPage'
 import { BrowserRouter as Router, Switch, Route, useHistory, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 
+import preloadImages from './utils/preloadImages';
+
 function RedirectHandler() {
   const history = useHistory();
 
@@ -38,6 +40,12 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  // Fetch project and Learning page images in the background once the first
+  // page has loaded, so they appear instantly when visitors click through
+  useEffect(() => {
+    preloadImages();
+  }, []);
+
   return (
     <Router>
     <RedirectHandler />

@@ -41,7 +41,8 @@
       "name": "Sysmex"
     },
     {
-      "name": "Fishbeck"
+      "name": "Fishbeck",
+      "logoTone": "light"
     },
     {
       "name": "Medtronic"

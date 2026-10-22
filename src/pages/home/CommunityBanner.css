@@ -18,6 +18,15 @@
 .communityBannerFrame {
   position: relative;
   overflow: hidden;
+
+  /* Horizontal swipes go to the slideshow; vertical ones still scroll the page */
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+}
+
+.communityBannerFrame:active {
+  cursor: grabbing;
 }
 
 /* Crossfade only: scaling a photo resamples it, which softens it */
@@ -88,10 +97,30 @@
 }
 
 .communityBannerTick {
+  position: relative;
   width: 16px;
   height: 3px;
+  padding: 0;
+  border: 0;
   background-color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
   transition: background-color 0.4s ease, width 0.4s ease;
+}
+
+/* The bars are thin, so each gets an invisible, larger hit area */
+.communityBannerTick::before {
+  content: '';
+  position: absolute;
+  inset: -12px -3px;
+}
+
+.communityBannerTick:hover {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+.communityBannerTick:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
 }
 
 .communityBannerTickActive {

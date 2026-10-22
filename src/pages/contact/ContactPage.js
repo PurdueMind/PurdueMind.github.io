@@ -7,6 +7,7 @@ import EmailLink from '../people/components/EmailLink';
 import PageHero from '../../components/PageHero';
 import SectionHeader from '../../components/SectionHeader';
 import { buildImageMap } from '../../utils/images';
+import { CONTACT_EMAIL, INSTAGRAM_URL, LINKEDIN_URL, SLACK_INVITE_URL } from '../../socialLinks';
 import defaultHeadshot from '../../assets/people/default.png';
 
 const leaderList = require('../people/leaderList.json');
@@ -18,9 +19,6 @@ function getImageSrc(images, filename) {
   return images[filename] || defaultHeadshot;
 }
 
-const CONTACT_EMAIL = 'purdueuniversitymind@gmail.com';
-const INSTAGRAM_URL = 'https://www.instagram.com/purdue.mind/';
-const SLACK_INVITE_URL = 'https://join.slack.com/t/purdue-mind-workspace/shared_invite/zt-47kw5vc6b-DeXzB8Jmg2IsORDEC_c2fg';
 
 export default function ContactPage() {
   return (
@@ -36,7 +34,7 @@ export default function ContactPage() {
             <div className='contactRow'>
               <dt>Email</dt>
               <dd>
-                <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                <a className='contactEmail' href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
                 <EmailLink email={CONTACT_EMAIL} />
               </dd>
             </div>
@@ -44,6 +42,12 @@ export default function ContactPage() {
               <dt>Instagram</dt>
               <dd><a href={INSTAGRAM_URL} target='_blank' rel='noopener noreferrer'>@purdue.mind</a></dd>
             </div>
+            {LINKEDIN_URL &&
+              <div className='contactRow'>
+                <dt>LinkedIn</dt>
+                <dd><a href={LINKEDIN_URL} target='_blank' rel='noopener noreferrer'>Purdue MIND</a></dd>
+              </div>
+            }
             <div className='contactRow'>
               <dt>Slack</dt>
               <dd><a href={SLACK_INVITE_URL} target='_blank' rel='noopener noreferrer'>Purdue MIND workspace</a></dd>

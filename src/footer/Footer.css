@@ -79,6 +79,17 @@
   background-color: rgba(201, 179, 140, 0.12);
 }
 
+.footerSocialText {
+  width: auto;
+  padding: 0 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+}
+
 .footerSocial img {
   width: 18px;
   height: 18px;
