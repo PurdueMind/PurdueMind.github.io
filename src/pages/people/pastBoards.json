@@ -1,0 +1,368 @@
+{
+  "_comment": "Past executive boards shown on /People/Alumni, newest first. Compiled from the club Google Drive (callout slides and contact rosters); the current board lives in leaderList.json.",
+  "boards": [
+    {
+      "year": "2025–2026",
+      "members": [
+        {
+          "role": "President",
+          "name": "Grant Congdon"
+        },
+        {
+          "role": "Vice President",
+          "name": "Uday Mittal"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Luke Johnson"
+        },
+        {
+          "role": "Secretary",
+          "name": "Shreya Krishnan"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Supreet Mishra"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Myra Khare"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Scout Hudson"
+        }
+      ]
+    },
+    {
+      "year": "2024–2025",
+      "members": [
+        {
+          "role": "President",
+          "name": "Dalton Aaker"
+        },
+        {
+          "role": "Vice President",
+          "name": "Simon Hasik"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Myra Khare"
+        },
+        {
+          "role": "Secretary",
+          "name": "Matt Schaller"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Grant Congdon"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Sam Ying"
+        }
+      ]
+    },
+    {
+      "year": "2023–2024",
+      "members": [
+        {
+          "role": "Co-President",
+          "name": "Allison Lisota"
+        },
+        {
+          "role": "Co-President",
+          "name": "Brandon Mar"
+        },
+        {
+          "role": "Vice President",
+          "name": "Simon Hasik"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Sam Ying"
+        },
+        {
+          "role": "Secretary",
+          "name": "Lily Esterline"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Matt Ghera"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Dalton Aaker"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Aditi Barla"
+        }
+      ]
+    },
+    {
+      "year": "2022–2023",
+      "members": [
+        {
+          "role": "President",
+          "name": "Claire Poukey"
+        },
+        {
+          "role": "Vice President",
+          "name": "Elyssia Wellington"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Pei-Lun (Patricia) Chen"
+        },
+        {
+          "role": "Secretary",
+          "name": "Brandon Mar"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Sanjana Prashanth"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Jean-Paul Pertuit"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Allison Lisota"
+        }
+      ]
+    },
+    {
+      "year": "2021–2022",
+      "members": [
+        {
+          "role": "President",
+          "name": "Jenna Munshi"
+        },
+        {
+          "role": "Vice President",
+          "name": "Kevin Bautista"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Akio Fujita"
+        },
+        {
+          "role": "Secretary",
+          "name": "Kyle Chang"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Matthew Starobrat"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Elyssia Wellington"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Claire Poukey"
+        }
+      ]
+    },
+    {
+      "year": "2020–2021",
+      "members": [
+        {
+          "role": "President",
+          "name": "Pragna Upputuri"
+        },
+        {
+          "role": "Vice President",
+          "name": "Omar Abdalla"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Kevin Bautista"
+        },
+        {
+          "role": "Secretary",
+          "name": "Elyssia Wellington"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Akio Fujita"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Jenna Munshi"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "McKenna Hillsdon-Smith"
+        }
+      ],
+      "seniorMentors": [
+        "Damen Wilson",
+        "Anthony Vukovich"
+      ]
+    },
+    {
+      "year": "2019–2020",
+      "members": [
+        {
+          "role": "President",
+          "name": "Damen Wilson"
+        },
+        {
+          "role": "Vice President",
+          "name": "Pragna Upputuri"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Parker van Emmerik"
+        },
+        {
+          "role": "Secretary",
+          "name": "Jenna Munshi"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Scott Kenning"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Tony Vukovich"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Diana Sarrico"
+        }
+      ]
+    },
+    {
+      "year": "2018–2019",
+      "members": [
+        {
+          "role": "President",
+          "name": "Srinivas Govindan"
+        },
+        {
+          "role": "Vice President",
+          "name": "Andrew Beutler"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Ali Abu-Saleh"
+        },
+        {
+          "role": "Secretary",
+          "name": "Jack Stickney"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Damen Wilson"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Pragna Upputuri"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Emilie Favela-Cardiel"
+        }
+      ]
+    },
+    {
+      "year": "2017–2018",
+      "members": [
+        {
+          "role": "President",
+          "name": "Jason Ummel"
+        },
+        {
+          "role": "Vice President",
+          "name": "Ryan Prince"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Matthew Tharp"
+        },
+        {
+          "role": "Secretary",
+          "name": "Michael Williams"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Samuel Kuhns"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Scott Guidoboni"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Sydney Meysembourg"
+        }
+      ]
+    },
+    {
+      "year": "2016–2017",
+      "members": [
+        {
+          "role": "President",
+          "name": "Pablo F. Argote"
+        },
+        {
+          "role": "Vice President",
+          "name": "Neal Patel"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Barrett Davis"
+        },
+        {
+          "role": "Secretary",
+          "name": "Ryan Prince"
+        },
+        {
+          "role": "Research & Development",
+          "name": "David Miller"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Dane Albaugh"
+        },
+        {
+          "role": "Networking & Events",
+          "name": "Jennifer Ray"
+        }
+      ],
+      "seniorMentors": [
+        "Sriram Boppana",
+        "Michael Drakopoulos"
+      ]
+    },
+    {
+      "year": "2015–2016",
+      "members": [
+        {
+          "role": "President",
+          "name": "Sriram Boppana"
+        },
+        {
+          "role": "Vice President",
+          "name": "Michael Drakopoulos"
+        },
+        {
+          "role": "Treasurer",
+          "name": "Raj Patel"
+        },
+        {
+          "role": "Research & Development",
+          "name": "Alex Ocken"
+        },
+        {
+          "role": "Entrepreneurship & Ideation",
+          "name": "Dane Albaugh"
+        }
+      ]
+    }
+  ]
+}

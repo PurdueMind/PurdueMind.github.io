@@ -109,3 +109,59 @@
     gap: 0;
   }
 }
+
+/* ---------- Past executive boards ---------- */
+.alumniSectionFollow {
+  padding-top: 0;
+}
+
+.pastBoardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.pastBoard {
+  border: 1px solid var(--line-strong);
+  background-color: var(--panel);
+}
+
+.pastBoardYear {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--line-strong);
+  background-color: var(--black);
+  color: var(--gold);
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+}
+
+.pastBoardList {
+  margin: 0;
+  padding: 6px 16px 10px;
+}
+
+.pastBoardList > div {
+  display: flex;
+  flex-direction: column;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.pastBoardList > div:last-child {
+  border-bottom: none;
+}
+
+.pastBoardList dt {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a4646;
+}
+
+.pastBoardList dd {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}

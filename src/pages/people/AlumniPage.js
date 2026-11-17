@@ -5,16 +5,20 @@ import '../../App.css';
 
 import PageHero from '../../components/PageHero';
 import SectionHeader from '../../components/SectionHeader';
+import useHashScroll from '../../hooks/useHashScroll';
 import { buildImageMap } from '../../utils/images';
 
 import defaultHeadshot from '../../assets/people/default.png';
 
 const { alumni } = require('./alumniBios.json');
+const { boards } = require('./pastBoards.json');
 
 // Alumni headshots live in src/assets/people/alumni
 const alumniImages = buildImageMap(require.context('../../assets/people/alumni', false, /\.(png|jpe?g)$/));
 
 export default function AlumniPage() {
+  useHashScroll();
+
   return (
     <div className='alumniPage'>
       <PageHero eyebrow='People · Alumni' title='Alumni'>
@@ -49,6 +53,31 @@ export default function AlumniPage() {
                 </blockquote>
               </div>
             </article>
+          ))}
+        </div>
+      </section>
+
+      <section className='section container alumniSectionFollow'>
+        <SectionHeader id='pastBoards' index='02' title='Past Executive Boards' meta={`${boards[boards.length - 1].year.slice(0, 4)}–${boards[0].year.slice(-4)}`} />
+        <div className='pastBoardGrid'>
+          {boards.map((board) => (
+            <div className='pastBoard' key={board.year}>
+              <h3 className='pastBoardYear'>{board.year}</h3>
+              <dl className='pastBoardList'>
+                {board.members.map((member) => (
+                  <div key={`${member.role}-${member.name}`}>
+                    <dt>{member.role}</dt>
+                    <dd>{member.name}</dd>
+                  </div>
+                ))}
+                {board.seniorMentors &&
+                  <div>
+                    <dt>Senior Mentors</dt>
+                    <dd>{board.seniorMentors.join(', ')}</dd>
+                  </div>
+                }
+              </dl>
+            </div>
           ))}
         </div>
       </section>
