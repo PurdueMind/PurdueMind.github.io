@@ -43,6 +43,9 @@ export default function AlumniPage() {
                 <div className='alumniBioHeader'>
                   <h3 className='alumniBioName'>{person.name}</h3>
                   <span className='alumniBioYear'>Class of {person.classYear}</span>
+                  {person.linkedIn &&
+                    <a className='alumniBioLinkedIn' href={person.linkedIn} target='_blank' rel='noreferrer'>LinkedIn ↗</a>
+                  }
                 </div>
                 <dl className='alumniBioFacts'>
                   <div><dt>Role in MIND</dt><dd>{person.role}</dd></div>
@@ -67,7 +70,11 @@ export default function AlumniPage() {
                 {board.members.map((member) => (
                   <div key={`${member.role}-${member.name}`}>
                     <dt>{member.role}</dt>
-                    <dd>{member.name}</dd>
+                    <dd>
+                      {member.linkedIn
+                        ? <a href={member.linkedIn} target='_blank' rel='noreferrer'>{member.name}</a>
+                        : member.name}
+                    </dd>
                   </div>
                 ))}
                 {board.seniorMentors &&

@@ -165,3 +165,23 @@
   font-size: 15px;
   font-weight: 600;
 }
+
+.alumniBioLinkedIn,
+.pastBoardList dd a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--gold-dark);
+  text-underline-offset: 3px;
+}
+
+.alumniBioLinkedIn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.alumniBioLinkedIn:hover,
+.pastBoardList dd a:hover {
+  text-decoration-thickness: 2px;
+}

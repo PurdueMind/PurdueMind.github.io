@@ -6,11 +6,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Grant Congdon"
+          "name": "Grant Congdon",
+          "linkedIn": "https://www.linkedin.com/in/grant-congdon/"
         },
         {
           "role": "Vice President",
-          "name": "Uday Mittal"
+          "name": "Uday Mittal",
+          "linkedIn": "https://www.linkedin.com/in/mittal-uday/"
         },
         {
           "role": "Treasurer",
@@ -39,11 +41,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Dalton Aaker"
+          "name": "Dalton Aaker",
+          "linkedIn": "https://www.linkedin.com/in/daaker/"
         },
         {
           "role": "Vice President",
-          "name": "Simon Hasik"
+          "name": "Simon Hasik",
+          "linkedIn": "https://www.linkedin.com/in/simon-hasik/"
         },
         {
           "role": "Treasurer",
@@ -55,7 +59,8 @@
         },
         {
           "role": "Research & Development",
-          "name": "Grant Congdon"
+          "name": "Grant Congdon",
+          "linkedIn": "https://www.linkedin.com/in/grant-congdon/"
         },
         {
           "role": "Networking & Events",
@@ -68,15 +73,18 @@
       "members": [
         {
           "role": "Co-President",
-          "name": "Allison Lisota"
+          "name": "Allison Lisota",
+          "linkedIn": "https://www.linkedin.com/in/allisonlisota/"
         },
         {
           "role": "Co-President",
-          "name": "Brandon Mar"
+          "name": "Brandon Mar",
+          "linkedIn": "https://www.linkedin.com/in/brandoncmar/"
         },
         {
           "role": "Vice President",
-          "name": "Simon Hasik"
+          "name": "Simon Hasik",
+          "linkedIn": "https://www.linkedin.com/in/simon-hasik/"
         },
         {
           "role": "Treasurer",
@@ -92,7 +100,8 @@
         },
         {
           "role": "Entrepreneurship & Ideation",
-          "name": "Dalton Aaker"
+          "name": "Dalton Aaker",
+          "linkedIn": "https://www.linkedin.com/in/daaker/"
         },
         {
           "role": "Networking & Events",
@@ -105,7 +114,8 @@
       "members": [
         {
           "role": "President",
-          "name": "Claire Poukey"
+          "name": "Claire Poukey",
+          "linkedIn": "https://www.linkedin.com/in/clairepoukey/"
         },
         {
           "role": "Vice President",
@@ -117,7 +127,8 @@
         },
         {
           "role": "Secretary",
-          "name": "Brandon Mar"
+          "name": "Brandon Mar",
+          "linkedIn": "https://www.linkedin.com/in/brandoncmar/"
         },
         {
           "role": "Research & Development",
@@ -129,7 +140,8 @@
         },
         {
           "role": "Networking & Events",
-          "name": "Allison Lisota"
+          "name": "Allison Lisota",
+          "linkedIn": "https://www.linkedin.com/in/allisonlisota/"
         }
       ]
     },
@@ -138,11 +150,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Jenna Munshi"
+          "name": "Jenna Munshi",
+          "linkedIn": "https://www.linkedin.com/in/jenna-munshi/"
         },
         {
           "role": "Vice President",
-          "name": "Kevin Bautista"
+          "name": "Kevin Bautista",
+          "linkedIn": "https://www.linkedin.com/in/kevin-alessandro-bautista/"
         },
         {
           "role": "Treasurer",
@@ -162,7 +176,8 @@
         },
         {
           "role": "Networking & Events",
-          "name": "Claire Poukey"
+          "name": "Claire Poukey",
+          "linkedIn": "https://www.linkedin.com/in/clairepoukey/"
         }
       ]
     },
@@ -171,15 +186,18 @@
       "members": [
         {
           "role": "President",
-          "name": "Pragna Upputuri"
+          "name": "Pragna Upputuri",
+          "linkedIn": "https://www.linkedin.com/in/pragna-elizabeth-upputuri/"
         },
         {
           "role": "Vice President",
-          "name": "Omar Abdalla"
+          "name": "Omar Abdalla",
+          "linkedIn": "https://www.linkedin.com/in/oabdall/"
         },
         {
           "role": "Treasurer",
-          "name": "Kevin Bautista"
+          "name": "Kevin Bautista",
+          "linkedIn": "https://www.linkedin.com/in/kevin-alessandro-bautista/"
         },
         {
           "role": "Secretary",
@@ -191,7 +209,8 @@
         },
         {
           "role": "Entrepreneurship & Ideation",
-          "name": "Jenna Munshi"
+          "name": "Jenna Munshi",
+          "linkedIn": "https://www.linkedin.com/in/jenna-munshi/"
         },
         {
           "role": "Networking & Events",
@@ -208,11 +227,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Damen Wilson"
+          "name": "Damen Wilson",
+          "linkedIn": "https://www.linkedin.com/in/damen-wilson/"
         },
         {
           "role": "Vice President",
-          "name": "Pragna Upputuri"
+          "name": "Pragna Upputuri",
+          "linkedIn": "https://www.linkedin.com/in/pragna-elizabeth-upputuri/"
         },
         {
           "role": "Treasurer",
@@ -220,7 +241,8 @@
         },
         {
           "role": "Secretary",
-          "name": "Jenna Munshi"
+          "name": "Jenna Munshi",
+          "linkedIn": "https://www.linkedin.com/in/jenna-munshi/"
         },
         {
           "role": "Research & Development",
@@ -241,11 +263,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Srinivas Govindan"
+          "name": "Srinivas Govindan",
+          "linkedIn": "https://www.linkedin.com/in/srinivasgovindan/"
         },
         {
           "role": "Vice President",
-          "name": "Andrew Beutler"
+          "name": "Andrew Beutler",
+          "linkedIn": "https://www.linkedin.com/in/andrewbeutler/"
         },
         {
           "role": "Treasurer",
@@ -257,11 +281,13 @@
         },
         {
           "role": "Research & Development",
-          "name": "Damen Wilson"
+          "name": "Damen Wilson",
+          "linkedIn": "https://www.linkedin.com/in/damen-wilson/"
         },
         {
           "role": "Entrepreneurship & Ideation",
-          "name": "Pragna Upputuri"
+          "name": "Pragna Upputuri",
+          "linkedIn": "https://www.linkedin.com/in/pragna-elizabeth-upputuri/"
         },
         {
           "role": "Networking & Events",
@@ -274,11 +300,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Jason Ummel"
+          "name": "Jason Ummel",
+          "linkedIn": "https://www.linkedin.com/in/jason-ummel/"
         },
         {
           "role": "Vice President",
-          "name": "Ryan Prince"
+          "name": "Ryan Prince",
+          "linkedIn": "https://www.linkedin.com/in/ryanprince40/"
         },
         {
           "role": "Treasurer",
@@ -307,11 +335,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Pablo F. Argote"
+          "name": "Pablo F. Argote",
+          "linkedIn": "https://www.linkedin.com/in/pablofargote/"
         },
         {
           "role": "Vice President",
-          "name": "Neal Patel"
+          "name": "Neal Patel",
+          "linkedIn": "https://www.linkedin.com/in/nealpatel4/"
         },
         {
           "role": "Treasurer",
@@ -319,7 +349,8 @@
         },
         {
           "role": "Secretary",
-          "name": "Ryan Prince"
+          "name": "Ryan Prince",
+          "linkedIn": "https://www.linkedin.com/in/ryanprince40/"
         },
         {
           "role": "Research & Development",
@@ -344,11 +375,13 @@
       "members": [
         {
           "role": "President",
-          "name": "Sriram Boppana"
+          "name": "Sriram Boppana",
+          "linkedIn": "https://www.linkedin.com/in/sriram-boppana/"
         },
         {
           "role": "Vice President",
-          "name": "Michael Drakopoulos"
+          "name": "Michael Drakopoulos",
+          "linkedIn": "https://www.linkedin.com/in/mdrakopoulos/"
         },
         {
           "role": "Treasurer",
