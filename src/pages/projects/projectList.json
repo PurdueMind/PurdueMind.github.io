@@ -114,6 +114,8 @@
     },
     {
       "id": "chiro-band",
+      "feature": "chiro-band-build.jpg",
+      "featureAlt": "Chiro-Band prototype laid flat with motors, battery and Arduino attached",
       "alt": "Chiro-Band layout sketch showing massage components, motors, battery and Arduino around the headband",
       "title": "Chiro-Band (2021-2023)",
       "imgSrc": "chiro-band.jpg",
@@ -134,6 +136,8 @@
     },
     {
       "id": "hydra-check",
+      "feature": "hydra-check-prototype.jpg",
+      "featureAlt": "3D-printed Hydra-Check prototype: outer housing beside the inner pressing mechanism",
       "alt": "Hydra-Check CAD model showing the press plate and sensor housing",
       "title": "Hydra-Check (2020-2021)",
       "imgSrc": "hydra-check-cad.jpg",
@@ -197,6 +201,8 @@
     },
     {
       "id": "exomind-glove",
+      "feature": "exomind-glove-beijing.jpg",
+      "featureAlt": "ExoMIND Glove, custom circuit boards and test equipment at the 2017 China-U.S. Young Maker Competition",
       "awards": [
         { "title": "3rd Place, highest-ranked U.S. team", "event": "2017 China-U.S. Young Maker Competition, Beijing" }
       ],

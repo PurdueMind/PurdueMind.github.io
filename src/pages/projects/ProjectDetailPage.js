@@ -58,7 +58,7 @@ export default function ProjectDetailPage() {
     <div className='projectsPage'>
       <Project
         imgSrc={getImageSrc(project)}
-        alt={project.alt}
+        alt={(detailedImages[project.feature] && project.featureAlt) || project.alt}
         title={project.title}
         status={isCurrent ? 'Active' : 'Archived'}
         teamPhoto={teamImages[project.teamPhoto]}
