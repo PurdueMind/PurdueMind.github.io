@@ -105,13 +105,6 @@ export default function OnboardingPage() {
                 <div className='travelList'>
                     {travelList.trips.map((trip) => (
                         <article className='travelTrip' key={trip.id}>
-                            {(travelImages[trip.id] || []).length > 0 &&
-                                <Slideshow
-                                    images={travelImages[trip.id]}
-                                    alt={`MIND at ${trip.title}`}
-                                    caption={`${trip.location} · ${trip.date}`}
-                                    height={340} />
-                            }
                             <div className='travelTripText'>
                                 <div className='travelTripMeta'>
                                     <span>{trip.date}</span>
@@ -125,6 +118,15 @@ export default function OnboardingPage() {
                                     <Link className='travelTripLink' to={`/Projects/${trip.project.slug}`}>See the {trip.project.title} project →</Link>
                                 }
                             </div>
+                            {(travelImages[trip.id] || []).length > 0 &&
+                                <div className='travelPhotoGrid'>
+                                    {travelImages[trip.id].map((src, i) => (
+                                        <figure className='figure travelPhoto' key={src}>
+                                            <img src={src} alt={`MIND at ${trip.title}, photo ${i + 1}`} loading='lazy' />
+                                        </figure>
+                                    ))}
+                                </div>
+                            }
                         </article>
                     ))}
                 </div>

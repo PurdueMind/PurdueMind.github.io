@@ -85,38 +85,36 @@
   gap: 40px;
 }
 
-/* Photos on one side, write-up on the other; alternate sides per trip */
 .travelTrip {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Fixed grid of trip photos, cropped to a shared shape */
+.travelPhotoGrid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
 }
 
-.travelTrip:nth-child(even) > .slideshow {
-  order: 2;
+.travelPhoto {
+  margin: 0;
+  overflow: hidden;
 }
 
-/* A trip without photos yet lets its write-up span the row */
-.travelTrip > .travelTripText:only-child {
-  grid-column: 1 / -1;
-}
-
-@media (max-width: 860px) {
-  .travelTrip {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .travelTrip:nth-child(even) > .slideshow {
-    order: 0;
-  }
+.travelPhoto img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .travelTripText {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  max-width: 760px;
 }
 
 .travelTripMeta {
