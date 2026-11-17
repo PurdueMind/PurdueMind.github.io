@@ -18,7 +18,7 @@ export default function AlumniPage() {
   return (
     <div className='alumniPage'>
       <PageHero eyebrow='People · Alumni' title='Alumni'>
-        <p className='heroBody'>Former MIND members on what the club meant to them and where they have gone since.</p>
+        <p className='heroBody'>Former MIND members on what the club meant to them.</p>
         <div className='heroActions'>
           <Link className='button buttonGhost' to='/People'>← Current members</Link>
         </div>
@@ -41,7 +41,6 @@ export default function AlumniPage() {
                 <dl className='alumniBioFacts'>
                   <div><dt>Role in MIND</dt><dd>{person.role}</dd></div>
                   <div><dt>Major</dt><dd>{person.major}</dd></div>
-                  <div><dt>Now</dt><dd>{person.now}</dd></div>
                 </dl>
                 <blockquote className='alumniBioQuote'>
                   {person.quote.map((paragraph, i) => <p key={i}>{paragraph}</p>)}
