@@ -36,21 +36,21 @@ export default function PeoplePage() {
       </PageHero>
 
       <section className='section container peopleSection'>
-        <SectionHeader id='officersBreak' index='01' title='Executive Board' meta={`${leaderList.officers.length} members`} />
+        <SectionHeader id='officersBreak' index='01' title='Executive Board' />
         <div className='cardGrid'>
           {getProfile(leaderList.officers, 'Officers')}
         </div>
       </section>
 
       <section className='section container peopleSection'>
-        <SectionHeader id='peopleMiddleDiv' index='02' title='Team Leads' meta={`${leaderList.leads.length} members`} />
+        <SectionHeader id='peopleMiddleDiv' index='02' title='Team Leads' />
         <div className='cardGrid'>
           {getProfile(leaderList.leads, 'Leads')}
         </div>
       </section>
 
       <section className='section container peopleSection'>
-        <SectionHeader id='peopleBottomDiv' index='03' title='Advisors' meta={`${leaderList.advisors.length} members`} />
+        <SectionHeader id='peopleBottomDiv' index='03' title='Advisors' />
         <div className='cardGrid'>
           {getProfile(leaderList.advisors, 'Advisors')}
         </div>

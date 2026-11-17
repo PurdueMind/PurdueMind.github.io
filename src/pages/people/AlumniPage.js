@@ -30,7 +30,7 @@ export default function AlumniPage() {
       </PageHero>
 
       <section className='section container'>
-        <SectionHeader index='01' title='Alumni Spotlights' meta={`${alumni.length} alumni`} />
+        <SectionHeader index='01' title='Alumni Spotlights' />
         <div className='alumniBioList'>
           {alumni.map((person) => (
             <AlumniBio key={person.name} person={person} />
