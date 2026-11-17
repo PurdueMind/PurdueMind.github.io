@@ -33,7 +33,8 @@
       "quote": [
         "I started a company through MIND."
       ],
-      "filename": "dane-albaugh.jpg"
+      "filename": "dane-albaugh.jpg",
+      "linkedIn": "https://www.linkedin.com/in/dane-albaugh/"
     },
     {
       "name": "Sam Kuhns",
@@ -43,7 +44,8 @@
       "quote": [
         "MIND influenced me towards Consulting by developing unique client interaction and problem solving skills that transfer well into industry positions."
       ],
-      "filename": "sam-kuhns.jpg"
+      "filename": "sam-kuhns.jpg",
+      "linkedIn": "https://www.linkedin.com/in/sam-kuhns/"
     },
     {
       "name": "Scott Guidoboni",
@@ -53,7 +55,8 @@
       "quote": [
         "MIND got me excited about taking an idea and making it real so they can help real people. Now I know execution is what really makes ideas valuable."
       ],
-      "filename": "scott-guidoboni.jpg"
+      "filename": "scott-guidoboni.jpg",
+      "linkedIn": "https://www.linkedin.com/in/scottguidoboni/"
     }
   ]
 }

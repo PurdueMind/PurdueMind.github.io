@@ -48,6 +48,8 @@ function getProjectTiles(projects) {
           alt={project.alt}
           title={project.title}
           awardCount={(project.awards || []).length}
+          patentCount={(project.patents || []).length}
+          startup={project.startup}
           fit={project.thumbnailFit}
           description={project.description} />
       ))}

@@ -26,12 +26,14 @@ export default function Projects(
     status,
     teamPhoto,
     awards = [],
+    patents = [],
+    startup,
     awardPhotos = [],
     description,
     projectCode = '' // matches a lead's teamCode in leaderList.json
   }) {
   const leads = getProfile(leaderList, projectCode);
-  const eyebrow = ['Project', projectCode && projectCode.toUpperCase(), status].filter(Boolean).join(' · ');
+  const eyebrow = ['Project', projectCode && projectCode.toUpperCase(), status, startup && `Became ${startup}`].filter(Boolean).join(' · ');
 
   // Sections after Overview are optional, so number them as they render
   let sectionCount = 1;
@@ -72,10 +74,9 @@ export default function Projects(
         <section className='section container projectLeadSection'>
           <SectionHeader index={nextIndex()} title='Awards & Recognition' meta={`${awards.length} ${awards.length === 1 ? 'award' : 'awards'}`} />
           <dl className='awardTable'>
-            {awards.map((award, i) => (
+            {awards.map((award) => (
               <div className='awardRow' key={award.title}>
-                <dt className='awardIndex'>AW-{String(i + 1).padStart(2, '0')}</dt>
-                <dd className='awardTitle'>{award.title}</dd>
+                <dt className='awardTitle'>{award.title}</dt>
                 <dd className='awardEvent'>{award.event}</dd>
               </div>
             ))}
@@ -92,6 +93,22 @@ export default function Projects(
               ))}
             </div>
           }
+        </section>
+      }
+
+      {patents.length > 0 &&
+        <section className='section container projectLeadSection'>
+          <SectionHeader index={nextIndex()} title='Patents' meta={`${patents.length} ${patents.length === 1 ? 'patent' : 'patents'}`} />
+          <dl className='awardTable'>
+            {patents.map((patent) => (
+              <div className='awardRow' key={patent.number}>
+                <dt className='awardTitle'>
+                  <a href={patent.url} target='_blank' rel='noreferrer'>{patent.number} ↗</a>
+                </dt>
+                <dd className='awardEvent'>{patent.title}{startup ? `, granted to ${startup}` : ''} ({patent.year})</dd>
+              </div>
+            ))}
+          </dl>
         </section>
       }
 

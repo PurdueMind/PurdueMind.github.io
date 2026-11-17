@@ -56,7 +56,7 @@
 
 .awardRow {
   display: grid;
-  grid-template-columns: 80px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
   align-items: baseline;
   padding: 14px 0;
@@ -65,32 +65,13 @@
 
 @media (max-width: 640px) {
   .awardRow {
-    grid-template-columns: 64px 1fr;
-  }
-  .awardEvent {
-    grid-column: 2;
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
 
 .awardRow dd {
   margin: 0;
-}
-
-.awardIndex {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: #4a4646;
-}
-
-.awardIndex::before {
-  content: '';
-  width: 8px;
-  height: 8px;
-  background-color: var(--gold-dark);
 }
 
 .awardTitle {

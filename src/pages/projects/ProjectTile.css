@@ -63,7 +63,8 @@
 
 .projectTileMeta {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
 }

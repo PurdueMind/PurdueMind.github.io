@@ -210,11 +210,21 @@
     },
     {
       "id": "smart-stock",
+      "startup": "Predictive Wear",
+      "awards": [
+        { "title": "1st Place ($4,000), as Predictive Wear", "event": "2018 Southwest Indiana Pitch Competition" },
+        { "title": "Selected for up to $250,000 in matching investment, as Predictive Wear", "event": "2019 Purdue Foundry Investment Fund" }
+      ],
+      "patents": [
+        { "number": "US12063993B2", "title": "Matter of manufacture of compression legging system and associated uses", "year": "2024", "url": "https://patents.google.com/patent/US12063993B2/en" }
+      ],
       "alt": "Photo of Compression Leggings",
       "title": "The Smart Sock (2015-2016)",
       "imgSrc": "smartSock.jpeg",
       "description": ["The smart sock is a smart compression stocking for monitoring chronic venous insufficiency",
-                      "The Smart Sock consists of a novel and non-invasive method of monitoring and treating CVI in the legs that provides convenient, objective and continuous measurements of relative fluid distribution levels and blood flow using bioimpedance spectroscopy (BIS) and reflective red and infrared pulse oximetry."]
+                      "The Smart Sock consists of a novel and non-invasive method of monitoring and treating CVI in the legs that provides convenient, objective and continuous measurements of relative fluid distribution levels and blood flow using bioimpedance spectroscopy (BIS) and reflective red and infrared pulse oximetry.",
+                      "MIND's first project turned into a startup, Predictive Wear, founded by MIND members Pablo Argote and Dane Albaugh, and continued beyond the club, developing compression socks with sensors that alert physicians to blood clots (deep vein thrombosis)",
+                      "Predictive Wear's team included MIND's founding executive board, won first place at the 2018 Southwest Indiana Pitch Competition, was selected for up to $250,000 in matching investment from the Purdue Foundry Investment Fund, and was granted a U.S. patent for its compression legging system in 2024"]
     }
   ]
 }

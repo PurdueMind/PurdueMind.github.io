@@ -63,6 +63,8 @@ export default function ProjectDetailPage() {
         status={isCurrent ? 'Active' : 'Archived'}
         teamPhoto={teamImages[project.teamPhoto]}
         awards={project.awards || []}
+        patents={project.patents || []}
+        startup={project.startup}
         awardPhotos={(project.awardPhotos || [])
           .filter((photo) => awardImages[photo.file])
           .map((photo) => ({ ...photo, src: awardImages[photo.file] }))}
