@@ -113,6 +113,17 @@
                       "By integrating machine learning (ML), the software automates injury assessment, enabling early detection by providing accurate and real-time prognosis on the sidelines"]
     },
     {
+      "id": "chiro-band",
+      "alt": "Chiro-Band layout sketch showing massage components, motors, battery and Arduino around the headband",
+      "title": "Chiro-Band (2021-2023)",
+      "imgSrc": "chiro-band.jpg",
+      "thumbnailFit": "contain",
+      "description": ["Chiro-Band is a migraine-relief headband concept that applies adjustable mechanical pressure and massage to selected points on the head",
+                      "Massage components attach to the band with velcro so they can be repositioned, with motors, a battery and an Arduino housed around the band behind an inner zipper",
+                      "Design discussions covered controllable intensity, comfort, roller and track mechanisms, pressure sensing, and optional heating and cooling",
+                      "CAD and physical design iterations continued from 2021 into 2023"]
+    },
+    {
       "id": "ptsd-dog-collar",
       "alt": "Nightmare Detection Dog Collar",
       "title": "PTSD-Activated Nightmare Detecting Apparatus for Service Dogs [PANDAS] (2020-2021)",

@@ -19,7 +19,6 @@ const NAV_ITEMS = [
       { label: 'Team Leads', to: { pathname: '/People', hash: '#peopleMiddleDiv' } },
       { label: 'Advisors', to: { pathname: '/People', hash: '#peopleBottomDiv' } },
       { label: 'Alumni', to: '/People/Alumni' },
-      { label: 'Past Boards', to: { pathname: '/People/Alumni', hash: '#pastBoards' } },
     ],
   },
   {
