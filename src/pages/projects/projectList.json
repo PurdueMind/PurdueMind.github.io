@@ -123,12 +123,15 @@
     },
     {
       "id": "hydra-check",
-      "alt": "Hydra-Check CAD rendering",
+      "alt": "Hydra-Check CAD model showing the press plate and sensor housing",
       "title": "Hydra-Check (2020-2021)",
-      "imgSrc": "hydraCheck.png",
-      "description": ["Hydra-Check is designed to provide a means for the testing and the diagnosis of dehydration",
-                      "A stamp-like device applies downwards pressure to a patient's fingernail and lift up whilst a constant light source in combination with a light sensor measures the amount of time it takes for the light intensity to return to normal",
-                      "As the stamp pulses up and down, the data is plotted on a monitor for the physician to analyze."]
+      "imgSrc": "hydra-check-cad.jpg",
+      "description": ["Hydra-Check is a non-invasive device for detecting dehydration in hospitals, athletic training rooms and senior care, where current methods like catheters and lab tests are invasive and slow",
+                      "A stamp-like mechanism presses on the patient's fingernail and releases it while a light source and sensor measure how long the nail bed takes to return to its original light intensity, known as the capillary refill time",
+                      "A pulse oximeter measures blood oxygen alongside the refill time, since other conditions can also slow capillary refill",
+                      "The device pulses and takes readings continuously, plotting a trend graph for physicians, nurses and athletic trainers to analyze",
+                      "The team iterated from sketches through several CAD models and 3D-printed prototypes, replacing an underpowered camshaft with a threaded rod and gear mechanism and designing a custom light sensor",
+                      "Developed as an entry for the NIBIB DEBUT student design competition, including a patent search and an anticipated FDA Class II 510(k) regulatory pathway"]
     },
     {
       "id": "tri-wheels",
@@ -179,6 +182,13 @@
     },
     {
       "id": "exomind-glove",
+      "awards": [
+        { "title": "3rd Place, highest-ranked U.S. team", "event": "2017 China-U.S. Young Maker Competition, Beijing" }
+      ],
+      "awardPhotos": [
+        { "file": "exomind-team-beijing-2017.jpg", "caption": "ExoMIND team at the China-U.S. Young Maker Competition" },
+        { "file": "exomind-glove-demo-2017.jpg", "caption": "ExoMIND Glove demo in Beijing" }
+      ],
       "alt": "Photo of the ExoMIND Glove",
       "title": "ExoMIND Glove (2016-2017)",
       "imgSrc": "exomindGlove.jpeg",

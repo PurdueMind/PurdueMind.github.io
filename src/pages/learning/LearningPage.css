@@ -77,3 +77,77 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
+/* ---------- Travel ---------- */
+.travelList {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Photos on one side, write-up on the other; alternate sides per trip */
+.travelTrip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.travelTrip:nth-child(even) > .slideshow {
+  order: 2;
+}
+
+/* A trip without photos yet lets its write-up span the row */
+.travelTrip > .travelTripText:only-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 860px) {
+  .travelTrip {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .travelTrip:nth-child(even) > .slideshow {
+    order: 0;
+  }
+}
+
+.travelTripText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.travelTripMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4a4646;
+}
+
+.travelTripSponsor {
+  padding: 2px 8px;
+  background-color: var(--black);
+  color: var(--gold);
+}
+
+.travelTripTitle {
+  font-size: 24px;
+}
+
+.travelTripAward {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-left: 4px solid var(--gold-dark);
+  background-color: var(--panel);
+  font-weight: 600;
+}
+
+.travelTripLink {
+  font-weight: 600;
+}

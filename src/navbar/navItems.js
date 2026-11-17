@@ -18,6 +18,7 @@ const NAV_ITEMS = [
       { label: 'Executive Board', to: { pathname: '/People', hash: '#officersBreak' } },
       { label: 'Team Leads', to: { pathname: '/People', hash: '#peopleMiddleDiv' } },
       { label: 'Advisors', to: { pathname: '/People', hash: '#peopleBottomDiv' } },
+      { label: 'Alumni', to: '/People/Alumni' },
     ],
   },
   {
@@ -36,6 +37,7 @@ const NAV_ITEMS = [
     children: [
       { label: 'Onboarding', to: { pathname: '/Learning', hash: '#onboardingBreak' } },
       { label: 'Workshops', to: { pathname: '/Learning', hash: '#workshopsBreak' } },
+      { label: 'Travel', to: { pathname: '/Learning', hash: '#travelBreak' } },
     ],
   },
   {

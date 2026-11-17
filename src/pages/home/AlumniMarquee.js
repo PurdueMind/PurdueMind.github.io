@@ -4,20 +4,19 @@ import { useEffect, useRef } from 'react';
 const SCROLL_SPEED = 28;
 
 // How long the rows stay still after a touch or swipe on a phone. With a mouse
-// the rows only pause while hovered and resume as soon as the cursor leaves.
+// only the hovered row pauses, and it resumes as soon as the cursor leaves.
 const RESUME_AFTER_MS = 2200;
 
 // Rows of items that scroll by themselves in alternating directions but are
 // real scroll containers, so visitors can swipe through them. Touch pauses
-// every row until RESUME_AFTER_MS of quiet; a mouse pauses them only while
-// hovering.
+// every row until RESUME_AFTER_MS of quiet; a mouse pauses only the row it
+// is hovering.
 // Each row's items are rendered twice so it loops seamlessly in both
 // directions.
 export default function AlumniMarquee({ rows, renderItem }) {
   const rowRefs = useRef([]);
   const positions = useRef([]);
   const lastInteraction = useRef(0);
-  const containerRef = useRef(null);
 
   useEffect(() => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -48,12 +47,12 @@ export default function AlumniMarquee({ rows, renderItem }) {
     const tick = (now) => {
       const dt = Math.min((now - previous) / 1000, 0.1);
       previous = now;
-      const hovered = canHover && containerRef.current && containerRef.current.matches(':hover');
-      const paused = hovered || now - lastInteraction.current < RESUME_AFTER_MS;
+      const touched = now - lastInteraction.current < RESUME_AFTER_MS;
 
       rowRefs.current.forEach((el, row) => {
         if (!el) return;
-        if (paused) {
+        // Hovering freezes only the row under the cursor; the others keep going
+        if (touched || (canHover && el.matches(':hover'))) {
           // Pick up from wherever the visitor left the row
           positions.current[row] = el.scrollLeft;
           return;
@@ -90,7 +89,6 @@ export default function AlumniMarquee({ rows, renderItem }) {
   return (
     <div
       className='alumniMarquee'
-      ref={containerRef}
       onPointerDown={(e) => { if (e.pointerType !== 'mouse') markTouch(); }}
       onTouchStart={markTouch}
       onTouchMove={markTouch}

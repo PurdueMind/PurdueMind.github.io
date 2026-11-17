@@ -78,13 +78,6 @@
   text-transform: uppercase;
 }
 
-.projectTileCode {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: #4a4646;
-}
-
 .projectTileTitle {
   font-size: 19px;
 }

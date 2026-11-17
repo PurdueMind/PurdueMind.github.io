@@ -3,6 +3,7 @@ import Navbar from './navbar/Navbar';
 import Footer from './footer/Footer';
 import HomePage from './pages/home/HomePage'
 import PeoplePage from './pages/people/PeoplePage'
+import AlumniPage from './pages/people/AlumniPage'
 import ProjectsPage from './pages/projects/ProjectsPage'
 import ProjectDetailPage from './pages/projects/ProjectDetailPage'
 import LearningPage from './pages/learning/LearningPage'
@@ -58,8 +59,11 @@ export default function App() {
           <Route exact path={['/', '/PurdueMIND/']}>
             <HomePage />
           </Route>
-          <Route path='/People'>
+          <Route exact path='/People'>
             <PeoplePage />
+          </Route>
+          <Route path='/People/Alumni'>
+            <AlumniPage />
           </Route>
           <Route exact path='/Projects'>
             <ProjectsPage />

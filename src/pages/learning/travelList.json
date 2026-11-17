@@ -1,0 +1,25 @@
+{
+  "_comment": "Trips shown in the Travel section of the Learning page, newest first. Each trip's photos go in src/assets/learning/travel/<id>/ and show in filename order.",
+  "trips": [
+    {
+      "id": "medtech-boston",
+      "title": "The MedTech Conference",
+      "location": "Boston, MA",
+      "date": "October 2026",
+      "summary": "MIND members traveled to Boston for The MedTech Conference, one of the largest gatherings of the medical technology industry. Members toured the exhibit hall and Patient Pavilion, tried device demos from companies like Philips, and heard founders and investors speak at the MedTech Innovator Showcase."
+    },
+    {
+      "id": "beijing-2017",
+      "title": "China-U.S. Young Maker Competition",
+      "location": "Beijing, China",
+      "date": "2017",
+      "sponsor": "Google",
+      "summary": "With sponsorship from Google, a team of MIND members traveled to Beijing for the 2017 China-U.S. Young Maker Competition. They presented the ExoMIND Glove, a wearable stroke rehabilitation device, alongside student makers from across China and the U.S., and took 3rd place as the highest-ranked U.S. team.",
+      "award": "3rd Place, highest-ranked U.S. team",
+      "project": {
+        "title": "ExoMIND Glove",
+        "slug": "exomind-glove"
+      }
+    }
+  ]
+}

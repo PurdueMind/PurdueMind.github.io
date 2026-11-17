@@ -1,0 +1,62 @@
+{
+  "_comment": "Alumni spotlights shown on /People/Alumni, oldest graduating class first. Headshots go in src/assets/people/alumni.",
+  "alumni": [
+    {
+      "name": "Sriram Boppana",
+      "classYear": "2017",
+      "role": "President & Founder, 2015-2016",
+      "major": "Biomedical Engineering, Electrical Engineering minor",
+      "now": "Research Engineer and Scientist at GE Global Research",
+      "quote": [
+        "My time with MIND was a very positive influence by helping me shape my long-term career goal as a medical research engineer and scientist. Before MIND started, I knew I wanted to help people by combining my interests in medicine and technology but wanted more unique learning opportunities. Many other students I knew who shared those values felt the same way and so we decided to start MIND.",
+        "During the school year, I got to work with a lot of passionate students with diverse backgrounds to solve complex issues in the clinical environment. We were able to directly network with clinical professionals ranging from physicians, caregiver networks, to graduate students at Purdue and identify existing medical challenges that people face on a day-by-day basis. We were also able to find technical mentors ranging from graduate students to faculty at Purdue to whom I am eternally thankful. We then went through the ideation process to identify, and later develop a potential engineering solution and a sustainable business plan.",
+        "In the end, MIND gave me the opportunity to develop my critical thinking, technical skillset, and resolve while tackling modern issues in the clinical environment which I employ every day at my current job."
+      ],
+      "filename": "sriram-boppana.jpg"
+    },
+    {
+      "name": "Pablo F. Argote",
+      "classYear": "2018",
+      "role": "President, 2016-2017",
+      "major": "Biomedical Engineering",
+      "now": "Mechanical Engineering Ph.D. student at the University of Colorado Boulder, focusing on medical imaging, health monitoring, medical device development and tissue engineering",
+      "quote": [
+        "Seeing how, as a student, you can get involved in medical research, technology development, entrepreneurship and regulatory affairs. I am pursuing a career in medical science and technologies."
+      ],
+      "filename": "pablo-argote.jpg"
+    },
+    {
+      "name": "Dane Albaugh",
+      "classYear": "2018",
+      "role": "Director of Entrepreneurship & Ideation",
+      "major": "Biomedical Engineering",
+      "now": "CTO of Predictive Wear",
+      "quote": [
+        "I started a company through MIND."
+      ],
+      "filename": "dane-albaugh.jpg"
+    },
+    {
+      "name": "Sam Kuhns",
+      "classYear": "2019",
+      "role": "Director of Research & Development, 2017-2018",
+      "major": "Computer Science, Psychology minor",
+      "now": "Software Engineer and Consultant at West Monroe in Chicago",
+      "quote": [
+        "MIND influenced me towards Consulting by developing unique client interaction and problem solving skills that transfer well into industry positions."
+      ],
+      "filename": "sam-kuhns.jpg"
+    },
+    {
+      "name": "Scott Guidoboni",
+      "classYear": "2019",
+      "role": "Director of Entrepreneurship & Ideation",
+      "major": "Biomedical Engineering, Entrepreneurship & Innovation Certificate",
+      "now": "Completed a master's at UC Berkeley in 2020; working in medical sales while building a pain management mobile app",
+      "quote": [
+        "MIND got me excited about taking an idea and making it real so they can help real people. Now I know execution is what really makes ideas valuable."
+      ],
+      "filename": "scott-guidoboni.jpg"
+    }
+  ]
+}

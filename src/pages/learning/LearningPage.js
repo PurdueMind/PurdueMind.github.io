@@ -15,6 +15,7 @@ import cadFiles from '../../assets/learning/CAD-Onboarding.pdf';
 import spiceFiles from '../../assets/learning/LTSpice-Onboarding.pdf';
 
 const workshopList = require('./workshopList.json');
+const travelList = require('./travelList.json');
 
 const fileList = {
     'arduino-project': arduinoFile,
@@ -33,6 +34,16 @@ function getImageSrc(filename) {
 // Slideshow of workshop photos shown next to the description
 const slideshowImages = Object.values(buildImageMap(require.context('../../assets/learning/slideshow', false, /\.(png|jpe?g)$/)));
 
+// Trip photos live in src/assets/learning/travel/<trip id>/, shown in filename
+// order, so photos can be added without touching this file
+const travelImageContext = require.context('../../assets/learning/travel', true, /\.(png|jpe?g)$/i);
+const travelImages = travelImageContext.keys().sort().reduce((byTrip, key) => {
+    const [, tripId] = key.split('/');
+    const mod = travelImageContext(key);
+    (byTrip[tripId] = byTrip[tripId] || []).push(mod && mod.default ? mod.default : mod);
+    return byTrip;
+}, {});
+
 const STEPS = [
     { title: 'Attend', body: 'For the first month of the fall semester, MIND hosts meetings dedicated to working through the onboarding projects.' },
     { title: 'Complete', body: 'Anyone interested in joining a project team then finishes the projects on their own time.' },
@@ -44,8 +55,8 @@ export default function OnboardingPage() {
 
     return (
         <div className='OnboardingPage'>
-            <PageHero eyebrow='Learning · Skills' title='Onboarding & Workshops'>
-                <p className='heroBody'>Hands-on projects that give new members the skills they need to contribute to project teams.</p>
+            <PageHero eyebrow='Learning · Skills' title='Onboarding, Workshops & Travel'>
+                <p className='heroBody'>Hands-on projects that give new members the skills they need to contribute to project teams, plus trips that take members to the wider medtech world.</p>
             </PageHero>
 
             <section className='section container'>
@@ -87,6 +98,36 @@ export default function OnboardingPage() {
                     </div>
                 }
                 <div className='workshopsComingSoon'>More workshops coming soon.</div>
+            </section>
+
+            <section className='section container learningSectionFollow'>
+                <SectionHeader id='travelBreak' index='03' title='Travel' meta={`${travelList.trips.length} trips`} />
+                <div className='travelList'>
+                    {travelList.trips.map((trip) => (
+                        <article className='travelTrip' key={trip.id}>
+                            {(travelImages[trip.id] || []).length > 0 &&
+                                <Slideshow
+                                    images={travelImages[trip.id]}
+                                    alt={`MIND at ${trip.title}`}
+                                    caption={`${trip.location} · ${trip.date}`}
+                                    height={340} />
+                            }
+                            <div className='travelTripText'>
+                                <div className='travelTripMeta'>
+                                    <span>{trip.date}</span>
+                                    <span>{trip.location}</span>
+                                    {trip.sponsor && <span className='travelTripSponsor'>Sponsored by {trip.sponsor}</span>}
+                                </div>
+                                <h3 className='travelTripTitle'>{trip.title}</h3>
+                                {trip.award && <div className='travelTripAward'>{trip.award}</div>}
+                                <p>{trip.summary}</p>
+                                {trip.project &&
+                                    <Link className='travelTripLink' to={`/Projects/${trip.project.slug}`}>See the {trip.project.title} project →</Link>
+                                }
+                            </div>
+                        </article>
+                    ))}
+                </div>
             </section>
         </div>
     );

@@ -26,25 +26,24 @@ export default function ProjectsPage() {
 
       <section className='section container'>
         <SectionHeader index='01' title='Active Projects' meta={`${projectList.currentProjects.length} teams`} />
-        {getProjectTiles(projectList.currentProjects, 'A')}
+        {getProjectTiles(projectList.currentProjects)}
       </section>
 
       <section className='section container projectsSectionFollow'>
         <SectionHeader index='02' title='Previous Projects' meta={`${projectList.pastProjects.length} archived`} />
-        {getProjectTiles(projectList.pastProjects, 'R')}
+        {getProjectTiles(projectList.pastProjects)}
       </section>
     </div>
   );
 };
 
-function getProjectTiles(projects, codePrefix) {
+function getProjectTiles(projects) {
   return (
     <div className='projectsGrid'>
-      {projects.map((project, i) => (
+      {projects.map((project) => (
         <ProjectTile
           key={project.slug || project.id}
           slug={project.slug || project.id}
-          code={`${codePrefix}-${String(i + 1).padStart(2, '0')}`}
           imgSrc={getImageSrc(project)}
           alt={project.alt}
           title={project.title}
