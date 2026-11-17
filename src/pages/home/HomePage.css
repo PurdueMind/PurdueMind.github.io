@@ -37,22 +37,22 @@
 .statCell {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
   flex-shrink: 0;
   width: 260px;
-  padding: 28px 28px 30px;
+  padding: 16px 28px 18px;
   border-left: 1px solid var(--line);
 }
 
 @media (max-width: 760px) {
   .statCell {
     width: 200px;
-    padding: 22px 20px 24px;
+    padding: 14px 20px 16px;
   }
 }
 
 .statNumber {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
