@@ -72,7 +72,10 @@ export default function Projects(
 
       {awards.length > 0 &&
         <section className='section container projectLeadSection'>
-          <SectionHeader index={nextIndex()} title='Awards & Recognition' meta={`${awards.length} ${awards.length === 1 ? 'award' : 'awards'}`} />
+          <SectionHeader index={nextIndex()} title={startup ? 'MIND Spinout Recognition' : 'Awards & Recognition'} meta={`${awards.length} ${awards.length === 1 ? 'award' : 'awards'}`} />
+          {startup &&
+            <p className='awardNote'>Awarded to {startup}, the startup that spun out of this MIND project.</p>
+          }
           <dl className='awardTable'>
             {awards.map((award) => (
               <div className='awardRow' key={award.title}>
