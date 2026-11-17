@@ -122,7 +122,7 @@ export default function OnboardingPage() {
                                 <div className='travelPhotoGrid'>
                                     {travelImages[trip.id].map((src, i) => (
                                         <figure className='figure travelPhoto' key={src}>
-                                            <img src={src} alt={`MIND at ${trip.title}, photo ${i + 1}`} loading='lazy' />
+                                            <img src={src} alt={`MIND at ${trip.title}, ${i + 1} of ${travelImages[trip.id].length}`} loading='lazy' />
                                         </figure>
                                     ))}
                                 </div>
