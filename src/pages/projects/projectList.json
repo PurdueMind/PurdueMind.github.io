@@ -174,13 +174,17 @@
     },
     {
       "id": "verti-fix",
+      "awards": [
+        { "title": "Grand Prize, U.S. semi-finals", "event": "2019 China-U.S. Young Maker Competition" }
+      ],
       "alt": "Photo of the Verti-Fix Headset",
       "title": "Verti-Fix (2018-2019)",
       "imgSrc": "vertiFix.jpeg",
       "description": ["Verti-Fix is a device designed to aid GPs and ER doctors diagnose and correct Benign Paroxysmal Positional Vertigo (BPPV)",
                       "Even though BPPV is a common condition (more than 200,000 cases per year), GPs and ER doctors will not diagnose it because they need to perform the Dix-Hallpike maneuver on the patient, and if performed incorrectly, could make things worse for the patient",
                       "This device helps doctors perform the Dix-Hallpike by guiding them through the proper steps and angles required with the use of a headband, neck brace for the patient, and a small screen for the doctor",
-                      "It also checks the eyes for nystagmus to diagnose BPPV. Once diagnosed, the doctor will use our device to perform the Epley maneuver to correct the vertigo"]
+                      "It also checks the eyes for nystagmus to diagnose BPPV. Once diagnosed, the doctor will use our device to perform the Epley maneuver to correct the vertigo",
+                      "Verti-Fix won a grand prize at the U.S. semi-finals of the 2019 China-U.S. Young Maker Competition, earning five team members an all-expenses-paid trip to the final rounds in Beijing. It was MIND's second time representing Purdue at the competition, after the ExoMIND Glove took 3rd place in 2017"]
     },
     {
       "id": "ambient-sound-bracelet",
@@ -212,6 +216,7 @@
       "id": "smart-stock",
       "startup": "Predictive Wear",
       "awards": [
+        { "title": "3rd Place ($5,000), Social Entrepreneurship Track, as Predictive Wear", "event": "2018 Burton D. Morgan Business Model Competition" },
         { "title": "1st Place ($4,000), as Predictive Wear", "event": "2018 Southwest Indiana Pitch Competition" },
         { "title": "Selected for up to $250,000 in matching investment, as Predictive Wear", "event": "2019 Purdue Foundry Investment Fund" }
       ],
@@ -224,7 +229,7 @@
       "description": ["The smart sock is a smart compression stocking for monitoring chronic venous insufficiency",
                       "The Smart Sock consists of a novel and non-invasive method of monitoring and treating CVI in the legs that provides convenient, objective and continuous measurements of relative fluid distribution levels and blood flow using bioimpedance spectroscopy (BIS) and reflective red and infrared pulse oximetry.",
                       "MIND's first project turned into a startup, Predictive Wear, founded by MIND members Pablo Argote and Dane Albaugh, and continued beyond the club, developing compression socks with sensors that alert physicians to blood clots (deep vein thrombosis)",
-                      "Predictive Wear's team included MIND's founding executive board, won first place at the 2018 Southwest Indiana Pitch Competition, was selected for up to $250,000 in matching investment from the Purdue Foundry Investment Fund, and was granted a U.S. patent for its compression legging system in 2024"]
+                      "Predictive Wear's team included MIND's founding executive board, took third place in the Social Entrepreneurship Track of the 2018 Burton D. Morgan Business Model Competition and first place at the 2018 Southwest Indiana Pitch Competition, was selected for up to $250,000 in matching investment from the Purdue Foundry Investment Fund, and was granted a U.S. patent for its compression legging system in 2024"]
     }
   ]
 }
