@@ -29,10 +29,12 @@ export default function AlumniPage() {
         <div className='alumniBioList'>
           {alumni.map((person) => (
             <article className='alumniBio' key={person.name}>
-              <img
-                className='alumniBioPhoto'
-                src={alumniImages[person.filename] || defaultHeadshot}
-                alt={person.name} />
+              <div className='alumniBioPhotoCol'>
+                <img
+                  className='alumniBioPhoto'
+                  src={alumniImages[person.filename] || defaultHeadshot}
+                  alt={person.name} />
+              </div>
               <div className='alumniBioBody'>
                 <div className='alumniBioHeader'>
                   <h3 className='alumniBioName'>{person.name}</h3>

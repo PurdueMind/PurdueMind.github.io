@@ -11,14 +11,18 @@
   background-color: var(--panel);
 }
 
+/* The photo stays a square at the top, however long the quote makes the card */
+.alumniBioPhotoCol {
+  border-right: 1px solid var(--line-strong);
+}
+
 .alumniBioPhoto {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 220px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
-  border-right: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
   background-color: var(--steel);
 }
 
@@ -91,12 +95,13 @@
     grid-template-columns: 1fr;
   }
 
-  .alumniBioPhoto {
-    height: auto;
-    aspect-ratio: 1 / 1;
-    max-height: 320px;
+  .alumniBioPhotoCol {
     border-right: none;
-    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .alumniBioPhoto {
+    max-width: 320px;
+    border-right: 1px solid var(--line-strong);
   }
 
   .alumniBioFacts > div {
